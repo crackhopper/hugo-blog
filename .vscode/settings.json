@@ -1,0 +1,14 @@
+{
+  // 禁用 YAML 的自动 schema 检测，避免误识别为 Jekyll
+  "yaml.schemaStore.enable": false,
+  // 明确指定 _config.yml 不使用任何 schema
+  "yaml.schemas": {
+    "": ["_config.yml"]
+  },
+  // 禁用 YAML 验证（如果需要的话）
+  "yaml.validate": false,
+  "[yaml]": {
+    "editor.defaultFormatter": null
+  }
+}
+

@@ -1,0 +1,42 @@
+baseURL = 'https://crackhopper.github.io'
+languageCode = 'zh-cn'
+title = 'crackhopper的技术博客'
+theme = 'Stack'
+
+
+[params]
+  mainSections = ['posts']
+  subtitle = 'C++, Graphics, Game, AI/ML'
+  description = '爱游戏的技术宅'
+  keywords = 'crackhopper, developer, graphics, game, c++'
+
+  [params.author]
+    name = 'crackhopper'
+    email = 'crackhopper@gmail.com'
+
+  [params.article]
+    math = true
+
+[markup]
+  [markup.highlight]
+    style = 'github'
+    lineNos = true
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [
+            ['\[', '\]'],
+            ['$$', '$$']
+          ]
+          inline = [
+            ['\(', '\)']
+          ]
+
+[permalinks]
+  posts = '/:year/:month/:day/:title/'
+  page = '/:slug/'
+  projects = '/projects/:slug/'
+  notes = '/notes/:slug/'
+
