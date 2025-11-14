@@ -22,3 +22,13 @@ node_modules/
 # Legacy (Hexo)
 db.json
 .deploy*/
+
+# Obsidian image processing
+.hugo_temp_content/
+.obsidian_images_state.json
+.preprocess_state.json
+
+
+__pycache__/
+
+workspace.json

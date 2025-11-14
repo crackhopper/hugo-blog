@@ -22,6 +22,13 @@ theme = 'Stack'
     style = 'github'
     lineNos = true
   [markup.goldmark]
+    [markup.goldmark.renderer]
+      # 允许在 Markdown 中使用 HTML 标签（用于图片宽度控制）
+      unsafe = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
         enable = true
@@ -40,3 +47,6 @@ theme = 'Stack'
   projects = '/projects/:slug/'
   notes = '/notes/:slug/'
 
+# Content Transform: 在解析 Markdown 之前转换 Obsidian 图片语法
+# 注意：这需要 Hugo 0.100.0+ 版本
+# 由于 Hugo 的 content transform 功能有限，我们使用 render hook 来处理
