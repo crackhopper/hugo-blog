@@ -2,10 +2,13 @@
   "hidden": true,
   "hiddenList": [
     "__pycache__",
-    "public",
     "scripts",
     "themes",
     "venv",
-    "resources"
+    "resources",
+    "assets",
+    "public",
+    "repo_to_deploy",
+    "logs"
   ]
 }

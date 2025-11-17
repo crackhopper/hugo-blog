@@ -1,72 +1,141 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-预处理脚本：将 Obsidian 图片语法 ![[filename.png]] 转换为标准 Markdown 图片语法
+预处理脚本：将 Obsidian Wiki 语法 ![[...]] 转换为 Hugo 可识别的 Markdown：
+- 图片：转换为标准 Markdown 图片或带宽度的 HTML img
+- 文档：转换为使用 relref 的 Markdown 链接
 在 Hugo 处理之前运行，不修改原始文件，而是创建临时副本
 支持增量更新：只更新修改过的文件
 """
-import os
 import re
 import shutil
-import tempfile
 import hashlib
 from pathlib import Path
-from datetime import datetime
+from typing import Dict, List, Optional, Tuple
+
+IMAGE_EXTENSIONS = {
+    '.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp', '.svg', '.avif', '.heic', '.heif'
+}
 
 def get_file_hash(file_path):
     """计算文件的 MD5 哈希值"""
     with open(file_path, 'rb') as f:
         return hashlib.md5(f.read()).hexdigest()
 
-def transform_obsidian_images(content, static_images_dir=None):
-    """将 Obsidian 图片语法转换为标准 Markdown 图片语法或 HTML img 标签"""
-    # 匹配 Obsidian 图片语法: ![[filename.png]] 或 ![[filename.png|296]]
+def build_wikilink_index(content_dir: Path) -> Dict[str, List[str]]:
+    """
+    构建一个 wiki 链接索引，支持以下匹配方式：
+    - 相对路径（含/不含 .md 扩展名）
+    - 文件名（stem）
+    """
+    index: Dict[str, List[str]] = {}
+    for md_file in content_dir.rglob('*.md'):
+        rel_path = md_file.relative_to(content_dir).as_posix()
+        stem = md_file.stem
+        without_ext = rel_path[: -len(md_file.suffix)] if md_file.suffix else rel_path
+        for key in {rel_path, without_ext, stem}:
+            if not key:
+                continue
+            index.setdefault(key, [])
+            if rel_path not in index[key]:
+                index[key].append(rel_path)
+    return index
+
+
+def looks_like_width(value: str) -> bool:
+    """判断 | 后的参数是否是图片宽度/尺寸描述"""
+    return bool(re.match(r'^\d+(?:px)?(?:[xX]\d+)?$', value.strip()))
+
+
+def resolve_document_target(target: str, wiki_index: Dict[str, List[str]]) -> Tuple[Optional[str], Optional[str]]:
+    """根据 wiki 索引解析目标文档，返回 (相对路径, 锚点)"""
+    anchor = None
+    normalized = target.strip().replace('\\', '/')
+    if '#' in normalized:
+        normalized, anchor = normalized.split('#', 1)
+        anchor = anchor.strip()
+    candidates = []
+    candidates.append(normalized)
+    if normalized.endswith('.md'):
+        candidates.append(normalized[:-3])
+    else:
+        candidates.append(f"{normalized}.md")
+    name = Path(normalized).name
+    candidates.append(name)
+    name_without_ext = Path(name).stem
+    if name_without_ext != name:
+        candidates.append(name_without_ext)
+    for key in candidates:
+        key = key.strip()
+        if not key:
+            continue
+        if key in wiki_index:
+            paths = wiki_index[key]
+            if len(paths) == 1:
+                return paths[0], anchor
+            print(f"警告: Wiki 链接 '{target}' 存在多个候选项，跳过。候选: {paths}")
+            return None, anchor
+    return None, anchor
+
+
+def transform_obsidian_links(content, static_images_dir=None, wiki_index=None):
+    """将 Obsidian 的 ![[...]] 语法转换为标准 Markdown 资源"""
     pattern = r'!\[\[([^\]]+)\]\]'
     
-    # 如果提供了 static_images_dir，用于验证图片是否存在
     project_root = Path.cwd()
-    if static_images_dir is None:
-        static_images_dir = project_root / 'static' / 'images'
-    else:
-        static_images_dir = Path(static_images_dir)
+    static_images_dir = Path(static_images_dir or (project_root / 'static' / 'images'))
+    wiki_index = wiki_index or {}
     
     missing_images = []
+    unresolved_documents = []
     
     def replace_func(match):
         full_match = match.group(1).strip()
+        parts = [p.strip() for p in full_match.split('|')]
+        target = parts[0]
+        meta = parts[1] if len(parts) > 1 else None
+        width = meta if meta and looks_like_width(meta) else None
+        alias = None if width else meta
         
-        # 检查是否包含宽度参数（用 | 分隔）
-        if '|' in full_match:
-            parts = full_match.split('|', 1)
-            filename = parts[0].strip()
-            width = parts[1].strip()
+        suffix = Path(target).suffix.lower()
+        image_path = static_images_dir / target
+        
+        is_image = False
+        if suffix in IMAGE_EXTENSIONS:
+            is_image = True
+        elif image_path.exists():
+            is_image = True
         else:
-            filename = full_match
+            doc_path, anchor = resolve_document_target(target, wiki_index)
+            if doc_path:
+                link_text = alias or Path(doc_path).stem
+                relref = f'{{{{< relref "{doc_path}" >}}}}'
+                if anchor:
+                    relref = f"{relref}#{anchor}"
+                return f"[{link_text}]({relref})"
+            else:
+                unresolved_documents.append(target)
         
-        # 验证图片文件是否存在
-        image_path = static_images_dir / filename
-        if not image_path.exists():
-            missing_images.append(filename)
-        
-        # 使用文件名（不含扩展名）作为 alt text
-        alt_text = Path(filename).stem
-        
-        # 检查是否包含宽度参数（用 | 分隔）
-        if '|' in full_match:
-            # 转换为 HTML img 标签，包含 width 属性（Hugo 需要启用 unsafe = true）
-            return f'<img src="/images/{filename}" alt="{alt_text}" width="{width}" loading="lazy" />'
-        else:
-            # 转换为标准 Markdown 图片语法，路径指向 /images/ 目录
-            return f"![{alt_text}](/images/{filename})"
+        alt_text = alias or Path(target).stem
+        if is_image:
+            if not image_path.exists():
+                missing_images.append(target)
+            if width:
+                return f'<img src="/images/{target}" alt="{alt_text}" width="{width}" loading="lazy" />'
+            return f"![{alt_text}](/images/{target})"
+        return match.group(0)
     
     result = re.sub(pattern, replace_func, content)
     
-    # 如果有缺失的图片，输出警告
     if missing_images:
         print(f"警告: 以下图片文件不存在于 {static_images_dir}:")
-        for img in missing_images:
+        for img in sorted(set(missing_images)):
             print(f"  - {img}")
         print("提示: 请确保图片文件已复制到 static/images/ 目录")
+    if unresolved_documents:
+        print("警告: 以下 wiki 链接无法解析为文档，将保留原样：")
+        for item in sorted(set(unresolved_documents)):
+            print(f"  - {item}")
     
     return result
 
@@ -106,6 +175,7 @@ def preprocess_content_dir(content_dir='content', temp_dir='.hugo_temp_content',
     
     # 获取所有 Markdown 文件
     md_files = list(content_path.rglob('*.md'))
+    wiki_index = build_wikilink_index(content_path)
     updated_count = 0
     skipped_count = 0
     
@@ -131,7 +201,11 @@ def preprocess_content_dir(content_dir='content', temp_dir='.hugo_temp_content',
         content = md_file.read_text(encoding='utf-8')
         # 传递 static/images 目录路径用于验证图片是否存在
         static_images_dir = Path.cwd() / 'static' / 'images'
-        transformed = transform_obsidian_images(content, static_images_dir=static_images_dir)
+        transformed = transform_obsidian_links(
+            content,
+            static_images_dir=static_images_dir,
+            wiki_index=wiki_index,
+        )
         
         # 写入临时文件
         temp_file.write_text(transformed, encoding='utf-8')
