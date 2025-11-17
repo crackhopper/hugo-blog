@@ -1,7 +1,7 @@
 {
   "deleteOption": ".trash",
   "logsModal": true,
-  "excludedFolders": "themes",
+  "excludedFolders": "themes,public,resources",
   "ribbonIcon": true,
   "excludeSubfolders": true
 }
