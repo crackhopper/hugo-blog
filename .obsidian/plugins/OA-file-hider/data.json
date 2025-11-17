@@ -5,6 +5,7 @@
     "public",
     "scripts",
     "themes",
-    "venv"
+    "venv",
+    "resources"
   ]
 }

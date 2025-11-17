@@ -205,8 +205,21 @@ hugo-blog/
 
 ### GitHub Pages
 
-1. 生成静态文件：`hugo`
-2. 将 `public/` 目录的内容推送到 GitHub Pages 仓库
+1. 复制环境变量示例：`cp .env.example .env`（Windows 可使用 `Copy-Item`）
+2. 填写 `.env` 中的：
+   - `DEPLOY_REPO`：GitHub Pages 仓库地址
+   - `DEPLOY_BRANCH`：用于部署的分支
+   - `DEPLOY_DIR`：部署子模块目录（默认 `repo_to_deploy`）
+3. 运行 `.\scripts\deploy.ps1`（`-Force` 跳过未提交更改提示，`-ForcePush` 即使没有新文件也会执行 `git push -f`）
+
+部署脚本流程：
+
+- 自动调用 `scripts/init-deploy-submodule.ps1` 将 `DEPLOY_DIR` 初始化为 git submodule（若尚未存在）
+- 在部署目录中删除除 `.git` 以外的所有文件，确保不会携带旧产物
+- 使用 `hugo --destination <DEPLOY_DIR>` 构建站点
+- 在子模块中提交并推送到 `.env` 配置的仓库/分支
+
+如果你更偏好手动流程，也可以直接执行 `hugo --destination repo_to_deploy`，然后在该目录内提交并推送；但推荐使用脚本以覆盖清理、构建与推送的全流程。
 
 ## 主题管理
 

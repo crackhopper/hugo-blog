@@ -34,3 +34,5 @@ __pycache__/
 workspace.json
 
 .trash/
+
+.env
