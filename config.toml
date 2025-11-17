@@ -17,6 +17,14 @@ theme = 'Stack'
   [params.article]
     math = true
 
+  [params.sidebar]
+    subtitle = 'C++, Graphics, Game, AI/ML'  # 原来的副标题搬过来
+
+    [params.sidebar.avatar]
+      enabled = true
+      local = true
+      src = 'img/avatar.jpg'   # 对应 assets/img/avatar.jpg
+
 [markup]
   [markup.highlight]
     style = 'github'
