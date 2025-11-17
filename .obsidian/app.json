@@ -5,5 +5,13 @@
   "useMarkdownLinks": false,
   "newLinkFormat": "shortest",
   "promptDelete": false,
-  "alwaysUpdateLinks": false
+  "alwaysUpdateLinks": false,
+  "userIgnoreFilters": [
+    "__pycache__/",
+    "public/",
+    "resources",
+    "scripts",
+    "themes/",
+    "venv/"
+  ]
 }

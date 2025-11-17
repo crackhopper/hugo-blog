@@ -2,7 +2,7 @@
 title: Qt之layout
 date: 2022-01-18T13:13:21+08:00
 tags:
-draft: false
+draft: true
 ---
 
 ### 1.布局初步

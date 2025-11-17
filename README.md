@@ -5,44 +5,34 @@
 ## 快速开始
 
 ### 安装 Hugo
+访问 https://gohugo.io/installation/ 安装 Hugo
 
-1. 访问 https://gohugo.io/installation/ 安装 Hugo
-2. 确保安装的是 **Hugo Extended** 版本（Stack 主题需要）
+### 安装 Stack 主题
+Stack 主题通过 Git Submodule 引入，首次克隆仓库后按顺序执行：
 
-### 本地开发
+1. 初始化并同步子模块（常用场景）：
 
-```bash
-# 启动开发服务器（包含草稿）
-hugo server -D
+   ```powershell
+   git submodule update --init --recursive
+   ```
 
-# 启动开发服务器（不包含草稿）
-hugo server
+2. 如需重新添加或切换到 Stack 主题，可运行：
 
-# 生成静态文件
-hugo
+   ```powershell
+   git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/Stack
+   ```
 
-# 生成静态文件（包含草稿）
-hugo -D
-```
+3. 在 `config.toml` 中确认 `theme = 'Stack'`，然后执行 `hugo server` 验证本地预览。
 
-访问 http://localhost:1313/ 查看博客
+> 主题仓库位于 `themes/Stack`，更新主题时只需进入该目录执行 `git pull`。
+
 
 ### 写作全流程脚本
-
 在项目根目录执行 `.\scripts\start-writing.ps1` 可以一键启动完整的写作环境：
-
-1. **环境检查**：确认 Python 及依赖（特别是 `watchdog`）已安装，并运行一次 `scripts/preprocess_obsidian.py --force` 生成 `.hugo_temp_content` 临时目录。
-2. **双目录监听**：脚本会后台运行 `scripts/watch_content.py`，同时监听 `content/` 下的 Markdown 与 `static/images/` 下的图片文件。
-   - Markdown 发生变化时，监听服务会调用 `preprocess_obsidian.py`，把 Obsidian 语法的 `![[image.png]]` 转成 `![image](/images/image.png)` 并写入 `.hugo_temp_content`，Hugo 读取的始终是这个临时目录。
-   - 图片发生变化时，监听服务除了再次触发预处理，还会把 `static/images/` 中的文件同步到 `public/images/`，保证本地预览可以立即访问到最新图片。
-3. **Hugo 开发服务器**：脚本前台运行 `hugo server --contentDir .hugo_temp_content`，按 `Ctrl+C` 可以同时停掉监听与服务器。
-
-> 提示：若不需要监听流程，可直接使用 `scripts/build.ps1 -Server` 启动 Hugo。
 
 ## 编写文章
 
 ### 创建新文章
-
 在 `content/posts/` 目录下创建 Markdown 文件，文件名将作为 URL slug。
 
 ### Front Matter 模板
@@ -150,8 +140,6 @@ menu:
 
 obsidian 配置了自动插入截图并且重命名为 `文章标题-时间.png`，例如 `测试-20251115004604697.png`。
 
-随后图片会被监控脚本复制到 `public/images/` ，文章的链接也会被调整更新，保存到 `.hugo_temp_content/` 中。
-
 ### 3. 文章分类和标签
 
 **分类：** 通过目录结构自动分类，如 `posts/C++/` 下的文章属于 C++ 分类。
@@ -188,7 +176,8 @@ description: 这是文章的摘要
 
 ```
 hugo-blog/
-├── content/            # 内容目录
+├── .obsidian/         # obsidian的设置，以及一些安装的插件。
+├── content/           # 内容目录
 │   ├── _index.md      # 首页配置
 │   ├── posts/         # 博客文章目录
 │   │   ├── C++/       # 分类子目录
@@ -235,7 +224,24 @@ git add themes/Stack
 git commit -m "Update theme"
 ```
 
-配置使用主题：TODO:
+### 配置新主题
+当需要尝试新的 Hugo 主题时，可以沿用以下流程：
+
+1. **引入主题代码**  
+   - 使用 Submodule：`git submodule add <theme_repo_url> themes/<ThemeName>`  
+   - 或者直接将主题下载/复制到 `themes/<ThemeName>`。
+
+2. **切换主题配置**  
+   - 更新 `config.toml` 中的 `theme` 字段为新主题名。  
+   - 按新主题文档补充必需的 `[params]`、菜单、自定义 CSS 等配置。
+
+3. **迁移/合并配置**  
+   - 参照 `themes/<ThemeName>/exampleSite/config.*` 调整本站配置。  
+   - 若主题提供额外的短代码或布局，确认内容文件是否需要相应 Front Matter。
+
+4. **验证与回滚**  
+   - 运行 `hugo server -D` 检查本地显示是否正常（包含草稿）。  
+   - 如需回滚，恢复 `config.toml` 中的 `theme` 字段并移除对应子模块：`git submodule deinit -f themes/<ThemeName>`、`git rm -f themes/<ThemeName>`。
 
 ## 参考资源
 

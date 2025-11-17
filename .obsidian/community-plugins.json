@@ -2,5 +2,6 @@
   "emacs-text-editor",
   "obsidian-heading-shifter",
   "oz-clear-unused-images",
-  "image-converter"
+  "image-converter",
+  "OA-file-hider"
 ]

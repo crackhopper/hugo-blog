@@ -3,11 +3,11 @@ title: cmake进阶
 date: 2020-02-15T20:48:22+08:00
 tags:
   - cmake
-  - c++
   - c
   - 技术
   - 项目管理
-draft: false  
+  - cpp
+draft: true
 ---
 # cmake进阶用法
 ## 变量

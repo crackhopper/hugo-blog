@@ -3,10 +3,10 @@ title: cmake入门
 date: 2020-02-15T20:48:22+08:00
 tags:
   - cmake
-  - c++
   - c
   - 技术
   - 项目管理
+  - cpp
 draft: false
 ---
 

@@ -2,7 +2,7 @@
 title: Qt之图形
 date: 2022-01-19T15:00:00+08:00
 tags:
-draft: false
+draft: true
 ---
 
 ## 二维图形部分

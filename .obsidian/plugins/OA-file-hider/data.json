@@ -1,0 +1,10 @@
+{
+  "hidden": true,
+  "hiddenList": [
+    "__pycache__",
+    "public",
+    "scripts",
+    "themes",
+    "venv"
+  ]
+}

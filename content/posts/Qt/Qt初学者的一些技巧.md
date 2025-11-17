@@ -2,7 +2,7 @@
 title: Qt初学者的一些技巧
 date: 2022-01-18T14:29:34+08:00
 tags:
-draft: false
+draft: true
 ---
 
 ### 1.QtGui头文件

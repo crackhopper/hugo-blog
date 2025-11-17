@@ -28,7 +28,7 @@ $requirementsFile = Join-Path $projectRoot "requirements.txt"
 if (Test-Path $requirementsFile) {
     Write-Host "检查 requirements.txt..." -ForegroundColor Gray
     # 检查是否安装了 watchdog
-    $watchdogCheck = python -c "import watchdog" 2>&1
+    python -c "import watchdog" 2>&1
     if ($LASTEXITCODE -ne 0) {
         Write-Host "警告: watchdog 未安装，正在安装..." -ForegroundColor Yellow
         pip install -r $requirementsFile

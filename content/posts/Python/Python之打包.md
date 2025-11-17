@@ -2,7 +2,7 @@
 title: Python之包管理
 date: 2022-01-17T10:00:00+08:00
 tags:
-draft: false
+draft: true
 ---
 
 # 环境管理
