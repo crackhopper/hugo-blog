@@ -54,6 +54,20 @@ Write-Host ""
 Write-Host "=== 启动服务 ===" -ForegroundColor Cyan
 Write-Host ""
 
+# 清空 public 目录，避免残留文件
+Write-Host "清理 public 目录..." -ForegroundColor Yellow
+$publicDir = Join-Path $projectRoot "public"
+if (Test-Path $publicDir) {
+    try {
+        Remove-Item -Path $publicDir -Recurse -Force
+        Write-Host "✓ 已清空 public 目录" -ForegroundColor Green
+    } catch {
+        Write-Host "警告: 无法清空 public 目录: $_" -ForegroundColor Yellow
+    }
+} else {
+    Write-Host "public 目录不存在，跳过清理" -ForegroundColor Gray
+}
+
 # 启动 Python 监听服务（后台）
 Write-Host "启动 Python 内容监听服务..." -ForegroundColor Yellow
 $pythonJob = Start-Job -ScriptBlock {
@@ -65,12 +79,11 @@ $pythonJob = Start-Job -ScriptBlock {
 Start-Sleep -Seconds 2
 
 # 启动 Hugo 开发服务器（前台）
-Write-Host "启动 Hugo 开发服务器..." -ForegroundColor Yellow
+Write-Host "启动 Hugo 开发服务器（跳过 build.ps1，仅使用预处理内容）..." -ForegroundColor Yellow
 Write-Host "按 Ctrl+C 停止所有服务`n" -ForegroundColor Gray
 
 try {
-    # 使用预处理后的内容目录
-    . ./scripts/build.ps1
+    # 直接以预处理目录启动，不再执行 build.ps1
     hugo server --contentDir .hugo_temp_content
 } finally {
     # 清理：停止 Python 监听服务

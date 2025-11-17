@@ -27,6 +27,18 @@ hugo -D
 
 访问 http://localhost:1313/ 查看博客
 
+### 写作全流程脚本
+
+在项目根目录执行 `.\scripts\start-writing.ps1` 可以一键启动完整的写作环境：
+
+1. **环境检查**：确认 Python 及依赖（特别是 `watchdog`）已安装，并运行一次 `scripts/preprocess_obsidian.py --force` 生成 `.hugo_temp_content` 临时目录。
+2. **双目录监听**：脚本会后台运行 `scripts/watch_content.py`，同时监听 `content/` 下的 Markdown 与 `static/images/` 下的图片文件。
+   - Markdown 发生变化时，监听服务会调用 `preprocess_obsidian.py`，把 Obsidian 语法的 `![[image.png]]` 转成 `![image](/images/image.png)` 并写入 `.hugo_temp_content`，Hugo 读取的始终是这个临时目录。
+   - 图片发生变化时，监听服务除了再次触发预处理，还会把 `static/images/` 中的文件同步到 `public/images/`，保证本地预览可以立即访问到最新图片。
+3. **Hugo 开发服务器**：脚本前台运行 `hugo server --contentDir .hugo_temp_content`，按 `Ctrl+C` 可以同时停掉监听与服务器。
+
+> 提示：若不需要监听流程，可直接使用 `scripts/build.ps1 -Server` 启动 Hugo。
+
 ## 编写文章
 
 ### 创建新文章
@@ -48,34 +60,7 @@ draft: false  # true 表示草稿，false 表示已发布
 ---
 ```
 
-### 编写草稿
-
-**方法 1：在 Front Matter 中设置**
-
-```yaml
----
-title: 我的草稿文章
-date: 2024-01-01T10:00:00+08:00
-draft: true  # 设置为 true
----
-```
-
-**方法 2：使用 Hugo 命令创建**
-
-```bash
-hugo new posts/我的新文章.md
-```
-
-默认创建的模板中 `draft: true`，编辑完成后改为 `false` 即可发布。
-
-**预览草稿：**
-
-```bash
-# 启动服务器时包含草稿
-hugo server -D
-```
-
-草稿文章不会出现在首页，但可以通过直接访问 URL 查看。
+可以使用 Obsidian 的 插入模板指令 （默认快键 alt+shift+insert） 来插入 `新文章` 模板，从而插入了 Front Matter 模板。
 
 ### 数学公式支持
 
@@ -91,12 +76,6 @@ hugo server -D
 
 在文章的 Front Matter 中，可以单独为某篇文章启用数学公式：
 
-```yaml
----
-title: 数学文章
-math: true  # 启用数学公式
----
-```
 
 ## Content 目录配置
 
@@ -105,92 +84,17 @@ math: true  # 启用数学公式
 ### posts/ - 博客文章
 
 **用途：** 存放博客文章，是网站的主要内容。
-
-**配置：**
-- **Permalink：** `/:year/:month/:day/:title/`（在 `config.toml` 中配置）
-- **URL 示例：** `/2024/01/01/文章标题/`
-- **Front Matter 示例：**
-
-```yaml
----
-title: 文章标题
-date: 2024-01-01T10:00:00+08:00
-tags:
-  - 标签1
-  - 标签2
-draft: false
----
-```
-
 **目录结构：** 可以在 `posts/` 下创建子目录分类，如 `posts/C++/`、`posts/Python/` 等，不影响 URL 结构。
 
 ### notes/ - 笔记
 
 **用途：** 存放学习笔记和理论知识整理。
 
-**配置：**
-- **Permalink：** `/notes/:slug/`（在 `config.toml` 中配置）
-- **URL 示例：** `/notes/笔记标题/`
-- **需要创建 `_index.md` 作为列表页：**
-
-```yaml
----
-title: 笔记
-date: 2024-01-01T10:00:00+08:00
-draft: false
-menu:
-    main:
-        name: 笔记
-        weight: -80
-        params:
-            icon: hash
----
-```
-
-**说明：** `menu` 配置用于在导航菜单中显示，`weight` 控制菜单顺序（数值越小越靠前），`icon` 设置菜单图标。
-
 ### projects/ - 项目
-
 **用途：** 展示个人项目。
 
-**配置：**
-- **Permalink：** `/projects/:slug/`（在 `config.toml` 中配置）
-- **URL 示例：** `/projects/项目名称/`
-- **需要创建 `_index.md` 作为列表页：**
-
-```yaml
----
-title: 项目
-date: 2024-01-01T10:00:00+08:00
-draft: false
-menu:
-    main:
-        name: 项目
-        weight: -70
-        params:
-            icon: link
----
-```
-
-**项目页面 Front Matter 示例：**
-
-```yaml
----
-title: 项目名称
-date: 2024-01-01T10:00:00+08:00
-draft: false
-image: /images/project-cover.jpg  # 项目封面图
----
-```
-
 ### page/ - 独立页面
-
 **用途：** 存放独立页面，如"关于"、"归档"等。
-
-**配置：**
-- **Permalink：** `/:slug/`（在 `config.toml` 中配置）
-- **URL 示例：** `/about/`、`/archives/`
-- **需要创建子目录和 `index.md`：**
 
 ```
 page/
@@ -198,22 +102,6 @@ page/
 │   └── index.md
 └── archives/
     └── index.md
-```
-
-**页面 Front Matter 示例：**
-
-```yaml
----
-title: 关于我
-date: 2024-01-01T10:00:00+08:00
-draft: false
-slug: about
-menu:
-    main:
-        weight: -90
-        params:
-            icon: user
----
 ```
 
 ### _index.md - 首页配置
@@ -260,19 +148,9 @@ menu:
 
 **静态资源位置：** `static/images/`
 
-**在文章中使用：**
+obsidian 配置了自动插入截图并且重命名为 `文章标题-时间.png`，例如 `测试-20251115004604697.png`。
 
-```markdown
-![图片描述](/images/文章标题/图片名.png)
-```
-
-**在 Front Matter 中使用：**
-
-```yaml
----
-image: /images/cover.jpg  # 文章封面图
----
-```
+随后图片会被监控脚本复制到 `public/images/` ，文章的链接也会被调整更新，保存到 `.hugo_temp_content/` 中。
 
 ### 3. 文章分类和标签
 
@@ -301,49 +179,8 @@ description: 这是文章的摘要
 
 **方法 2：** 在文章中使用 `<!--more-->` 分隔符，之前的内容作为摘要。
 
-### 5. 代码高亮
 
-已在 `config.toml` 中配置代码高亮：
-
-```toml
-[markup.highlight]
-  style = 'github'
-  lineNos = true
-```
-
-**使用示例：**
-
-````markdown
-```python
-def hello():
-    print("Hello, World!")
-```
-````
-
-### 6. 数学公式
-
-全局已启用数学公式，使用 LaTeX 语法：
-
-- 行内公式：`$E = mc^2$`
-- 块级公式：使用 `$$...$$`
-
-### 7. 草稿管理
-
-**创建草稿：**
-
-```bash
-hugo new posts/新文章.md
-```
-
-默认创建的模板中 `draft: true`。
-
-**预览草稿：**
-
-```bash
-hugo server -D
-```
-
-### 8. 自定义样式
+### 5. 自定义样式
 
 可以在 `static/` 目录下创建自定义 CSS 文件，然后在 `config.toml` 中引入。
 
@@ -382,36 +219,6 @@ hugo-blog/
 1. 生成静态文件：`hugo`
 2. 将 `public/` 目录的内容推送到 GitHub Pages 仓库
 
-### 使用 GitHub Actions（推荐）
-
-创建 `.github/workflows/deploy.yml`：
-
-```yaml
-name: Deploy Hugo
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: true
-      - uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
-      - run: hugo
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-```
-
 ## 主题管理
 
 Stack 主题通过 Git Submodule 管理：
@@ -428,21 +235,7 @@ git add themes/Stack
 git commit -m "Update theme"
 ```
 
-## 常用命令
-
-```bash
-# 创建新文章
-hugo new posts/文章标题.md
-
-# 本地预览（包含草稿）
-hugo server -D
-
-# 构建生产版本
-hugo --minify
-
-# 检查配置
-hugo config
-```
+配置使用主题：TODO:
 
 ## 参考资源
 

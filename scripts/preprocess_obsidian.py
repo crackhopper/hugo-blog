@@ -18,10 +18,19 @@ def get_file_hash(file_path):
     with open(file_path, 'rb') as f:
         return hashlib.md5(f.read()).hexdigest()
 
-def transform_obsidian_images(content):
+def transform_obsidian_images(content, static_images_dir=None):
     """将 Obsidian 图片语法转换为标准 Markdown 图片语法或 HTML img 标签"""
     # 匹配 Obsidian 图片语法: ![[filename.png]] 或 ![[filename.png|296]]
     pattern = r'!\[\[([^\]]+)\]\]'
+    
+    # 如果提供了 static_images_dir，用于验证图片是否存在
+    project_root = Path.cwd()
+    if static_images_dir is None:
+        static_images_dir = project_root / 'static' / 'images'
+    else:
+        static_images_dir = Path(static_images_dir)
+    
+    missing_images = []
     
     def replace_func(match):
         full_match = match.group(1).strip()
@@ -31,18 +40,35 @@ def transform_obsidian_images(content):
             parts = full_match.split('|', 1)
             filename = parts[0].strip()
             width = parts[1].strip()
-            # 使用文件名（不含扩展名）作为 alt text
-            alt_text = Path(filename).stem
+        else:
+            filename = full_match
+        
+        # 验证图片文件是否存在
+        image_path = static_images_dir / filename
+        if not image_path.exists():
+            missing_images.append(filename)
+        
+        # 使用文件名（不含扩展名）作为 alt text
+        alt_text = Path(filename).stem
+        
+        # 检查是否包含宽度参数（用 | 分隔）
+        if '|' in full_match:
             # 转换为 HTML img 标签，包含 width 属性（Hugo 需要启用 unsafe = true）
             return f'<img src="/images/{filename}" alt="{alt_text}" width="{width}" loading="lazy" />'
         else:
-            filename = full_match
-            # 使用文件名（不含扩展名）作为 alt text
-            alt_text = Path(filename).stem
             # 转换为标准 Markdown 图片语法，路径指向 /images/ 目录
             return f"![{alt_text}](/images/{filename})"
     
-    return re.sub(pattern, replace_func, content)
+    result = re.sub(pattern, replace_func, content)
+    
+    # 如果有缺失的图片，输出警告
+    if missing_images:
+        print(f"警告: 以下图片文件不存在于 {static_images_dir}:")
+        for img in missing_images:
+            print(f"  - {img}")
+        print("提示: 请确保图片文件已复制到 static/images/ 目录")
+    
+    return result
 
 def preprocess_content_dir(content_dir='content', temp_dir='.hugo_temp_content', force=False):
     """
@@ -103,7 +129,9 @@ def preprocess_content_dir(content_dir='content', temp_dir='.hugo_temp_content',
         
         # 读取并转换内容
         content = md_file.read_text(encoding='utf-8')
-        transformed = transform_obsidian_images(content)
+        # 传递 static/images 目录路径用于验证图片是否存在
+        static_images_dir = Path.cwd() / 'static' / 'images'
+        transformed = transform_obsidian_images(content, static_images_dir=static_images_dir)
         
         # 写入临时文件
         temp_file.write_text(transformed, encoding='utf-8')

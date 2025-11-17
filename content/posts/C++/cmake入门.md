@@ -39,6 +39,7 @@ cmake <project_dir>
 看一个简单的例子，目录层级如下：
 ![最简单的cmake](/images/cmake-tutorial/hello-world.png)
 
+![[cmake-tutorial/hello-world.png]]
 其中，两个文件的内容：
 
 **helloworld.cpp**

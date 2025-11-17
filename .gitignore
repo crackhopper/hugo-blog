@@ -32,3 +32,5 @@ db.json
 __pycache__/
 
 workspace.json
+
+.trash/

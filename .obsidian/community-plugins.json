@@ -1,5 +1,6 @@
 [
   "emacs-text-editor",
-  "image-converter",
-  "obsidian-heading-shifter"
+  "obsidian-heading-shifter",
+  "oz-clear-unused-images",
+  "image-converter"
 ]

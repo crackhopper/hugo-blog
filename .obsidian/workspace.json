@@ -11,10 +11,14 @@
             "id": "40a99f17b3c7acbc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/C++/cmake入门.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "cmake入门"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 394.5
   },
   "right": {
     "id": "3e59d233495d4142",
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "content/posts/测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "测试 的反向链接列表"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "content/posts/测试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "出链"
+              "title": "测试 的出链列表"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "content/posts/测试.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "测试 的大纲"
             }
           }
         ]
@@ -173,32 +180,38 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:创建新数据库": false
+      "bases:创建新数据库": false,
+      "oz-clear-unused-images:Clear Unused Images": false
     }
   },
   "active": "40a99f17b3c7acbc",
   "lastOpenFiles": [
+    "scripts/convert_images_to_wikilinks.py",
+    "content/posts/C++/CMake的坑.md",
     "content/posts/测试.md",
-    "public/归档/index.html",
-    "public/归档",
-    "public/2022/01/20/qt之输入控件/index.html",
-    "public/2022/01/20/qt之输入控件",
-    "public/2022/01/18/qt之常见容器/index.html",
-    "public/2022/01/18/qt之常见容器",
-    "public/2022/01/18/qt之qtablewidget/index.html",
-    "public/2022/01/18/qt之qtablewidget",
-    "public/2022/01/18/qt之buttons/index.html",
-    "public/2022/01/18/qt之buttons",
-    "public/images/测试-20251115020030068.png",
-    "public/images/测试-20251115020029880.png",
-    "public/images/测试-20251115020029631.png",
-    "public/images/测试-20251115020029550.png",
-    "static/images/测试-20251115020029537.png",
-    "public/images/测试-20251115015617036.png",
-    "public/images/测试-20251115015617575.png",
-    "public/images/测试-20251115015617388.png",
-    "public/images/测试-20251115015617229.png",
-    "public/images/Pasted image 20251115015616.png",
+    "public/images/let-us-write-compiler/compile.png",
+    "static/images/let-us-write-compiler/compile.png",
+    "public/images/cmake-tutorial/static-lib.png",
+    "static/images/cmake-tutorial/static-lib.png",
+    "public/images/cmake-tutorial/static-lib-s.png",
+    "static/images/cmake-tutorial/static-lib-s.png",
+    "public/images/cmake-tutorial/static-lib-res.png",
+    "static/images/cmake-tutorial/static-lib-res.png",
+    "public/images/cmake-tutorial/out-build.png",
+    "static/images/cmake-tutorial/out-build.png",
+    "public/tags/随想/page/1/index.html",
+    "public/tags/项目管理/page/1/index.html",
+    "public/tags/编译器/page/1/index.html",
+    "public/tags/随笔/page/1/index.html",
+    "public/tags/编译原理/page/1/index.html",
+    "public/tags/心情/page/1/index.html",
+    "public/tags/笔记/page/1/index.html",
+    "public/tags/教程/page/1/index.html",
+    "public/tags/技术/page/1/index.html",
+    "public/tags/商业/page/1/index.html",
+    "content/notes/矩阵初步.md",
+    "content/posts/C++/cmake进阶.md",
+    "content/posts/C++/cmake-advance.md",
     "venv/Lib/site-packages/pip-25.3.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
     "venv/Lib/site-packages/pip/_vendor/idna/LICENSE.md",
     "TROUBLESHOOTING.md",
@@ -212,7 +225,6 @@
     "content/page/about/index.md",
     "content/notes/开源协议详解.md",
     "content/notes/数据库六大范式.md",
-    "content/notes/矩阵初步.md",
     "content/notes/数学之不动点定理.md",
     "content/posts/随笔/起点从这里开始.md",
     "content/posts/随笔/对幸福的思考.md",
@@ -220,10 +232,6 @@
     "content/posts/编译器/小白学写编译器：1.编译基础概念.md",
     "content/posts/其他技术/关于用emacs记笔记.md",
     "content/posts/其他技术/Vega-lite初体验.md",
-    "content/posts/其他技术/Teaching-and-Learning-with-Jupyter.md",
-    "content/posts/其他技术/React之初体验.md",
-    "content/posts/其他技术/OpenCV相机矫正.md",
-    "content/posts/其他技术/Jupyter用户文档.md",
     "未命名.canvas"
   ]
 }
