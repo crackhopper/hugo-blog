@@ -503,66 +503,11 @@ VK_LOADER_LAYERS_DISABLE=*wegame*
 ```
 
 
-# 遗留问题未解决！igvk64被反复调用
-最好是在系统环境变量中，直接设定上面的环境变量。这样windbg启动的时候，环境变量自然也生效了。
-
-检查环境变量是否设定成功，启动调试后：
-```
-!peb
-```
-
-不过，即使设定了环境变量，我们断点 
-```
-bp KERNELBASE!CreateFileW "r rcx; du @rcx; k L3; g"
-```
-
-日志目前不产生了。但是，仍然会有大量的打开文件操作。
-
-从堆栈可以看出：
-```
-[0x0]   igvk64!ctlTemperatureGetState+0x73ea6a   0xcb4b753750   0x7ff9329718a0   
-[0x1]   igvk64!ctlTemperatureGetState+0x73c020   0xcb4b753b40   0x7ff93296ecfb   
-[0x2]   igvk64!ctlTemperatureGetState+0x73947b   0xcb4b753ce0   0x7ff93296e00b   
-[0x3]   igvk64!ctlTemperatureGetState+0x73878b   0xcb4b753d20   0x7ff932964276   
-[0x4]   igvk64!ctlTemperatureGetState+0x72e9f6   0xcb4b753d70   0x7ff93211040f   
-[0x5]   igvk64!DumpRegistryKeyDefinitions+0x1c605f   0xcb4b753ee0   0x7ff9321007fb   
-[0x6]   igvk64!DumpRegistryKeyDefinitions+0x1b644b   0xcb4b7544e0   0x7ff9320e76a4   
-[0x7]   igvk64!DumpRegistryKeyDefinitions+0x19d2f4   0xcb4b754650   0x7ff9320d1bd5   
-[0x8]   igvk64!DumpRegistryKeyDefinitions+0x187825   0xcb4b754700   0x7ff9320431e6   
-[0x9]   igvk64!DumpRegistryKeyDefinitions+0xf8e36   0xcb4b754750   0x7ff932027534   
-[0xa]   igvk64!DumpRegistryKeyDefinitions+0xdd184   0xcb4b76b960   0x7ff931ffec7d   
-[0xb]   igvk64!DumpRegistryKeyDefinitions+0xb48cd   0xcb4b76b9d0   0x7ff931f80ca5   
-[0xc]   igvk64!DumpRegistryKeyDefinitions+0x368f5   0xcb4b76ba20   0x7ff9378dc6dc   
-[0xd]   vulkan_1!vkResetEvent+0x4b14c   0xcb4b76baf0   0x7ff9378c3652   
-[0xe]   vulkan_1!vkResetEvent+0x320c2   0xcb4b76bc50   0x7ff9378e751e   
-[0xf]   vulkan_1!vkResetEvent+0x55f8e   0xcb4b76be40   0x7ff630566b2f   
-[0x10]   VulkanGLFWDemo+0x6b2f   0xcb4b76f250   0x7ff630567e80   
-
-```
-
-因为是release外加关闭了implicit layers。所以没有任何validation layers干扰。但是，vulkan还是会产生大量 igvk64模块的调用。
-## AI解释
-`igvk64` 很可能是 Intel 的 Vulkan ICD / 驱动相关模块（或 Intel GPU 的 Vulkan 支持库/监控库）。Vulkan loader 在进程初始化 / 创建实例时会把系统里注册的所有 ICD（以及某些层）都载入并初始化——因此即便你最后用的是 NVIDIA 的物理设备，Intel 的 ICD 也可能会被加载并执行初始化代码（查询注册表、查询温度/设备信息、打开设备/日志文件等），这就会看到大量 `CreateFileW` / 注册表读取 等操作，堆栈里就会出现 `igvk64` 的函数。
-
-**关于ICD机制，更多参见：** [Vulkan的ICD机制]({{< relref "notes/Vulkan/Vulkan的ICD机制.md" >}})
+# 遗留问题未解决！intel驱动总被调用
+由于内容比较多，单独开了一个帖子来记录。这个问题当前没找到解决方案。
 
 
-## 验证是不是ICD问题
-环境变量设定 
+[Vulkan程序中Intel驱动总是被调用（未解决）]({{< relref "posts/Vulkan/Vulkan程序中Intel驱动总是被调用（未解决）.md" >}})
 
-```
-VK_DRIVER_FILES=C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_c6ae241e95feb82d\nv-vk64.json
-```
 
-检查环境变量是否设定成功，启动调试后：
-```
-!peb
-```
 
-确认了环境变量成功设置。
-
-测试结果：如果仅限定加载nvidia的ICD，那么程序创建 vkCreateInstance会失败，返回错误码。-9 VK_ERROR_INCOMPATIBLE_DRIVER。
-
-所以还不能仅限定一个ICD。
-
-目前只知道是intel的icd驱动问题，导致了频繁的调用。但这个还无法限制，暂时不知道为什么。

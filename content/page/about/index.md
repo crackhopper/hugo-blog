@@ -16,16 +16,14 @@ menu:
 
 ### 技术栈
 
-- **编程语言**: C++, Python, JavaScript
-- **图形学**: OpenGL, 游戏引擎开发
-- **机器学习**: 计算机视觉, 深度学习
+- **编程语言**: TypeScript, C++, Go, Python
+- **游戏开发**: Vulkan, cocos
+- **AI方面**: Diffusion Model, LLM, Agent
 - **Web开发**: 全栈开发
 
 ### 兴趣领域
-
 - C++, Graphics, Game, AI/ML
 - 游戏引擎开发
-- 编译器技术
 - 独立游戏开发
 
 ### 联系方式
