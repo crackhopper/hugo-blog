@@ -1,5 +1,5 @@
 ---
-title: Vulkan程序中Intel驱动总是被调用
+title: Vulkan程序中Intel驱动总是被调用（未解决）
 date: 2025-11-21T12:53:06+08:00
 tags:
   - vulkan
