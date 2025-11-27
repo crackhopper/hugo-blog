@@ -57,14 +57,7 @@
       "key": "."
     }
   ],
-  "emacs-text-editor:forward-char": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "F"
-    }
-  ],
+  "emacs-text-editor:forward-char": [],
   "emacs-text-editor:forward-word": [
     {
       "modifiers": [
