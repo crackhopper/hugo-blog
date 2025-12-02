@@ -1,5 +1,5 @@
 # Scheduled
-- [[buf.build工具]]
+- [[buf和connectrpc入门01]]
 - [[Kalfka一些知识的总结01]]
 - [[grpc-gateway的配置和用法]]
 
