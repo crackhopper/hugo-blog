@@ -8,12 +8,17 @@ tags:
 draft: false
 ---
 
+继续深入 Vulkan 的绘制教程。当然我这里内容会比官方文档更深入一些。
+
+如标题所示，主要讲VB的使用。
+
 <!--more-->
-## 正文开始
 
 
 # 顶点输入描述(Vertex Input Desciption)
+
 ## Vertex Shader的修改
+
 ```glsl
 #version 450
 

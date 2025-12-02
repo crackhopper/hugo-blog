@@ -1,6 +1,6 @@
 [submodule "themes/Stack"]
 	path = themes/Stack
-	url = https://github.com/CaiJimmy/hugo-theme-stack.git
+	url = git@github.com:crackhopper/hugo-theme-stack.git
 [submodule "repo_to_deploy"]
 	path = repo_to_deploy
 	url = git@github.com:crackhopper/crackhopper.github.io.git

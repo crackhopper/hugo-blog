@@ -1,0 +1,12 @@
+{{/* 加载用户自定义的纯 CSS 文件 */}}
+{{ with .Site.Params.customCSS }}
+    {{ range . }}
+        {{ $css := resources.Get . }}
+        {{ if $css }}
+            {{/* 仅使用 RelPermalink 或 Permalink 加载，不进行额外的 ToCSS 处理 */}}
+            <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+        {{ else }}
+            {{ warnf "Custom CSS file not found at path: %s" . }}
+        {{ end }}
+    {{ end }}
+{{ end }}

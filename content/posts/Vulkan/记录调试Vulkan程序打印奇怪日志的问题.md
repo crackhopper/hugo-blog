@@ -43,7 +43,7 @@ AI可以不停的给我提出各种各样没用的方案。
 考虑到，程序无非就是二进制在CPU上跑，我直接动态调试二进制程序不就可以了？于是开启了我的WinDbg之路。
 
 ## WinDbg
-**关于 WinDbg 的使用，更多参见** [WinDbg的初级用法]({{< relref "notes/调试/WinDbg的初级用法.md" >}})
+**关于 WinDbg 的使用，更多参见** [WinDbg的初级用法]({{< relref "posts/调试/WinDbg的初级用法.md" >}})
 
 
 # 问题定位
@@ -480,7 +480,7 @@ start             end                 module name
 ### 原因
 vulkan初始化的时候，会检查注册表，加载所有 `Implicit Layer` 的配置（manifest）。这样同样也会加载对应的dll。这就是为什么 WeGame 的Layer被加载了。（vulkan的这个功能似乎很有安全问题啊！）
 
-**关于validation layer发现机制，更多参见**： [Vulkan的Layer发现机制和debug]({{< relref "notes/Vulkan/Vulkan的Layer发现机制和debug.md" >}})
+**关于validation layer发现机制，更多参见**： [Vulkan的Layer发现机制和debug]({{< relref "posts/Vulkan/Vulkan的Layer发现机制和debug.md" >}})
 
 # 神秘日志问题解决！
 

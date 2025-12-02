@@ -9,6 +9,8 @@ draft: false
 ---
 起因开始于 [记录调试Vulkan程序打印奇怪日志的问题]({{< relref "posts/Vulkan/记录调试Vulkan程序打印奇怪日志的问题.md" >}})
 
+这篇文章详细展开了 WinDbg 的基础用法。
+
 
 <!--more-->
 # 正文开始

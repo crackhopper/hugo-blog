@@ -3,7 +3,7 @@
   "useMarkdownLinks": false,
   "newLinkFormat": "shortest",
   "promptDelete": false,
-  "alwaysUpdateLinks": false,
+  "alwaysUpdateLinks": true,
   "userIgnoreFilters": [
     "__pycache__/",
     "public/",

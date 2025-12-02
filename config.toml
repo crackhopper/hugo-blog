@@ -9,6 +9,7 @@ theme = 'Stack'
   subtitle = 'C++, Graphics, Game, AI/ML'
   description = '爱游戏的技术宅'
   keywords = 'crackhopper, developer, graphics, game, c++'
+  customCSS = ['css/custom.css']
 
   [params.author]
     name = 'crackhopper'
@@ -25,7 +26,15 @@ theme = 'Stack'
       local = true
       src = 'img/avatar.jpg'   # 对应 assets/img/avatar.jpg
 
+  [params.widgets]
+    [[params.widgets.page]]  # 针对文章单页的侧边栏
+      type = 'toc'
+
 [markup]
+  [markup.tableOfContents]
+    startLevel = 1 # 从 H2 (##) 开始生成 TOC
+    endLevel = 4   # 到 H4 (####) 结束
+    ordered = false # 使用无序列表
   [markup.highlight]
     style = 'github'
     lineNos = true
@@ -53,7 +62,6 @@ theme = 'Stack'
   posts = '/:year/:month/:day/:title/'
   page = '/:slug/'
   projects = '/projects/:slug/'
-  notes = '/notes/:slug/'
 
 # Content Transform: 在解析 Markdown 之前转换 Obsidian 图片语法
 # 注意：这需要 Hugo 0.100.0+ 版本

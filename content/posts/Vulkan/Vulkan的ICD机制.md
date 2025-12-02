@@ -7,6 +7,8 @@ tags:
 draft: false
 ---
 
+不甘心解决不了 igvk 的频繁调用问题的我，深入研究了一下ICD机制。尝试手动指定ICD来启动Vulkan，看能否解决问题。
+
 <!--more-->
 # 什么是 Vulkan ICD？
 

@@ -8,14 +8,15 @@ tags:
   - debug
 draft: false
 ---
-基于官方文档： https://chromium.googlesource.com/external/github.com/KhronosGroup/Vulkan-Loader/%2B/HEAD/loader/LoaderAndLayerInterface.md#layer-discovery 的翻译和整理。
+这篇文章是我解决Vulkan神秘日志问题的副产品，主要基于文档 [LoaderAndLayerInterface.md](https://chromium.googlesource.com/external/github.com/KhronosGroup/Vulkan-Loader/%2B/HEAD/loader/LoaderAndLayerInterface.md#layer-discovery)
+，讲解了Vulkan的Layer发现机制。
 
-其中，特别用quote块和一些插图是我添加的评论和注释。
-
-快速总结(指定layer的做法)
+快速总结(指定layer的加载做法)
 - 利用 `VK_LAYER_PATH` 环境变量，强制只加载指定的layer。
 - 利用 `VK_LOADER_LAYERS_DISABLE=~implicit~` 禁用所有 implicit layer。
 - 利用 `VK_LOADER_LAYERS_DISABLE=*wegame*` 禁用wegame layer。
+
+p.s. 用quote块和一些插图是我添加的评论和注释。
 
 <!--more-->
 # **Layer Discovery（Layer 发现）**
@@ -198,4 +199,4 @@ set VK_LOADER_LAYERS_ALLOW=*steam*,*Mesa*
 ```
 
 # 更多
-[Vulkan的ICD机制]({{< relref "notes/Vulkan/Vulkan的ICD机制.md" >}})
+[Vulkan的ICD机制]({{< relref "posts/Vulkan/Vulkan的ICD机制.md" >}})

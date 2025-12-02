@@ -7,9 +7,15 @@ tags:
 draft: false
 ---
 
-<!--more-->
-## 正文开始
+C++11之后，字符串有很多新特性。这里主要罗列了所有特性，需要重点关注 
+- 明确编码字面量
+- Raw String Literals
+- User-Defined Literals
+- `std::string_view`
+- 以及一些 便利函数 
 
+
+<!--more-->
 
 # 宽字符串 L"" (老特性)
 这个是老特性了。L代表宽字符串。它的字符集取决于你使用的编译器和平台，但它的核心是对应于 `wchar_t` 类型的：
