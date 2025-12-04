@@ -1,10 +1,10 @@
-# Scheduled
-- [[buf和connectrpc入门01]]
-- [[Kalfka一些知识的总结01]]
-- [[grpc-gateway的配置和用法]]
+# Doing
+
 
 # Waiting
 ## QUANT
+- [[Kalfka一些知识的总结01]]
+
 - [[Go和GORM的补充知识01]]
 - [[Deno入门相关知识01]] (deno不用了！！)
 - [[TypeScript链式调用与串行锁]]

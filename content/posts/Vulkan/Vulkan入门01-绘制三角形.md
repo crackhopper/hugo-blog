@@ -252,6 +252,127 @@ add_custom_target(CompileShaders
 )
 ```
 
+## 完整的cmake配置
+主CMakeLists.txt
+```cmake
+cmake_minimum_required(VERSION 3.16)
+project(VulkanGLFWDemo LANGUAGES C CXX)
+
+# 设定 C++ 20
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# 设置编译器编码选项
+if(MSVC)
+    # MSVC: 明确指定使用 UTF-8
+    add_compile_options(/utf-8)
+else()
+    # GCC/Clang: 设置源码字符集
+    add_compile_options(-finput-charset=UTF-8)
+    add_compile_options(-fexec-charset=UTF-8)
+endif()
+# 定义一个预编译宏，方便我们自己使用
+add_definitions(-D_UTF8_SOURCE)
+
+
+
+# -------------------------------
+# Vulkan
+# -------------------------------
+find_package(Vulkan REQUIRED)
+if(NOT Vulkan_FOUND)
+    message(FATAL_ERROR "Vulkan SDK not found")
+endif()
+
+# -------------------------------
+# GLFW
+# -------------------------------
+# 使用源码方式构建
+add_subdirectory(external/glfw-3.4)
+
+# -------------------------------
+# 主项目
+# -------------------------------
+set(SOURCES
+    src/main.cpp
+    src/utils.cpp
+)
+add_executable(${PROJECT_NAME} ${SOURCES})
+target_link_libraries(${PROJECT_NAME} PRIVATE Vulkan::Vulkan glfw)
+# 下面这个目录方便引入一些header-only的库
+target_include_directories(${PROJECT_NAME} PRIVATE include)
+# -------------------------------
+# Windows 特殊：定义宏
+# 关闭MSVC的安全警告，例如，用 strcpy_s 替代 strcpy，用 scanf_s 替代 scanf
+# 提高可移植性
+# -------------------------------
+if (WIN32)
+    target_compile_definitions(${PROJECT_NAME} PRIVATE "_CRT_SECURE_NO_WARNINGS")
+endif()
+
+
+
+
+# 引入shader编译的target
+add_subdirectory(shaders)
+add_dependencies(${PROJECT_NAME} CompileShaders)
+
+```
+
+shader目录
+```cmake
+# 添加使用 glslc.exe 编译shader 为 .spv 的目标
+find_program(GLSLC_EXECUTABLE
+    NAMES glslc
+    HINTS $ENV{VULKAN_SDK}/Bin $ENV{VULKAN_SDK}/x86_64/bin
+    REQUIRED
+)
+
+# 定义 shader 目录和输出目录
+set(SHADER_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+set(SHADER_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR})
+file(MAKE_DIRECTORY ${SHADER_OUTPUT_DIR})
+
+# 自动查找所有着色器文件
+file(GLOB SHADER_FILES
+    "${SHADER_DIR}/*.vert"
+    "${SHADER_DIR}/*.frag"
+    # ...可以添加更多类型，如.comp, .geom等
+)
+
+set(SPV_FILES "") # 用于存储所有生成的.spv文件路径
+
+foreach(SHADER_FILE ${SHADER_FILES})
+    # 获取着色器文件的完整文件名（例如: shader.vert）
+    get_filename_component(BASE_NAME ${SHADER_FILE} NAME) 
+    message(STATUS "Shader file: ${SHADER_FILE}")
+    
+    # 构造输出 .spv 文件的完整路径
+    # 示例: .../shaders/shader.vert.spv
+    set(OUTPUT_SPV "${SHADER_OUTPUT_DIR}/${BASE_NAME}.spv") 
+    message(STATUS "Output SPV file: ${OUTPUT_SPV}")
+
+    # 将生成的 .spv 文件添加到列表中
+    list(APPEND SPV_FILES "${OUTPUT_SPV}")
+
+    # 定义自定义编译命令
+    add_custom_command(
+        OUTPUT "${OUTPUT_SPV}"
+        COMMAND "${GLSLC_EXECUTABLE}"
+            -o "${OUTPUT_SPV}"
+            "${SHADER_FILE}"
+        DEPENDS "${SHADER_FILE}"
+        COMMENT "Compiling shader: ${BASE_NAME}"
+        VERBATIM
+    )
+endforeach()
+
+# 创建目标依赖所有生成的 .spv 文件
+add_custom_target(CompileShaders
+    DEPENDS ${SPV_FILES}
+)
+```
+
 # GLFW窗口初始化
 ```cpp
 // 它初始化了 GLFW 内部的所有必需组件，包括系统计时器、线程、以及输入系统（键盘、鼠标等）。
@@ -603,6 +724,9 @@ dependency.srcAccessMask = 0;
 dependency.dstStageMask = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT;
 dependency.dstAccessMask = VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT;
 ```
+
+一句话解释: **在 src stage / access 完成前，dst stage / access 不能执行**
+
 类比：
 - subpass:
 	- src: 上一个人。
@@ -614,8 +738,10 @@ dependency.dstAccessMask = VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT;
 	- src: 上一个人需完成的动作 srcAccess（等待触发的条件，如果src正在完成某个访问）
 	- dst: 下一个人将要完成的动作 dstAccess（等待触发的时刻，dst要执行某个访问）
 
-用一句话简单描述：
-**当下一个人（将要进入 dstStage&&dstAccess 所定义的状态时），需要看一下上一个人（src是否在 srcStage &&  srcAccess 所定义的状态；如果在，则等待其离开）**。
+简化的过程描述：
+- 当下一个人（将要进入 dstStage&&dstAccess 所定义的状态时）
+- 检查barrier：看上一个人（src是否在 srcStage &&  srcAccess 所定义的状态）。
+	- 触发barrier：如果上一个人正处于对应阶段的对应操作，则等待其离开。
 
 代码里的，效果来说：
 1. 当subpass执行到要对颜色附件写入阶段，并且要获取AccessMask的动作时：

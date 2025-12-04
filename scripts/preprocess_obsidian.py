@@ -12,6 +12,17 @@ import shutil
 import hashlib
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
+from urllib.parse import quote
+
+def url_encode_path(path: str) -> str:
+  """
+  对 URL 路径进行安全编码：
+  - 保留 / 作为路径分隔
+  - 编码空格等非法字符
+  - 不破坏中文
+  """
+  # safe='/' 表示路径分隔符不编码
+  return quote(path, safe='/-_.~')
 
 
 def slugify_title(title: str) -> str:
@@ -187,8 +198,14 @@ def transform_obsidian_links(content, static_images_dir=None, wiki_index=None):
       if not image_path.exists():
         missing_images.append(target)
       if width:
-        return f'<img src="/images/{target}" alt="{alt_text}" width="{width}" loading="lazy" />'
-      return f"![{alt_text}](/images/{target})"
+        encoded_target = url_encode_path(target)
+        return (
+          f'<img src="/images/{encoded_target}" '
+          f'alt="{alt_text}" width="{width}" loading="lazy" />'
+        )        
+
+      encoded_target = url_encode_path(target)
+      return f"![{alt_text}](/images/{encoded_target})"        
     return match.group(0)
 
   def log_with_replace_func(match):
