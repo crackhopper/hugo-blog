@@ -7,6 +7,7 @@ tags:
   - vertexbuffer
 draft: false
 ---
+![[Vulkan入门02-VertexBuffers-1764252524778.png]]
 
 继续深入 Vulkan 的绘制教程。当然我这里内容会比官方文档更深入一些。
 
