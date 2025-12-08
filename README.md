@@ -26,6 +26,13 @@ Stack 主题通过 Git Submodule 引入，首次克隆仓库后按顺序执行�
 
 > 主题仓库位于 `themes/Stack`，更新主题时只需进入该目录执行 `git pull`。
 
+### 安装工具脚本
+自定义了很多处理markdown的工具，需要使用到python
+```sh
+virtualenv venv
+./venv/Scripts/activate.ps1 # 或linux/mac下 source venv/Scripts/activate
+pip install -r requirements.txt
+```
 
 ### 写作全流程脚本
 在项目根目录执行 `.\scripts\start-writing.ps1` 可以一键启动完整的写作环境：

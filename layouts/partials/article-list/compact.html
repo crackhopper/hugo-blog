@@ -47,6 +47,13 @@
         <p>
             {{ . | safeHTML }} 
         </p>
+        {{ if $.Params.Tags }}
+        <section class="article-tags">
+            {{ range ($.GetTerms "tags") }}
+                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+        </section>
+        {{ end }}
     </div>
     {{ end }}      
 </article>

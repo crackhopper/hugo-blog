@@ -113,7 +113,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE include)
 ```
 
 开始之前，在创建 textures 文件夹，并放入一个 CC0 的image （512 x 512 ） `texture.jpg` 如下：
-![[Vulkan入门04-Texture mapping-1764816362517.png]]
+![[Vulkan入门04-Texture mapping-1764816362517.png|142x142]]
 
 接下来我们来创建TextureImage:
 ```cpp
