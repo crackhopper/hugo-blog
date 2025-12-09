@@ -7,7 +7,7 @@ tags:
   - vertexbuffer
 draft: false
 ---
-![[Vulkan入门02-VertexBuffers-1764252524778.png]]
+![[Vulkan入门02-VertexBuffers-1764252524778.png|574x430]]
 
 继续深入 Vulkan 的绘制教程。当然我这里内容会比官方文档更深入一些。
 
@@ -529,4 +529,4 @@ vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(indices.size()), 1, 0, 0, 
 ```
 
 ## 效果
-![[Vulkan入门02-VertexBuffers-1764252524778.png]]
+![[Vulkan入门02-VertexBuffers-1764252524778.png|574x430]]

@@ -428,3 +428,21 @@ void cleanupSwapChain() {
     ...
 }
 ```
+
+## 疑惑点
+### 为什么1个depth buffer就够了？
+
+https://stackoverflow.com/questions/62371266/why-is-a-single-depth-buffer-sufficient-for-this-vulkan-swapchain-render-loop
+
+- 这个帖子给出了一个方案，避免了 depth buffer写入时的race condition。却没有解决 **渲染语义上的正确性**。
+	- **适用范围有限**
+		- 修复只在 **场景静态或 camera 不动** 的情况下安全
+		- 对于动态场景、多摄像机、多视角渲染、快速移动等情况，结果会出错
+
+**为什么 per-frame depth buffer 才是安全的**
+- 为每个 frame / swap chain image 使用 **独立 depth buffer** 可以保证：
+    1. 内存访问安全（GPU 不会同时写同一 buffer）
+    2. 渲染语义正确（每帧独立深度数据，深度测试结果只依赖当前帧 geometry）
+- MAX_FRAMES_IN_FLIGHT > 1 时，每帧都可以并行渲染，不会互相干扰
+
+个人想法：最好的做法还是不要节省这一点 depth buffer的存储空间了。老老实实根据frame数目，创建多个即可。

@@ -9,7 +9,7 @@ tags:
 draft: false
 ---
 
-![[Vulkan入门06-Loading models-1765192359210.png]]
+![[Vulkan入门06-Loading models-1765192359210.png|695x522]]
 
 本节基于简单的 `tinyobjloader` 库来加载OBJ文件。整体比较简单，只是把之前手写的顶点数据替换为动态从文件中读取。
 
@@ -127,7 +127,7 @@ vertex.texCoord = {
     1.0f - attrib.texcoords[2 * index.texcoord_index + 1]
 };
 ```
-![[Vulkan入门06-Loading models-1765192359210.png]]
+![[Vulkan入门06-Loading models-1765192359210.png|695x522]]
 
 当模型旋转起来的时候，背面会比较有意思（因为模型并没考虑到从那个方向观看）
 ![[Vulkan入门06-Loading models-1765192467007.png]]
