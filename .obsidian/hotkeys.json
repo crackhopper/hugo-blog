@@ -300,6 +300,13 @@
         "Shift"
       ],
       "key": "Insert"
+    },
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "F12"
     }
   ],
   "app:delete-file": [
