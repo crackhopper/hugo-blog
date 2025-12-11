@@ -1,5 +1,5 @@
 # Doing
-- OScholar梳理
+-  [[C++模板元编程初探]]
 - 整理完善地图算法逻辑
 	- 更优秀的地图移动聚焦。
 	- 战斗系统集成细节：结算。
@@ -7,7 +7,6 @@
 - trading服务：e2e测试，进一步完成；+ 订单功能重构；
 - trading服务，kafka数据流读取位置处理。
 - trading服务，按照计划，完成PLAN1-5
-- [[Vulkan入门05-Depth buffering]]
 
 # Waiting
 
@@ -20,11 +19,14 @@
 
 - [[Task - go项目构建工具]]
 
-## VULKAN
-- [[Vulkan入门06-Loading models]]
-- [[Vulkan入门07-Generating Mipmaps]]
-- [[Vulkan入门08-Multisampling]]
-- [[Vulkan入门09-Compute Shader]]
+## Renderer
+### MGPK
+《Mastering Graphics Programming with Vulkan》
+
+- [[C++ Allocator]]
+- MGPV-ch01: 代码分析：main.cpp
+- MGPK-ch01: RenderDoc 基础使用
+- MGPK-ch01: 引擎代码分析：
 
 ## GAME_DEV
 - 房间怪物配置和roll机制。

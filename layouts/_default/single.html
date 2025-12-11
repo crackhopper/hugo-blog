@@ -42,5 +42,6 @@
 {{ end }}
 
 {{ define "right-sidebar" }}
+    {{/* 文章页面显示右侧边栏，用于显示TOC */}}
     {{ if .Scratch.Get "hasWidget" }}{{ partial "sidebar/right.html" (dict "Context" . "Scope" "page") }}{{ end}}
 {{ end }}

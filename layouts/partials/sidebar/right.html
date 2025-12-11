@@ -1,7 +1,7 @@
 {{- $scope := default "homepage" .Scope -}}
 {{- $context := .Context -}}
 {{- with (index .Context.Site.Params.widgets $scope) -}}
-    <aside class="sidebar right-sidebar sticky">
+    <aside class="sidebar right-sidebar sticky" id="right-sidebar">
         {{ range $widget := . }}
             {{ if templates.Exists (printf "partials/widget/%s.html" .type) }}
                 <!-- Ensure that the `params` is not nil -->
@@ -13,4 +13,8 @@
             {{ end }}
         {{ end }}
     </aside>
+    {{/* 悬浮按钮，用于在TOC收起时重新展开 */}}
+    <button class="toc-float-btn" id="toc-float-btn" aria-label="展开目录" title="展开目录">
+        <span class="toc-float-btn-icon"></span>
+    </button>
 {{ end }}

@@ -1,8 +1,8 @@
 {{ if (.Context.Scratch.Get "TOCEnabled") }}
-    <section class="widget archives">
+    <section class="widget archives toc-widget">
         <h2 class="widget-title section-title">{{ T "article.tableOfContents" }}</h2>
         
-        <div class="widget--toc">
+        <div class="widget--toc" id="toc-content">
             {{ .Context.TableOfContents }}
         </div>
     </section>

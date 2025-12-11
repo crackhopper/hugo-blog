@@ -34,3 +34,311 @@ html {
     /* 覆盖主题中设置的平滑滚动 */
     scroll-behavior: auto !important;
 }
+
+/* 使右侧边栏宽度与左侧边栏一致 */
+@media (min-width: 768px) {
+    .container.extended {
+        --right-sidebar-max-width: 25%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container.extended {
+        --right-sidebar-max-width: 20%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container.extended {
+        --right-sidebar-max-width: 15%;
+    }
+}
+
+/* 确保右侧边栏在响应式时正确隐藏（在 md 以下隐藏） */
+/* 注意：主题已经在 grid.scss 中实现了这个功能，这里确保覆盖 */
+.container .right-sidebar {
+    display: none;
+}
+
+/* 在 md 断点 (768px+) 显示右侧边栏，降低TOC显示的最小尺寸 */
+@media (min-width: 768px) {
+    .container .right-sidebar {
+        display: flex;
+    }
+}
+
+/* 左侧边栏优先折叠：在1280px以下隐藏左侧边栏，让TOC优先显示 */
+/* 这样在768px-1280px之间，只有TOC显示，左侧边栏隐藏 */
+@media (max-width: 1279px) {
+    body.article-page .container.extended .left-sidebar {
+        display: none !important;
+    }
+}
+
+/* 在1280px以上，同时显示左侧边栏和右侧边栏 */
+@media (min-width: 1280px) {
+    body.article-page .container.extended .left-sidebar {
+        display: flex !important;
+    }
+}
+
+/* 文章页面布局优化，充分利用屏幕空间，减少留白 */
+/* 使用!important确保覆盖主题样式 */
+
+/* 文章页面全屏布局，充分利用屏幕空间 */
+@media (min-width: 768px) {
+    body.article-page .container.extended {
+        max-width: 95vw !important; /* 使用视口宽度，几乎全屏 */
+        width: 100% !important;
+        --left-sidebar-max-width: 16% !important;
+        --right-sidebar-max-width: 30% !important; /* 进一步增加右侧边栏宽度，给TOC更多空间 */
+    }
+    body.article-page .container.extended .left-sidebar {
+        max-width: 16% !important;
+        min-width: 220px !important; /* 设置最小宽度，防止换行 */
+    }
+    body.article-page .container.extended .right-sidebar {
+        max-width: 30% !important;
+        width: 30% !important; /* 确保宽度生效 */
+        flex-basis: 30% !important; /* flex基础大小 */
+        flex-shrink: 0 !important; /* 防止被压缩 */
+        flex-grow: 0 !important; /* 防止自动扩展 */
+        min-width: 30% !important; /* 最小宽度 */
+    }
+}
+
+@media (min-width: 1024px) {
+    body.article-page .container.extended {
+        max-width: 96vw !important; /* 在大屏幕上使用更大的宽度 */
+        width: 100% !important;
+        --left-sidebar-max-width: 14% !important;
+        --right-sidebar-max-width: 28% !important; /* 进一步增加右侧边栏宽度 */
+    }
+    body.article-page .container.extended .left-sidebar {
+        max-width: 14% !important;
+        min-width: 220px !important; /* 设置最小宽度，防止换行 */
+    }
+    body.article-page .container.extended .right-sidebar {
+        max-width: 28% !important;
+        width: 28% !important; /* 确保宽度生效 */
+        flex-basis: 28% !important; /* flex基础大小 */
+        flex-shrink: 0 !important; /* 防止被压缩 */
+        flex-grow: 0 !important; /* 防止自动扩展 */
+        min-width: 28% !important; /* 最小宽度 */
+    }
+}
+
+@media (min-width: 1280px) {
+    body.article-page .container.extended {
+        max-width: 97vw !important; /* 在超大屏幕上使用更大的宽度 */
+        width: 100% !important;
+        --left-sidebar-max-width: 12% !important;
+        --right-sidebar-max-width: 26% !important; /* 进一步增加右侧边栏宽度 */
+    }
+    body.article-page .container.extended .left-sidebar {
+        max-width: 12% !important;
+        min-width: 220px !important; /* 设置最小宽度，防止换行 */
+    }
+    body.article-page .container.extended .right-sidebar {
+        max-width: 26% !important;
+        width: 26% !important; /* 确保宽度生效 */
+        flex-basis: 26% !important; /* flex基础大小 */
+        flex-shrink: 0 !important; /* 防止被压缩 */
+        flex-grow: 0 !important; /* 防止自动扩展 */
+        min-width: 26% !important; /* 最小宽度 */
+    }
+}
+
+@media (min-width: 1536px) {
+    body.article-page .container.extended {
+        max-width: 98vw !important; /* 在超大屏幕上进一步增加宽度 */
+        width: 100% !important;
+        --left-sidebar-max-width: 10% !important;
+        --right-sidebar-max-width: 24% !important; /* 进一步增加右侧边栏宽度 */
+    }
+    body.article-page .container.extended .left-sidebar {
+        max-width: 10% !important;
+        min-width: 220px !important; /* 设置最小宽度，防止换行 */
+    }
+    body.article-page .container.extended .right-sidebar {
+        max-width: 24% !important;
+        width: 24% !important; /* 确保宽度生效 */
+        flex-basis: 24% !important; /* flex基础大小 */
+        flex-shrink: 0 !important; /* 防止被压缩 */
+        flex-grow: 0 !important; /* 防止自动扩展 */
+        min-width: 24% !important; /* 最小宽度 */
+    }
+}
+
+@media (min-width: 1920px) {
+    body.article-page .container.extended {
+        max-width: 98vw !important; /* 在超宽屏幕上几乎全屏 */
+        width: 100% !important;
+        --left-sidebar-max-width: 8% !important;
+        --right-sidebar-max-width: 30% !important; /* 进一步增加右侧边栏宽度 */
+    }
+    body.article-page .container.extended .left-sidebar {
+        max-width: 8% !important;
+        min-width: 220px !important; /* 设置最小宽度，防止换行 */
+    }
+    body.article-page .container.extended .right-sidebar {
+        max-width: 30% !important;
+        width: 30% !important; /* 确保宽度生效 */
+        flex-basis: 30% !important; /* flex基础大小 */
+        flex-shrink: 0 !important; /* 防止被压缩 */
+        flex-grow: 0 !important; /* 防止自动扩展 */
+        min-width: 30% !important; /* 最小宽度 */
+        /* 使用固定像素值作为备选方案，确保宽度可以突破 */
+        min-width: 500px !important; /* 最小宽度像素值 */
+    }
+}
+
+/* TOC字体大小变量 - 可以手动调整这些值 */
+body.article-page .right-sidebar .widget--toc {
+    --toc-link-font-size: 1.6rem; /* TOC链接字体大小，可以手动调整 */
+    --toc-title-font-size: 1.9rem; /* TOC标题字体大小，可以手动调整 */
+    --toc-base-font-size: 1.2rem; /* TOC基础字体大小，可以手动调整 */
+}
+
+/* 优化文章页面右侧TOC的显示，使其更紧凑 */
+body.article-page .right-sidebar .widget--toc {
+    padding: var(--card-padding) !important;
+    font-size: var(--toc-base-font-size) !important;
+    line-height: 1.4 !important; /* 减小行高，让TOC更紧凑 */
+}
+
+body.article-page .right-sidebar .widget--toc #TableOfContents {
+    padding: 0.5em 0 !important;
+    max-height: calc(100vh - 200px) !important; /* 确保TOC不会超出视口 */
+    font-size: var(--toc-base-font-size) !important;
+    line-height: 1.4 !important; /* 减小行高 */
+    overflow-x: auto !important; /* 内容过长时显示水平滚动条 */
+    overflow-y: auto !important; /* 保持垂直滚动 */
+}
+
+body.article-page .right-sidebar .widget--toc #TableOfContents li {
+    margin: 2px 0 2px 15px !important; /* 进一步减小列表项间距，让TOC更紧凑 */
+    padding: 2px 8px !important; /* 减小内边距 */
+    font-size: var(--toc-base-font-size) !important;
+    line-height: 1.4 !important; /* 减小行高 */
+    white-space: nowrap !important; /* 防止列表项换行 */
+}
+
+body.article-page .right-sidebar .widget--toc #TableOfContents li a {
+    white-space: nowrap !important; /* 防止链接文本换行 */
+    display: inline-block !important; /* 改为inline-block，保持不换行 */
+    font-size: var(--toc-link-font-size) !important; /* 使用变量控制链接字体大小 */
+    line-height: 1.3 !important; /* 减小链接行高，让TOC更紧凑 */
+}
+
+/* 确保所有嵌套的链接都使用变量字体大小，且不换行 */
+body.article-page .right-sidebar .widget--toc #TableOfContents li li a {
+    font-size: var(--toc-link-font-size) !important;
+    white-space: nowrap !important;
+}
+
+body.article-page .right-sidebar .widget--toc #TableOfContents li li li a {
+    font-size: var(--toc-link-font-size) !important;
+    white-space: nowrap !important;
+}
+
+body.article-page .right-sidebar .widget--toc #TableOfContents li li li li a {
+    font-size: var(--toc-link-font-size) !important;
+    white-space: nowrap !important;
+}
+
+body.article-page .right-sidebar .widget--toc #TableOfContents > ul {
+    padding: 0 1em !important; /* 增加根列表的内边距 */
+}
+
+body.article-page .right-sidebar .widget-title {
+    font-size: var(--toc-title-font-size) !important; /* 使用变量控制标题字体大小 */
+    margin-bottom: 1.2em !important; /* 增加标题下边距 */
+    padding: 0 var(--card-padding) !important; /* 添加左右内边距 */
+    padding-top: var(--card-padding) !important; /* 添加上内边距 */
+}
+
+/* TOC收起状态 - 只隐藏内容 */
+body.article-page .right-sidebar .toc-widget.collapsed .widget--toc {
+    display: none !important;
+}
+
+/* TOC收起时，隐藏整个右侧边栏，让主内容区域扩展 */
+body.article-page .right-sidebar.collapsed {
+    display: none !important;
+}
+
+/* 在手机上（<768px），当TOC展开时，强制显示右侧边栏，让用户可以通过悬浮按钮打开TOC */
+@media (max-width: 767px) {
+    body.article-page .right-sidebar:not(.collapsed) {
+        display: flex !important;
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 80% !important;
+        max-width: 400px !important;
+        z-index: 999 !important;
+        background: var(--card-background) !important;
+        box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15) !important;
+        overflow-y: auto !important;
+    }
+    
+    /* 在手机上显示TOC时，添加遮罩层 */
+    body.article-page.toc-open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998 !important;
+        pointer-events: auto;
+    }
+}
+
+/* TOC悬浮按钮样式 - 始终显示，用于切换展开/收起 */
+body.article-page .toc-float-btn {
+    position: fixed !important;
+    right: 20px !important;
+    bottom: 20px !important;
+    width: 60px !important;
+    height: 60px !important;
+    z-index: 1000 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 50% !important;
+    background: var(--card-background) !important;
+    border: 1px solid var(--card-border-color) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--body-text-color);
+}
+
+body.article-page .toc-float-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.article-page .toc-float-btn-icon {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+/* 展开状态：显示减号 */
+body.article-page .toc-float-btn:not(.collapsed) .toc-float-btn-icon::before {
+    content: '−';
+}
+
+/* 收起状态：显示加号 */
+body.article-page .toc-float-btn.collapsed .toc-float-btn-icon::before {
+    content: '+';
+}
+
+/* 悬浮按钮在所有屏幕尺寸都显示，包括手机，方便用户随时打开TOC */
+/* 不再隐藏悬浮按钮，让手机用户也能通过悬浮按钮打开TOC */
