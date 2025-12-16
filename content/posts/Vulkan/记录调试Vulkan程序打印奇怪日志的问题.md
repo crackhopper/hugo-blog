@@ -3,8 +3,8 @@ title: 记录调试Vulkan程序打印奇怪日志的问题
 date: 2025-11-17T21:52:05+08:00
 tags:
   - vulkan
-  - cpp
   - 调试
+  - windbg
 draft: false
 ---
 为什么好好的vulkan程序会突然打印神秘的日志？是代码的扭曲，还是SDK的沦丧？且看我慢慢分解。

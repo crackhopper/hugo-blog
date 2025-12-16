@@ -4,7 +4,6 @@ date: 2025-11-19T15:35:53+08:00
 tags:
   - vulkan
   - layer
-  - cpp
   - debug
 draft: false
 ---

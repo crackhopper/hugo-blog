@@ -1,7 +1,10 @@
 ---
 title: C++模板元编程初探
 date: 2025-12-11T00:16:03+08:00
-tags: []
+tags:
+  - cpp
+  - template
+  - meta-programming
 draft: false
 ---
 ![[C++模板元编程初探-1765422624800.png|697x392]]

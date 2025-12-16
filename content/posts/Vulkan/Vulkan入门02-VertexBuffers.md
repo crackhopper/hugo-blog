@@ -2,7 +2,6 @@
 title: Vulkan入门02-VertexBuffers
 date: 2025-11-27T22:17:18+08:00
 tags:
-  - cpp
   - vulkan
   - vertexbuffer
 draft: false

@@ -3,8 +3,6 @@ title: cmake入门
 date: 2020-02-15T20:48:22+08:00
 tags:
   - cmake
-  - c
-  - cpp
   - build
 draft: false
 ---
