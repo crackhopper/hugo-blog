@@ -36,3 +36,5 @@ workspace.json
 .trash/
 
 .env
+
+_notupload/

@@ -276,3 +276,63 @@ target_link_libraries(hellocv ${OpenCV_LIBS})
 
 这样即保证了跨平台，又很简单。赶快试一下吧！
 
+## 深入 `find_package` 
+cmake提供了 `find_package` 功能。可以方便自动查找一些外部依赖库。
+
+用法：
+```
+find_package(<PackageName> [version] [REQUIRED] [QUIET] [COMPONENTS <component1> <component2>...] [NO_MODULE])
+```
+
+分为两种模式：module模式和config模式
+
+### Module 模式 （老模式，cmake负责）
+通过 `Find<PackageName>.cmake` 文件
+
+- **查找文件：** CMake 会尝试在特定的目录（包括 CMake 自己的安装目录和用户指定的目录）中寻找一个名为 `Find<PackageName>.cmake` 的文件。
+- **执行逻辑：** 如果找到，CMake 会执行这个文件中的脚本逻辑。这个脚本通常包含了一系列平台特定的命令（如 `find_path`、`find_library`、`find_program`）来定位库的头文件、库文件和可执行程序。
+- **设置变量：** 成功定位后，`Find<PackageName>.cmake` 脚本会设置一组标准的 CMake 变量供项目使用。
+
+
+查找成功后，会有如下变量：
+
+| **变量名称**                     | **描述**          |
+| ---------------------------- | --------------- |
+| `<PackageName>_FOUND`        | 布尔值，表示是否成功找到库。  |
+| `<PackageName>_INCLUDE_DIRS` | 包含头文件的目录列表。     |
+| `<PackageName>_LIBRARIES`    | 要链接的库文件路径或名称列表。 |
+| `<PackageName>_DEFINITIONS`  | 编译所需的预处理器定义。    |
+**需要分别用 `target_link_library` ， `target_include_directories` ， `target_compile_definitions` 来引入库文件、头文件和编译选项**
+### Config 模式 (新模式，库提供者负责)
+通过 `<PackageName>Config.cmake` 或 `<PackageName>-config.cmake` 文件
+- **查找文件：** CMake 会尝试在系统路径（如 `/usr/local/lib/cmake/` 或自定义路径）中寻找一个名为 `<PackageName>Config.cmake` 或 `<PackageName>-config.cmake` 的配置文件。
+- **执行逻辑：** 这种配置文件是由**库的开发者**在库的安装过程中生成的。它包含了库的绝对路径信息。
+- **设置目标：** Config 模式的配置文件通常会使用 `IMPORTED` 目标（如 `add_library(<PackageName>::<component> IMPORTED)`）来封装库的信息。这是 CMake 推荐的现代用法，允许用户直接使用库名称作为链接目标，例如： `target_link_libraries(MyExecutable PRIVATE <PackageName>::<component>)`
+
+**一体化导入，将：库文件、头文件、编译选项，都包装到 `Package::Component` 中了**
+
+查找成功后，会有如下变量/符号：(其他变量也有，但通常不推荐使用)
+
+| **变量/符号**                      | **描述**         |
+| ------------------------------ | -------------- |
+| `<PackageName>_FOUND`          | 布尔值，表示是否成功找到库。 |
+| `<PackageName>::<PackageName>` | 通常可以直接用来链接的符号  |
+| `<PackageName>::<Component>`   | 只使用库的一部分       |
+- 如何确定都有哪些 `<PackageName>::xxx` ？
+	- **翻阅 `XXXConfig.cmake` 文件：** 搜索文件中的 `add_library(... IMPORTED ...)` ， `add_header_only_library(...)` 以及 `<PackageName>::`。
+### Config模式-`<PackageName>_DIR` 路径
+
+当我们调用 `find_package` 命令的时候，CMAKE会自动根据 对应的模块名字参数 `<PackageName>` ，拼接 `<PackageName>_DIR` ，看是否存在这个变量。如果存在，则在这个路径下按照 `Config` 模式查找对应的配置文件 `<PackageName>Config.cmake` 或 `<PackageName>-config.cmake`
+
+
+变量如何定义？
+- 可以是CMAKE变量。
+	- 代码中 `set(<PackageName>_DIR ...)`
+	- 命令行 `-D<PackageName>_DIR=...`
+- 可以是环境变量（当CMAKE变量不存在的时候）
+	- `export <PackageName>_DIR=`
+
+查找过程：
+- `<<PackageName>_DIR>/` (根目录)
+- `<<PackageName>_DIR>/(lib/|share/)cmake/<PackageName>/` (标准的安装路径)
+- `<<PackageName>_DIR>/(lib/|share/)<PackageName>/`
