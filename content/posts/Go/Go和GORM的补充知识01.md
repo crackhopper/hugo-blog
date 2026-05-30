@@ -1,4 +1,5 @@
 ---
+id: art_5a0f88ce638741eaeb2f4de5bd2c9c0d
 title: Go和GORM的补充知识01
 date: 2025-12-01T11:02:59+08:00
 tags:

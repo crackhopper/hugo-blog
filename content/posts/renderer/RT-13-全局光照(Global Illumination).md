@@ -1,5 +1,22 @@
+---
+id: art_32344ad2f03937f4965d5488930f7fd5
+title: RT-13-全局光照(Global Illumination)
+date: '2026-05-30T19:44:34+08:00'
+draft: true
+tags:
+- 实时全局光照
+- RSM
+- LPV
+- 间接光照
+- 游戏渲染
+---
 实时GI，通常考虑：直接光照+1次bounce的间接光照
 - 通常思路： 直接光照的结果，作为secondary light来照其他点。
+
+本文深入探讨了两种实时全局光照技术：反射阴影贴图（RSM）和光传播体积（LPV）。RSM将Shadow Map像素视为次级光源，通过邻域截断、重要性采样和Mipmap等加速策略，高效模拟一次弹射漫反射间接光照，但存在漏光和仅适用于漫反射等局限。LPV则在三维网格中注入并传播直接光照的辐射度，利用球谐函数压缩方向信息，实现空间中的间接光照估计，但面临几何遮挡导致的漏光问题。文章详细分析了原理、步骤、优劣及工程实现技巧。
+
+<!-- more -->
+
 # 3D空间 (3d space)
 ## Reflective Shadow Maps(RSM)
 ### 原理
@@ -10,7 +27,7 @@ Reflective Shadow Maps (RSM) 的核心思想是：**把 Shadow Map 上的每一�
 
 回顾对光源采样的图：
 
-![[RT-13-全局光照(Global Illumination)-原理-01.png|308]]
+![[RT_13_全局光照_Global_Illumination-原理-01.png|308]]
 
 渲染方程：
 $$
@@ -87,13 +104,13 @@ RSM 假设：**如果在三维空间中 $q$ 和 $p$ 很近，那么把它们投�
 
 因此，论文设计了一个特殊的**概率密度函数（PDF）**。在采样时，离中心点越近，采样的密度越高；离得越远，采样越稀疏。
 
-![[RT-13-全局光照(Global Illumination)-重要性采样importance-sampling与低频过滤-01.png|420]]
+![[RT_13_全局光照_Global_Illumination-重要性采样importance_sampling与低频过滤-01.png|420]]
 
 
 #### 多级渐远纹理（Mipmaps）高能压缩
 最后，RSM存什么？
 - Depth， coordinate， normal，flux
-![[RT-13-全局光照(Global Illumination)-多级渐远纹理mipmaps高能压缩-01.png]]
+![[RT_13_全局光照_Global_Illumination-多级渐远纹理mipmaps高能压缩-01.png]]
 
 还有一种更激进的工业界优化方案： interleaved sampling + Mipmaps。
 
@@ -175,12 +192,12 @@ VPL 和 RSM 很像。
 #### 1. Generation
 用RSM找到场景中被直接光照照亮的表面。 （**当然每个光源都要做**)
 
-![[RT-13-全局光照(Global Illumination)-1-generation-01.png]]
+![[RT_13_全局光照_Global_Illumination-1_generation-01.png]]
 
 #### 2. Injection
 用三维纹理来记录。对格子内部包含一些虚拟光源，叠加后，形成基于包围盒表面定义的一个光源辐射的函数。然后用SH来逼近这个局部的光源
 
-![[RT-13-全局光照(Global Illumination)-2-injection-01.png]]
+![[RT_13_全局光照_Global_Illumination-2_injection-01.png]]
 
 #### 3. Propagation
 考虑包围盒。然后从每个格子，向周围的6个格子传播radiance。
@@ -190,7 +207,7 @@ VPL 和 RSM 很像。
 	- 注意：对于格子内本身就有的光源，仅在第一次计算的时候用到，作为初始能量向外传播。第一次迭代结束后，如果这个格子周围都是黑的，那么光源格子自然就是黑的。（但直接光照会对其正常着色）。
 - 整体迭代 5 次左右。
 
-![[RT-13-全局光照(Global Illumination)-3-propagation-01.png]]
+![[RT_13_全局光照_Global_Illumination-3_propagation-01.png]]
 
 #### 4. Rendering
 对任意的 shading point ，如果其处于某个格子内，那么这个格子本身我们计算了 incident radiance，所以可以直接用这个来进行间接光照着色。（当然，实际做法的时候，根据 shading point的位置，可以做和周边格子的插值，得到更加平滑的过度）
@@ -200,10 +217,10 @@ VPL 和 RSM 很像。
 
 当然，实际上，墙只要不够厚，不能覆盖多个格子，那么propagation按照我们的算法都会漏光。不过，如果格子完全被几何体覆盖，可以对格子标记专门的阻挡信息，隔断propagation。这里也是实现上的trick点。（有可能需要对格子内几何体的法线分布（用面积做权重）做压缩，来近似计算，得到阻挡概率分布）
 
-![[RT-13-全局光照(Global Illumination)-problem-light-leaking-01.png|453]]
+![[RT_13_全局光照_Global_Illumination-problem_light_leaking-01.png|453]]
 
 
-![[RT-13-全局光照(Global Illumination)-problem-light-leaking-02.png]]
+![[RT_13_全局光照_Global_Illumination-problem_light_leaking-02.png]]
 
 ### 实时工作流
 | **阶段**             | **实时计算的具体操作**                                                                            | **耗时与复用机制**                                           |
@@ -217,29 +234,29 @@ VPL 和 RSM 很像。
 ### 思路
 2pass算法。整体来说：场景离散化格子；然后，着色点，用BRDF反射视线，查询锥的区域，得到对应的格子。通过这些格子的信息来获取间接光照。
 
-![[RT-13-全局光照(Global Illumination)-思路-01.png]]
+![[RT_13_全局光照_Global_Illumination-思路-01.png]]
 
 ### 步骤
 对整个场景，建立 hiearchy 的格子。
 
-![[RT-13-全局光照(Global Illumination)-步骤-01.png]]
+![[RT_13_全局光照_Global_Illumination-步骤-01.png]]
 
 #### Pass1 - light pass - 得到直接光照的voxel
-![[RT-13-全局光照(Global Illumination)-pass1---light-pass---得到直接光照的voxel-01.png]]
+![[RT_13_全局光照_Global_Illumination-pass1_light_pass_得到直接光照的voxel-01.png]]
 
 - 记录：（当然都是记录SH）
 	- 光源方向
 	- 法线方向
 #### pass2 - rendering pass - 渲染基于cone tracing
 
-![[RT-13-全局光照(Global Illumination)-pass2---rendering-pass---渲染基于cone-tracing-01.png]]
+![[RT_13_全局光照_Global_Illumination-pass2_rendering_pass_渲染基于cone_tracing-01.png]]
 
 cone碰撞到平面的时候，可能距离会远会近。根据这个距离，可以得到层级。采样的时候，类似mipmap采样对应层级即可。
 
 ### 问题
 解决glossy比较好，如果diffuse呢？
 
-![[RT-13-全局光照(Global Illumination)-问题-01.png]]
+![[RT_13_全局光照_Global_Illumination-问题-01.png]]
 # 屏幕空间方法 (screen space)
 什么是屏幕空间？仅能看到屏幕渲染的结果，然后进行处理（即后处理的效果）。
 ## 环境光遮蔽: Screen Space Ambient Occlusion (SSAO)
@@ -260,7 +277,7 @@ SSAO：
 
 整体做法，很简单：看起来像是给物体贴了个阴影图的做法。
 ### Ambient Occlusion理论
-![[RT-13-全局光照(Global Illumination)-ambient-occlusion理论-01.png]]
+![[RT_13_全局光照_Global_Illumination-ambient_occlusion理论-01.png]]
 
 考虑 渲染方程，用split sum拆分，把Visibily 函数从积分中拆分出来。
 $$
@@ -270,7 +287,7 @@ $$
 - $k_A$ 定义为，从视角方向看到某个点，这个点朝着各个方向上，光照的visibility：
 	- $k_A=\frac{1}{\pi} \int_{\Omega^+} V\cos\theta_i d\omega_i$
 - 为什么split sum后，有两个 $\cos$ ？
-	- 实际上可以理解为一种球面积分的换元。用 $\mu=\cos\theta$ 。具体参见 [[posts/数学/深入思考曲面积分|深入思考曲面积分]] 中的 “换元剪切技巧” 。
+	- 实际上可以理解为一种球面积分的换元。用 $\mu=\cos\theta$ 。具体参见 [[深入思考曲面积分]] 中的 “换元剪切技巧” 。
 
 
 进一步考虑 $L_i, f_r$ 都为常数。且 $f_r=\frac{\rho}{\pi}$ ，那么上面式子：
@@ -288,7 +305,7 @@ $$
 
 具体如何做？考虑反射光在有限的范围内，是否被其他物体遮挡。
 
-![[RT-13-全局光照(Global Illumination)-如何计算-k-a-01.png|597]]
+![[RT_13_全局光照_Global_Illumination-如何计算_k_a-01.png|597]]
 
 Screen Space （实际上是NDC空间） 的做法的假设：
 1. 任何一个shading point，都在一个局部的球的内部，撒点，看点是否能被shading point看到
@@ -296,10 +313,10 @@ Screen Space （实际上是NDC空间） 的做法的假设：
 3. 考虑：应该只有法线方向的半球上，才可能有遮挡。因此，一个快速方法：下图中红点数量过半，才考虑 AO 
 	1. 如果有法线：那么采样，可以仅采样半球了，且可以对采样点进行加权。
 
-![[RT-13-全局光照(Global Illumination)-如何计算-k-a-02.png]]
+![[RT_13_全局光照_Global_Illumination-如何计算_k_a-02.png]]
 
 ### False occlusion, halos
-![[RT-13-全局光照(Global Illumination)-false-occlusion-halos-01.png]]
+![[RT_13_全局光照_Global_Illumination-false_occlusion_halos-01.png]]
 
 问题原因：
 - 取屏幕空间一个点，然后取球。由于深度突变，所以采样点显然被 石凳 上的点遮挡，这里错误的被认为石凳附近的地板，周边有复杂的几何遮挡，从而叠加了AO（环境光遮蔽）。就会导致局部变暗。
@@ -349,7 +366,7 @@ HBAO 不是在半球内随机撒点，而是在屏幕空间沿着几个固定的
 - AO： 考虑有一个全局环境光
 - DO： 否定上面的假设，直接用次级光源来做。这样可以做到 color bleeding 的效果（如下图）
  
-![[RT-13-全局光照(Global Illumination)-screen-space-directional-occlusion-ssdo-01.png]]
+![[RT_13_全局光照_Global_Illumination-screen_space_directional_occlusion_ssdo-01.png]]
 
 ### 思路
 虽然用次级光源信息，但不用RSM，而从屏幕空间来做。
@@ -360,13 +377,13 @@ HBAO 不是在半球内随机撒点，而是在屏幕空间沿着几个固定的
 
 所以和SSAO做法相反。但AO考虑的是全局环境光（足够远），增量局部颜色。而DO认为局部颜色变化由小范围其他间接光（足够近）来着色，远处不考虑。
 
-![[RT-13-全局光照(Global Illumination)-思路-02.png]]
+![[RT_13_全局光照_Global_Illumination-思路-02.png]]
 - SSAO考虑第一个式子
 - SSBO考虑第二个式子
 
 **前提假设**： 不考虑光照方向。或者说，认为视线方向是光照方向。（类似SSAO）
 
-![[RT-13-全局光照(Global Illumination)-思路-03.png]]
+![[RT_13_全局光照_Global_Illumination-思路-03.png]]
 
 1. 从P点附近，找一个半球。sample附近的像素。
 2. 命中的像素点，看是否遮挡P点。如果遮挡的点，对应的像素的值会被考虑
@@ -388,11 +405,11 @@ HBAO 不是在半球内随机撒点，而是在屏幕空间沿着几个固定的
 - Shading： 求交后如何着色。
 
 
-![[RT-13-全局光照(Global Illumination)-思路-04.png|560]]
+![[RT_13_全局光照_Global_Illumination-思路-04.png|560]]
 
 也可以考虑brdf的lobe
 
-![[RT-13-全局光照(Global Illumination)-思路-05.png]]
+![[RT_13_全局光照_Global_Illumination-思路-05.png]]
 
 ### 核心步骤：求像素反射点
 
@@ -401,7 +418,7 @@ Linear Raymarch
 - 按照步长进行移动，会有对应的depth变化（和本身记录的depth做比较）
 - 当depth大于记录值，说明发生了求交。
 
-![[RT-13-全局光照(Global Illumination)-核心步骤求像素反射点-01.png]]
+![[RT_13_全局光照_Global_Illumination-核心步骤求像素反射点-01.png]]
 
 步长如何确定？ hierachy ray trace
 - 把depth变为mipmap（做 min pooling，取最小值）
@@ -412,7 +429,7 @@ Linear Raymarch
 - 如果没相交，那么继续步进即可（此时可以调大一个level）。
 - 注意：不用回退，因为是 min map 。所以相交对应的点，调低level后，直接测试是否相交。（因为交点可以得到具体的子节点索引(finer 1 level)，这个子节点要么相交，得解；如果没相交，还可以步进）
 
-![[RT-13-全局光照(Global Illumination)-核心步骤求像素反射点-02.png]]
+![[RT_13_全局光照_Global_Illumination-核心步骤求像素反射点-02.png]]
 
 算法：
 ```
@@ -428,7 +445,7 @@ while (level > -1)
 
 前着色点(receiver)是考虑BRDF的，而步进得到的点 hit point(caster) 假设是diffuse的，因为像素保留的仅有camera上看到的值，我们直接用这个值假设它是一个次级光源。（如果不考虑它是diffuse的，那么就需要用它本身的brdf，再往前找上一层的光源进行采样；SSR本身并没有做这个步骤，仅计算一次bounce）
 
-![[RT-13-全局光照(Global Illumination)-核心步骤shading-01.png]]
+![[RT_13_全局光照_Global_Illumination-核心步骤shading-01.png]]
 ### 问题和解决方案
 超出 screen space 的位置？
 - 步进过大的点

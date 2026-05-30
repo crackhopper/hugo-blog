@@ -1,4 +1,5 @@
 ---
+id: art_036c98e48766feb5f09036a1fdd3512c
 title: cmake入门
 date: 2020-02-15T20:48:22+08:00
 tags:
@@ -203,7 +204,7 @@ target_link_libraries(helloworld hello world)
 - `target_link_libraries` 用来对 `helloworld` 这个target进行更多的描述：描述这个target完成过程中，需要对 `hello` 以及 `world` 两个target进行链接（这两个target必须是库）
 
 完整的目录结构：
-![[cmake入门-add-block-directories-01.png]]
+![[cmake入门-add_block_directories-01.png]]
 
 ## 引入第三方库
 
@@ -253,7 +254,7 @@ target_link_libraries(hellocv opencv_core opencv_highgui opencv_imgproc)
 引入opencv非常容易，但有一个新问题。不同的平台上，opencv的安装地址可能不一样。如何才能更加通用的探测各个平台的opencv，并正确的链接呢？
 
 cmake为了解决这个问题，要求所有兼容cmake的包，都编写对应的cmake模块。比如opencv包安装文件，就包含了对应的cmake模块：
-![[cmake入门-使用find-package-01.png]]
+![[cmake入门-使用find_package-01.png]]
 
 这里的.cmake文件被安装到 `/usr/share` 文件夹下。这个是cmake会搜索模块的路径之一。
 

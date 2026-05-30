@@ -1,3 +1,6 @@
+---
+id: art_3faa2484a8e0689450da25ade95e877f
+---
 # 回顾BRDF定义
 $$
 f_r(\omega_i , \omega_r)=\frac{dL_r(\omega_r)}{dE_i(\omega_i)}

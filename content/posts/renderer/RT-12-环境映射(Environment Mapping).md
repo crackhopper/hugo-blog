@@ -1,3 +1,6 @@
+---
+id: art_d9fc359086a1e568c3b6320f11df2bb9
+---
 # 环境光照介绍
 - 用一个图片表达从无穷远+各个方向出来的光。
 
@@ -15,7 +18,7 @@ $$
 
 BRDF材质：如果足够glossy（表面光滑）则BRDF support小，如果足够diffuse（表面粗糙）则BRDF更光滑。
 
-![[RT-12-环境映射(Environment Mapping)-原理思路-01.png]]
+![[RT_12_环境映射_Environment_Mapping-原理思路-01.png]]
 
 因此我们可以用常见的逼近方式（积分中值定理）：
 
@@ -27,7 +30,7 @@ $$
 
 ##  $IBL$ 积分 (第一项)
 
-![[RT-12-环境映射(Environment Mapping)-ibl-积分-第一项-01.png]]
+![[RT_12_环境映射_Environment_Mapping-ibl_积分_第一项-01.png]]
 
 所以IBL部分的积分的求解方式：
 1. 根据 $f_r$ 的support（由于反射角度决定，因此，可以得到入射角的support，这样可以在对应的support上，求 $L_i$ 的均值）
@@ -63,7 +66,7 @@ $$
 - 这里 $\theta$  是入射角
 	- 不过需要注意的是：入射角、反射角、或者光线和半程向量的夹角。（在一定条件下，这几个角都假定相等，当作近似计算的时候；显然此时，要求 发现和半程向量夹角 $\theta_h$ 要足够小）
 
-![[RT-12-环境映射(Environment Mapping)-microfacet-brdf-下的近似计算-01.png]]
+![[RT_12_环境映射_Environment_Mapping-microfacet_brdf_下的近似计算-01.png]]
 
 
 再看D项（Beckmann 分布，不过后来更常用的是GGX）
@@ -75,7 +78,7 @@ $$
 	- 固定角度，\alpha 越大，越粗糙。法线分布越平均。
 	- 固定粗糙度，半程夹角越大，法线密度越低，即法线还是分布在主法线附近。
 
-![[RT-12-环境映射(Environment Mapping)-microfacet-brdf-下的近似计算-02.png]]
+![[RT_12_环境映射_Environment_Mapping-microfacet_brdf_下的近似计算-02.png]]
 
 
 **基于用Split Sum (积分中值定理) 来简化** Fresnel项如果使用Schlick逼近处理：
@@ -88,7 +91,7 @@ $$
 
 预计算仅需要考虑， roughness 和 $\cos\theta_v$  两个变量下的积分（后者是因为有了这个相当于通过 \theta_i （被积变量）可以得到 \theta_h ，从而被积分函数内部都可以计算，可以用monte carlo方法预计算出积分来）。最后，确定参数下，可以打两张表。然后两次查表就可以快速计算积分。 这个表也叫做 **Specular LUT**
 
-![[RT-12-环境映射(Environment Mapping)-microfacet-brdf-下的近似计算-03.png]]
+![[RT_12_环境映射_Environment_Mapping-microfacet_brdf_下的近似计算-03.png]]
 
 
 之前都没考虑遮蔽项G。如果考虑的话，实际上，固定 \cos\theta_v ，那么有了G的公式，也可以再打表的时候，直接带入到里面去。
@@ -119,18 +122,18 @@ $$
 
 ## 效果
 
-![[RT-12-环境映射(Environment Mapping)-效果-01.png]]
+![[RT_12_环境映射_Environment_Mapping-效果-01.png]]
 
 ## 局限性
 - 假设所有环境光无限远。所以如果离的特别近的时候计算，会有问题。
 
 # Precomputed Radiance Transfer (PRT)
 ## Background - Spherical Harmonics
-[[posts/数学/调和分析入门|调和分析入门]]  （用拉普拉斯算子的谱，来辅助分析；有更好的局部逼近和全局一致逼近性）
+[[调和分析入门]]  （用拉普拉斯算子的谱，来辅助分析；有更好的局部逼近和全局一致逼近性）
 
 简单讲一下 球谐函数（Spherical Harmonics） （简记为 $B_i(\omega)$ ，即一个球面上的函数）
 
-![[RT-12-环境映射(Environment Mapping)-background---spherical-harmonics-01.png]]
+![[RT_12_环境映射_Environment_Mapping-background_spherical_harmonics-01.png]]
 
 
 实际上，每个l代表一次空间折叠。 m 代表空间折叠的方向（或者有点像对空间切几刀）。一些性质：
@@ -151,7 +154,7 @@ $$
 ## PRT整体思路
 环境渲染
 
-![[RT-12-环境映射(Environment Mapping)-prt整体思路-01.png]]
+![[RT_12_环境映射_Environment_Mapping-prt整体思路-01.png]]
 - 上图中，都是给定了出射角度 $\omega_o$ ，然后被积分的函数内容，可以用图像（球面来表示）
 	- 盒子对应的像素： 6 x 64 x 64
 	- 对每个像素（采样点），均计算一次函数值。最后通过加权求和得到积分（投射到方向垂直的面上）。
@@ -159,7 +162,7 @@ $$
 
 
 对上面的内容，考虑预计算（其实可以转化成频域/谱域的信号）。现在渲染方程重新考虑：
-![[RT-12-环境映射(Environment Mapping)-prt整体思路-02.png]]
+![[RT_12_环境映射_Environment_Mapping-prt整体思路-02.png]]
 - BRDF（包含外部遮蔽）乘角度，整体看作 **light transport**
 - 实际做法：把 Lighting 和 Light Transport 分别做球谐展开。这样只需要保留两组系数即可。
 - 针对不同的 $\omega_o, \alpha$ ，就可以预计算对应的球谐展开，保存几个系数（得到几张LUT图）
@@ -191,7 +194,7 @@ $$
 	- 如果是各向同性，其实不影响。
 
 ## 效果图
-![[RT-12-环境映射(Environment Mapping)-效果图-01.png]]
+![[RT_12_环境映射_Environment_Mapping-效果图-01.png]]
 - 红色为正、蓝色为负
 - 这里每个 Basis 都是一种成分的光照。（对应到影响着色上，影响的区域）
 - 即，每个频率对应考虑模型表面的位置。
@@ -199,7 +202,7 @@ $$
 
 ## PRT with Glossy
 
-![[RT-12-环境映射(Environment Mapping)-prt-with-glossy-01.png]]
+![[RT_12_环境映射_Environment_Mapping-prt_with_glossy-01.png]]
 
 - 上图是考虑了 $\cos\theta_o$ 的不同取值，构成了矩阵的不同列。
 - 这个矩阵叫做 transport matrix。形象的理解：把光照的频率，按照矩阵转移到对应的值上。
@@ -214,7 +217,7 @@ $$
 
 **考虑 Interreflections**
 
-![[RT-12-环境映射(Environment Mapping)-prt-with-glossy-02.png|538x375]]
+![[RT_12_环境映射_Environment_Mapping-prt_with_glossy-02.png|538x375]]
 
 - L: 光照
 - S: Specular （镜面 transport）
@@ -244,14 +247,14 @@ $$
 	- 因为PathTracing后，可以完整得到每个Vertex的irradiance（方向下的强度），因此就是一个球面函数，可以用SH来压缩。
 
 多次bounce后结果更加亮：
-![[RT-12-环境映射(Environment Mapping)-prt-with-glossy-03.png]]
+![[RT_12_环境映射_Environment_Mapping-prt_with_glossy-03.png]]
 
 
 ## 其他基函数
 - Wavelet
-	- ![[RT-12-环境映射(Environment Mapping)-其他基函数-01.png]]
+	- ![[RT_12_环境映射_Environment_Mapping-其他基函数-01.png]]
 	- 小波变换后：可以全频率保留，并且大部分的系数为0
-	- ![[RT-12-环境映射(Environment Mapping)-其他基函数-02.png|236x321]]![[RT-12-环境映射(Environment Mapping)-其他基函数-03.png|241x317]]
+	- ![[RT_12_环境映射_Environment_Mapping-其他基函数-02.png|236x321]]![[RT_12_环境映射_Environment_Mapping-其他基函数-03.png|241x317]]
 	- 这里每次都分离一部分高频的阴影。
 	- JPEG用了类似的DCT，得到强的压缩。
 

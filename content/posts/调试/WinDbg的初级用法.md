@@ -1,4 +1,5 @@
 ---
+id: art_18ae0c3e6b88e9fe258445460de96f2f
 title: WinDbg的初级用法
 date: 2025-11-17T22:05:20+08:00
 tags:
@@ -7,7 +8,7 @@ tags:
   - 调试
 draft: false
 ---
-起因开始于 [[posts/Vulkan/记录调试Vulkan程序打印奇怪日志的问题|记录调试Vulkan程序打印奇怪日志的问题]]
+起因开始于 [[记录调试Vulkan程序打印奇怪日志的问题]]
 
 这篇文章详细展开了 WinDbg 的基础用法。
 

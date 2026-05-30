@@ -1,4 +1,5 @@
 ---
+id: art_a32b303672bda4d1fd951cb641de1bed
 title: buf和connectrpc入门01
 date: 2025-12-02T18:47:04+08:00
 tags:

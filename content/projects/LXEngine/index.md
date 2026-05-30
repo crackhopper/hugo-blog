@@ -1,4 +1,5 @@
 ---
+id: art_54949c376122bdbd2c05759fbf6e5df5
 title: LXEngine-AI Native渲染器
 date: 2024-01-01T10:00:00+08:00
 draft: false
@@ -46,7 +47,7 @@ image: /images/game-engine.jpg
 ### 3. AI 辅助工程流 (AI-Driven Workflow)
 - **Agent 协同**：引入 **OpenSpec Agent** 工作流，辅助解决 Vulkan 复杂的同步与 Debug 细节，极大提升了底层重构效率。
 
-更多内容: [[posts/GameEngine/LXEngine架构 v0.1.0|LXEngine架构 v0.1.0]]
+更多内容: [[LXEngine架构 v0.1.0]]
 
 ## RoadMap (核心开发计划)
 ### 阶段一：基础设施与静态渲染 (v0.1.0 - 已完成)

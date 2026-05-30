@@ -1,3 +1,6 @@
+---
+id: art_f504a6715e669666465ddd5ed8babbc5
+---
 # RTRT概要
 目前只能做到 1 spp (一个像素一个样本 1 sample per pixel) 。（性能 RT Core提供 1G per second的光线并行的能力）
 

@@ -1,276 +1,223 @@
-# crackhopper的技术博客
+# crackhopper 的技术博客
 
-基于 Hugo + Stack 主题的静态博客
+基于 Obsidian + Hugo + Stack 主题的中文技术博客。源文件保留 Obsidian wiki 语法，构建前由 Python 脚本预处理到 Hugo 可识别的 Markdown。
 
 ## 快速开始
 
-### 安装 Hugo
-访问 https://gohugo.io/installation/ 安装 Hugo
+首次进入仓库后执行：
 
-### 安装 Stack 主题
-Stack 主题通过 Git Submodule 引入，首次克隆仓库后按顺序执行：
-
-1. 初始化并同步子模块（常用场景）：
-
-   ```powershell
-   git submodule update --init --recursive
-   ```
-
-2. 如需重新添加或切换到 Stack 主题，可运行：
-
-   ```powershell
-   git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/Stack
-   ```
-
-3. 在 `config.toml` 中确认 `theme = 'Stack'`，然后执行 `hugo server` 验证本地预览。
-
-> 主题仓库位于 `themes/Stack`，更新主题时只需进入该目录执行 `git pull`。
-
-### 项目规范
-
-内容写作与 Agent 协作规范见 [AGENTS.md](AGENTS.md)。
-
-### 安装工具脚本
-自定义了很多处理 markdown 的工具，需要使用到 python
-```sh
-virtualenv venv
-./venv/Scripts/activate.ps1 # 或linux/mac下 source venv/Scripts/activate
-pip install -r requirements.txt
+```bash
+python3 init.py
 ```
 
-### 写作全流程脚本
-在项目根目录执行 `.\scripts\start-writing.ps1` 可以一键启动完整的写作环境：
+脚本会自动：
 
-## 编写文章
+- 使用 `uv sync` 创建/更新 `.venv`
+- 检查本地 Hugo 版本，不满足时下载 Hugo extended 到 `.tools/hugo/`
+- 检查 `.env` 中的 LLM 配置；缺失时交互式提示填写
+- 生成或更新 `.env`
+- 进入一个已注入本地工具链的交互 shell
 
-### 创建新文章
-在 `content/posts/` 目录下创建 Markdown 文件，文件名将作为 URL slug。
+进入该 shell 后，`python` 和 `hugo` 会优先指向项目本地版本。自动化环境可用：
 
-### Front Matter 模板
+```bash
+python3 init.py --no-shell
+```
 
-每篇文章需要在开头包含 Front Matter（元数据）：
+`--no-shell` 不会交互补配置；如果缺少 `LLM_MODEL` 或 `LLM_API_KEY` 会直接失败。
+
+## 本地预览
+
+启动远程可访问的预览服务：
+
+```bash
+python scripts/serve.py
+```
+
+默认行为：
+
+- 绑定 `0.0.0.0`
+- 先启动 1314 Admin，再校验 `content/` 和 `.hugo_temp_content/`
+- 校验通过后预处理 `content/` 到 `.hugo_temp_content/`
+- 默认不包含 draft 文档
+- 启动 Hugo 预览端口 `1313`
+- 启动本地管理页/API 端口 `1314`
+
+常用参数：
+
+```bash
+python scripts/serve.py --port 1313 --admin-port 1314
+python scripts/serve.py --drafts
+python scripts/serve.py --no-admin
+python scripts/serve.py --host 127.0.0.1
+```
+
+管理页地址：
+
+```text
+http://<你的局域网IP>:1314/admin/
+http://<你的局域网IP>:1314/issues/
+http://<你的局域网IP>:1314/docs/
+```
+
+管理页是本地构建的 React 应用，支持目录过滤、draft/published 过滤、关键字搜索、按 modified/date/title/directory 排序，并编辑 `title`、`date`、`tags`、`draft`。顶部 `Save all & restart preview` 会保存所有改动并重启预览；如需查看草稿，先勾选 `Preview drafts`。它只用于本地预览写作，不参与生产发布。
+
+如果校验发现 broken image，`serve` 会只保留 1314 Admin，不启动 1313 Hugo preview。进入 `/issues/` 可以查看具体文件、行号、缺失图片和候选文件；点击 `Edit Markdown` 会打开 Monaco 编辑器修改 `content/posts/` 原文。保存后工具链会重新导出并校验，校验通过后再跳转 1313 preview。
+
+如果首次启动提示 Admin UI 未构建，可手动执行：
+
+```bash
+python -m hugo_blog.preview.admin_ui_build
+```
+
+## 内容规范
+
+内容目录：
+
+```text
+content/
+├── posts/      # 博客文章
+├── projects/   # 项目页
+├── page/       # about、archives 等独立页面
+└── pending/    # 待整理笔记，工具链跳过
+```
+
+文章使用 YAML front matter：
 
 ```yaml
 ---
 title: 文章标题
-date: 2024-01-01T10:00:00+08:00
-tags:
-  - 标签1
-  - 标签2
-draft: false  # true 表示草稿，false 表示已发布
----
-```
-
-可以使用 Obsidian 的 插入模板指令 （默认快键 alt+shift+insert） 来插入 `新文章` 模板，从而插入了 Front Matter 模板。
-
-### 数学公式支持
-
-本博客已启用数学公式支持，使用 LaTeX 语法：
-
-- 行内公式：`$E = mc^2$` → $E = mc^2$
-- 块级公式：
-  ```
-  $$
-  \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
-  $$
-  ```
-
-在文章的 Front Matter 中，可以单独为某篇文章启用数学公式：
-
-
-## Content 目录配置
-
-`content/` 目录是 Hugo 的内容根目录，不同子目录有不同的用途和配置方式。
-
-### posts/ - 博客文章
-
-**用途：** 存放博客文章，是网站的主要内容。
-**目录结构：** 可以在 `posts/` 下创建子目录分类，如 `posts/C++/`、`posts/Python/` 等，不影响 URL 结构。
-
-### notes/ - 笔记
-
-**用途：** 存放学习笔记和理论知识整理。
-
-### projects/ - 项目
-**用途：** 展示个人项目。
-
-### page/ - 独立页面
-**用途：** 存放独立页面，如"关于"、"归档"等。
-
-```
-page/
-├── about/
-│   └── index.md
-└── archives/
-    └── index.md
-```
-
-### _index.md - 首页配置
-
-**用途：** 配置网站首页的菜单项。
-
-**位置：** `content/_index.md`
-
-**配置示例：**
-
-```yaml
----
-menu:
-    main:
-        name: 文章
-        weight: -100
-        params:
-            icon: home
----
-```
-
-**说明：** `weight: -100` 确保首页菜单项在最前面。
-
-## Stack 主题使用技巧
-
-### 1. 菜单配置
-
-在 Front Matter 中使用 `menu` 字段配置导航菜单：
-
-```yaml
----
-menu:
-    main:
-        name: 菜单名称
-        weight: -80  # 控制顺序，数值越小越靠前
-        params:
-            icon: hash  # 图标名称
----
-```
-
-**常用图标：** `home`、`user`、`hash`、`link`、`archive`、`search` 等。图标文件位于 `themes/Stack/assets/icons/`。
-
-### 2. 图片使用
-
-**静态资源位置：** `static/images/`
-
-Obsidian 附件目录为 `static/images/`。推荐命名 `{文章}-{段落}-{序号}.png`；可用 `python scripts/normalize_content.py` 批量规范化。详见 [AGENTS.md](AGENTS.md)。
-
-> 遗留脚本 `scripts/fix_obsidian_images.py` 已弃用，请改用 `scripts/normalize_content.py`。
-
-### 3. 文章分类和标签
-
-**分类：** 通过目录结构自动分类，如 `posts/C++/` 下的文章属于 C++ 分类。
-
-**标签：** 在 Front Matter 中设置：
-
-```yaml
----
+date: 2026-05-30T13:00:00+08:00
 tags:
   - C++
-  - CMake
-  - 教程
+draft: true
 ---
 ```
 
-### 4. 文章摘要
+摘要写在正文开头，并用 Hugo 摘要分界线结束：
 
-**方法 1：** 在 Front Matter 中设置 `description`
+```markdown
+这里是摘要内容。
 
-```yaml
----
-description: 这是文章的摘要
----
+<!-- more -->
+
+# 第一个标题
 ```
 
-**方法 2：** 在文章中使用 `<!--more-->` 分隔符，之前的内容作为摘要。
+不要在 front matter 中维护 `description` 字段；归一化脚本会移除它。
 
+图片和文章引用遵循 [AGENTS.md](AGENTS.md)：源文件使用 Obsidian wiki 语法，构建时自动转换。
 
-### 5. 自定义样式
+## 内容归一化
 
-可以在 `static/` 目录下创建自定义 CSS 文件，然后在 `config.toml` 中引入。
+默认发现 front matter/tags/摘要需要修复时会先询问，确认后才写入：
+
+```bash
+python scripts/normalize.py
+```
+
+跳过确认并处理所有候选文章：
+
+```bash
+python scripts/normalize.py --apply-all
+```
+
+逐篇审核：每篇写入前询问，写入后自动重启预览后台：
+
+```bash
+python scripts/normalize.py --review-each
+```
+
+Dry-run 检查：
+
+```bash
+python scripts/normalize.py --dry-run
+```
+
+常用参数：
+
+```bash
+python scripts/normalize.py --article "RT-04-材质和BRDF"
+python scripts/normalize.py --apply-all
+python scripts/normalize.py --review-each
+python scripts/normalize.py --no-llm
+python scripts/normalize.py --fix-links
+python scripts/normalize.py --skip-metadata
+```
+
+归一化会处理：
+
+- 删除未引用图片的提示与确认
+- broken image 检查；存在缺失图片时跳过该文件写入
+- 图片命名规范化
+- 旧 Markdown 图片链接迁移到 Obsidian `![[...]]`
+- Hugo `relref` 迁移到 Obsidian wiki 链接
+- broken wiki 链接交互式修复
+- 缺失 front matter 自动补齐
+- 缺失 `tags` 自动生成
+- 缺失正文摘要自动生成并插入到 `<!-- more -->` 前
+
+`draft` 只在缺失时补 `true`；已有 `draft: false` 不会被覆盖。
+
+真实写入完成后，归一化脚本会自动启动远程预览。`--dry-run` 不启动预览。
+
+## LLM 配置
+
+`scripts/normalize.py` 默认会在缺失 tags 或摘要时调用 LLM。配置写入 `.env`：
+
+```bash
+LLM_PROVIDER="deepseek"
+LLM_BASE_URL="https://api.deepseek.com"
+LLM_MODEL="你的模型名"
+LLM_API_KEY="你的 API Key"
+```
+
+DeepSeek 使用 OpenAI-compatible chat completions API。默认情况下，归一化需要可用的 `LLM_API_KEY` 和 `LLM_MODEL`；缺失会 fatal。`--dry-run` 不调用 LLM。每次 LLM 生成摘要或 tags 时，脚本会打印对应文件名和生成内容。需要完全离线写入时必须显式使用：
+
+```bash
+python scripts/normalize.py --no-llm
+```
+
+## 构建与发布
+
+本地构建：
+
+```bash
+python scripts/build.py
+```
+
+构建和发布默认不包含草稿，也不会包含 `docs/` 开发文档。构建前会执行同一套内容校验；如果存在 broken image，会直接失败。预览模式的开发文档由 1314 React Docs 提供。
+
+发布使用 Python 脚本：
+
+```bash
+python scripts/deploy.py
+```
+
+部署配置位于 `.env`：
+
+```bash
+DEPLOY_REPO="git@github.com:crackhopper/crackhopper.github.io.git"
+DEPLOY_BRANCH="master"
+DEPLOY_DIR="repo_to_deploy"
+```
+
+发布流程会构建到 `DEPLOY_DIR` 并推送到目标 GitHub Pages 仓库。生产发布不包含 draft；draft 仅用于本地预览。
 
 ## 目录结构
 
-```
+```text
 hugo-blog/
-├── .obsidian/         # obsidian的设置，以及一些安装的插件。
-├── content/           # 内容目录
-│   ├── _index.md      # 首页配置
-│   ├── posts/         # 博客文章目录
-│   │   ├── C++/       # 分类子目录
-│   │   ├── Python/
-│   │   └── ...
-│   ├── notes/         # 笔记目录
-│   │   ├── _index.md  # 笔记列表页
-│   │   └── *.md       # 笔记文件
-│   ├── projects/      # 项目目录
-│   │   ├── _index.md  # 项目列表页
-│   │   └── */         # 项目子目录
-│   └── page/          # 独立页面
-│       ├── about/     # 关于页面
-│       └── archives/  # 归档页面
-├── static/            # 静态资源目录
-│   └── images/        # 图片资源
-├── themes/            # 主题目录
-│   └── Stack/         # Stack 主题（Git Submodule）
-├── config.toml        # Hugo 配置文件
-├── templates/         # 文章模板
-└── public/            # 构建输出目录（已忽略）
+├── content/              # Obsidian/Hugo 内容源文件
+├── static/images/        # 图片附件
+├── scripts/              # 薄运行入口
+├── src/hugo_blog/        # Python 工具链实现
+├── docs/                 # 开发者文档
+├── themes/Stack/         # Hugo Stack 主题 submodule
+├── .hugo_temp_content/   # 预处理输出，勿提交
+├── .tools/               # 本地 Hugo 等工具，勿提交
+├── .venv/                # uv 创建的 Python 环境，勿提交
+└── public/               # Hugo 构建输出，勿提交
 ```
 
-## 部署
-
-### GitHub Pages
-
-1. 复制环境变量示例：`cp .env.example .env`（Windows 可使用 `Copy-Item`）
-2. 填写 `.env` 中的：
-   - `DEPLOY_REPO`：GitHub Pages 仓库地址
-   - `DEPLOY_BRANCH`：用于部署的分支
-   - `DEPLOY_DIR`：部署子模块目录（默认 `repo_to_deploy`）
-3. 运行 `.\scripts\deploy.ps1`（`-Force` 跳过未提交更改提示，`-ForcePush` 即使没有新文件也会执行 `git push -f`）
-
-部署脚本流程：
-
-- 自动调用 `scripts/init-deploy-submodule.ps1` 将 `DEPLOY_DIR` 初始化为 git submodule（若尚未存在）
-- 在部署目录中删除除 `.git` 以外的所有文件，确保不会携带旧产物
-- 使用 `hugo --destination <DEPLOY_DIR>` 构建站点
-- 在子模块中提交并推送到 `.env` 配置的仓库/分支
-
-如果你更偏好手动流程，也可以直接执行 `hugo --destination repo_to_deploy`，然后在该目录内提交并推送；但推荐使用脚本以覆盖清理、构建与推送的全流程。
-
-## 主题管理
-
-Stack 主题通过 Git Submodule 管理：
-
-```bash
-# 初始化 submodule（首次克隆仓库后）
-git submodule update --init --recursive
-
-# 更新主题到最新版本
-cd themes/Stack
-git pull origin master
-cd ../..
-git add themes/Stack
-git commit -m "Update theme"
-```
-
-### 配置新主题
-当需要尝试新的 Hugo 主题时，可以沿用以下流程：
-
-1. **引入主题代码**  
-   - 使用 Submodule：`git submodule add <theme_repo_url> themes/<ThemeName>`  
-   - 或者直接将主题下载/复制到 `themes/<ThemeName>`。
-
-2. **切换主题配置**  
-   - 更新 `config.toml` 中的 `theme` 字段为新主题名。  
-   - 按新主题文档补充必需的 `[params]`、菜单、自定义 CSS 等配置。
-
-3. **迁移/合并配置**  
-   - 参照 `themes/<ThemeName>/exampleSite/config.*` 调整本站配置。  
-   - 若主题提供额外的短代码或布局，确认内容文件是否需要相应 Front Matter。
-
-4. **验证与回滚**  
-   - 运行 `hugo server -D` 检查本地显示是否正常（包含草稿）。  
-   - 如需回滚，恢复 `config.toml` 中的 `theme` 字段并移除对应子模块：`git submodule deinit -f themes/<ThemeName>`、`git rm -f themes/<ThemeName>`。
-
-## 参考资源
-
-- [Hugo 官方文档](https://gohugo.io/documentation/)
-- [Stack 主题文档](https://stack.jimmycai.com/)
-- [Hugo 数学公式支持](https://gohugo.io/content-management/mathematics/)
+更多 Agent 和内容细节见 [AGENTS.md](AGENTS.md)。

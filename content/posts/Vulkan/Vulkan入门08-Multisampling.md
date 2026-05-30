@@ -1,4 +1,5 @@
 ---
+id: art_6859d5678c399f5f83516fc56af6842b
 title: Vulkan入门08-Multisampling
 date: 2025-12-09T12:45:58+08:00
 tags:
@@ -7,8 +8,8 @@ tags:
   - sample-shading
 draft: false
 ---
-![[Vulkan入门08-Multisampling-intro-01.png|636x338]]
-![[Vulkan入门08-Multisampling-intro-02.png|636x331]]
+![[Vulkan入门08_Multisampling-intro-01.png|636x338]]
+![[Vulkan入门08_Multisampling-intro-02.png|636x331]]
 
 多重采样(MSAA)也是一个常用的采样技术。对比上一节的mipmap：
 - **MSAA ：减几何锯齿**  
@@ -171,10 +172,10 @@ void createRenderPass() {
 
 # 渲染结果
 
-![[Vulkan入门08-Multisampling-渲染结果-01.png]]
+![[Vulkan入门08_Multisampling-渲染结果-01.png]]
 
 更细节对比：
-![[Vulkan入门08-Multisampling-渲染结果-02.png]]
+![[Vulkan入门08_Multisampling-渲染结果-02.png]]
 
 # 质量提升
 我们当前的 MSAA 实现存在一些局限性，可能会影响在更精细场景中输出图像的质量。例如，我们目前尚未解决由shader aliasing引起的潜在问题，即 MSAA 仅平滑几何体的边缘，而不会平滑内部填充。这可能导致在屏幕上渲染出平滑的多边形，但若纹理包含高对比度颜色，其外观仍会显得 aliased。解决这个问题的一种方法是通过启用 Sample Shading 来进一步提升图像质量，尽管这会带来额外的性能开销：

@@ -1,4 +1,5 @@
 ---
+id: art_f4023e05c90b8d07f145226e6783c419
 title: TypeScript链式调用与串行锁
 date: 2025-12-01T11:11:44+08:00
 tags:

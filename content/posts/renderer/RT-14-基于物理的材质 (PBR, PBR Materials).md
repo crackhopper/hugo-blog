@@ -1,3 +1,6 @@
+---
+id: art_2812f8e6671b2541a1aaf537f67b61b9
+---
 
 # PBR 材质
 - 表面：主要是 microfacet 和 disney principled

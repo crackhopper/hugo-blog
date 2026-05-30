@@ -1,4 +1,5 @@
 ---
+id: art_4cdec07b9ff3116b2c91f781d5e3b852
 title: AI时代下的代码熵增
 date: 2026-04-02T10:02:22+08:00
 tags: []

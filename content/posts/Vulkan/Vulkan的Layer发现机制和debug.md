@@ -1,4 +1,5 @@
 ---
+id: art_4ddf723ef6317a156270dcf2de7f5478
 title: Vulkan的Layer发现机制
 date: 2025-11-19T15:35:53+08:00
 tags:
@@ -72,7 +73,7 @@ Desktop loader 不会使用这些 introspection 函数，但 layer 仍应包含�
 **每个项必须是 manifest 文件的绝对路径名。**
 
 示例图：
-![[Vulkan的Layer发现机制和debug-windows-layer-discoverywindows-上的-layer-发现-01.png]]
+![[Vulkan的Layer发现机制-windows_layer_discoverywindows_上的_layer_发现-01.png]]
 
 
 另外，只有在应用 **没有管理员权限** 时才会查找 `HKEY_CURRENT_USER` 路径。  
@@ -93,8 +94,8 @@ Desktop loader 不会使用这些 introspection 函数，但 layer 仍应包含�
 	软件组织编号为： `5C4C3332-344D-483C-8739-259E934C9CC8`
 	上面两个key的截图为：
 
-![[Vulkan的Layer发现机制和debug-windows-layer-discoverywindows-上的-layer-发现-02.png]]
-![[Vulkan的Layer发现机制和debug-windows-layer-discoverywindows-上的-layer-发现-03.png]]
+![[Vulkan的Layer发现机制-windows_layer_discoverywindows_上的_layer_发现-02.png]]
+![[Vulkan的Layer发现机制-windows_layer_discoverywindows_上的_layer_发现-03.png]]
 
 
 在 64 位系统上，可能存在另一组注册表值，用于记录 32 位 layer：
@@ -198,4 +199,4 @@ set VK_LOADER_LAYERS_ALLOW=*steam*,*Mesa*
 ```
 
 # 更多
-[[posts/Vulkan/Vulkan的ICD机制|Vulkan的ICD机制]]
+[[Vulkan的ICD机制]]

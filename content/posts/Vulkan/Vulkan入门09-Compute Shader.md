@@ -1,4 +1,5 @@
 ---
+id: art_a49055d65eccdd8ff84a0cf87e487d2c
 title: Vulkan入门09-Compute Shader
 date: 2025-12-09T22:46:41+08:00
 tags:
@@ -7,7 +8,7 @@ tags:
   - particle-system
 draft: false
 ---
-![[Vulkan入门09-Compute Shader-intro-01.png|342x270]]
+![[Vulkan入门09_Compute_Shader-intro-01.png|342x270]]
 
 
 整体来说，执行compute pipeline，类似图形管线，但是更加简单：
@@ -25,7 +26,7 @@ vkCmdDispatch
 <!--more-->
 
 # Vulkan Pipeline
-![[Vulkan入门09-Compute Shader-vulkan-pipeline-01.png]]
+![[Vulkan入门09_Compute_Shader-vulkan_pipeline-01.png]]
 
 上面的图，左侧是传统的图形管线。右侧是一些特殊的管线（比如基于mesh shader的rendering，以及用GPU来实现计算的Compute Shader）。
 
@@ -56,7 +57,7 @@ Compute Shader
 # 目标案例
 我们将用 Compute Shader来实现一个粒子系统 (Particle System)效果如下
 
-![[Vulkan入门09-Compute Shader-intro-01.png|342x270]]
+![[Vulkan入门09_Compute_Shader-intro-01.png|342x270]]
 
 # 数据操作(Data manipulation)
 ## Shader storage buffer objects (SSBO)
@@ -316,7 +317,7 @@ if (vkCreateDescriptorSetLayout(device, &layoutInfo, nullptr, &computeDescriptor
 - 每帧需要知道上一帧粒子的位置。以便更新它们。
 具体流程如下图：
 
-![[Vulkan入门09-Compute Shader-descriptor-01.png]]
+![[Vulkan入门09_Compute_Shader-descriptor-01.png]]
 
 而UBO显然是用来计算delta time，以及管理哪个buffer是source，哪个buffer是dst的。
 
@@ -401,7 +402,7 @@ if (vkCreateComputePipelines(
 
 说明示例图：
 
-![[Vulkan入门09-Compute Shader-compute-space-01.png]]
+![[Vulkan入门09_Compute_Shader-compute_space-01.png]]
 
 work groups 和 invocations 的维度数 (number of dimensions) 取决于输入数据的结构 （由compute shader的 local size 定义）。
 

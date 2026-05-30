@@ -1,4 +1,5 @@
 ---
+id: art_31d9c405e6306a4410db3dbbea4d5c23
 title: C++内存管理
 date: 2025-12-16T18:16:06+08:00
 tags:
@@ -8,7 +9,7 @@ tags:
   - gc
 draft: false
 ---
-![[C++内存管理-intro-01.png]]
+![[C_内存管理-intro-01.png]]
 
 
 本文主要围绕C++内存管理。也会介绍C++的RAII机制，以及其他语言的内存管理（GC）。

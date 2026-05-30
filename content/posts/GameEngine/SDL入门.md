@@ -1,4 +1,5 @@
 ---
+id: art_93a5daf99e65963632022a15ffa75eb1
 title: SDL入门
 date: 2025-12-22T19:42:32+08:00
 tags:

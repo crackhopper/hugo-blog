@@ -1,3 +1,6 @@
+---
+id: art_c4402402cfd686c8c4e4bff532177106
+---
 # 光谱(Spectrum)
 光的性质。光在各个频率下的能量分布。
 ## 谱功率密度 (Spectrum Power Distribution)

@@ -1,10 +1,11 @@
 ---
+id: art_4f8ad38dde84358fc4c1ebe0631233b6
 title: MGPK-ch01-代码分析01
 date: 2025-12-10T13:10:41+08:00
 tags: []
 draft: true
 ---
-![[MGPV-ch01-代码分析01-内存管理-intro-01.png]]
+![[MGPK_ch01_代码分析01-intro-01.png]]
 
 Vulkan Tutorial 已经读完。
 

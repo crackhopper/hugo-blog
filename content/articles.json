@@ -1,0 +1,2211 @@
+{
+  "version": 1,
+  "articles": {
+    "art_019904150215dd1c9d97d8772552d96f": {
+      "id": "art_019904150215dd1c9d97d8772552d96f",
+      "path": "pending/Jupyter用户文档.md",
+      "title": "Jupyter用户文档",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:878bc930726cd791b02ce2280e622747",
+      "previous_paths": [],
+      "aliases": [
+        "Jupyter用户文档"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_026abf2b4cfa3d4e8c0facc94a56951e": {
+      "id": "art_026abf2b4cfa3d4e8c0facc94a56951e",
+      "path": "posts/系统/cpp中设置环境变量.md",
+      "title": "cpp中设置环境变量",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:b756c6b3d359f88d39c5bc0fe4b2ef4a",
+      "previous_paths": [],
+      "aliases": [
+        "cpp中设置环境变量"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_02cf2aa49834f01075ff6a67c6c52b49": {
+      "id": "art_02cf2aa49834f01075ff6a67c6c52b49",
+      "path": "pending/C++/Cpp中的RVO.md",
+      "title": "Cpp中的RVO",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:dfe085ee2651180afb29a3a10179d309",
+      "previous_paths": [],
+      "aliases": [
+        "Cpp中的RVO"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_036c98e48766feb5f09036a1fdd3512c": {
+      "id": "art_036c98e48766feb5f09036a1fdd3512c",
+      "path": "posts/构建/cmake入门.md",
+      "title": "cmake入门",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:64c49fd8405ffbc3117be3ca9ba1767d",
+      "previous_paths": [],
+      "aliases": [
+        "cmake入门"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "cmake入门-简单的例子-01.png",
+        "cmake入门-构建helloworld-01.png",
+        "cmake入门-项目外构建-01.png",
+        "cmake入门-项目外构建-02.png",
+        "cmake入门-项目外构建-03.png",
+        "cmake入门-静态库项目-01.png",
+        "cmake入门-静态库项目-02.png",
+        "cmake入门-add_block_directories-01.png",
+        "cmake入门-指定链接库优先链接动态库-01.png",
+        "cmake入门-指定链接库优先链接动态库-02.png",
+        "cmake入门-使用find_package-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_038b295da648a352ebc1cc78ebce18a8": {
+      "id": "art_038b295da648a352ebc1cc78ebce18a8",
+      "path": "posts/Vulkan/记录调试Vulkan程序打印奇怪日志的问题.md",
+      "title": "记录调试Vulkan程序打印奇怪日志的问题",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:74be8b1da11869195b15614682f77be8",
+      "previous_paths": [],
+      "aliases": [
+        "记录调试Vulkan程序打印奇怪日志的问题"
+      ],
+      "outgoing_links": [
+        "WinDbg的初级用法",
+        "Vulkan的Layer发现机制",
+        "Vulkan程序中Intel驱动总是被调用（未解决）"
+      ],
+      "incoming_links": [
+        "art_18ae0c3e6b88e9fe258445460de96f2f"
+      ],
+      "image_keys": [
+        "记录调试Vulkan程序打印奇怪日志的问题-起因-01.png",
+        "记录调试Vulkan程序打印奇怪日志的问题-起因-02.png",
+        "记录调试Vulkan程序打印奇怪日志的问题-起因-03.png",
+        "记录调试Vulkan程序打印奇怪日志的问题-增加断点处的行为scripting-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_05b1c22ae41f1d9c7fe4bddf0f549e54": {
+      "id": "art_05b1c22ae41f1d9c7fe4bddf0f549e54",
+      "path": "posts/GameEngine/ImGUI入门.md",
+      "title": "ImGUI入门",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:6a4982305c93e7d1f9d494c4dbf3da5f",
+      "previous_paths": [],
+      "aliases": [
+        "ImGUI入门"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_0949c3914b29ba75dbe6900e92e97469": {
+      "id": "art_0949c3914b29ba75dbe6900e92e97469",
+      "path": "pending/C++/glog和gflags.md",
+      "title": "那些年踩过的坑--glog with gflags",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:523a5d1accb5d0f3acb2929ad5b15298",
+      "previous_paths": [],
+      "aliases": [
+        "那些年踩过的坑--glog with gflags",
+        "glog和gflags"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_0a7737555ec399efc801f3ba424cbbb6": {
+      "id": "art_0a7737555ec399efc801f3ba424cbbb6",
+      "path": "posts/renderer/RT-02-光传播理论(渲染方程).md",
+      "title": "Cook-Torrance BRDF",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:863b71df12de87dd44298636dcfca5cf",
+      "previous_paths": [],
+      "aliases": [
+        "Cook-Torrance BRDF",
+        "RT-02-光传播理论(渲染方程)"
+      ],
+      "outgoing_links": [
+        "深入思考曲面积分"
+      ],
+      "incoming_links": [],
+      "image_keys": [
+        "RT-02-光传播理论(渲染方程)-radiance-01.png",
+        "RT-02-光传播理论(渲染方程)-brdfbidirectional-reflectance-distribution-function-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_0b033fb97e61b0ac8a7dd783d8c4b910": {
+      "id": "art_0b033fb97e61b0ac8a7dd783d8c4b910",
+      "path": "pending/矩阵初步.md",
+      "title": "矩阵初步",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:d87b63ab89340be03ea0f89337a47b02",
+      "previous_paths": [],
+      "aliases": [
+        "矩阵初步"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_0b5d86d1fee4b6094df4896d4b262a32": {
+      "id": "art_0b5d86d1fee4b6094df4896d4b262a32",
+      "path": "pending/数据库六大范式.md",
+      "title": "数据库六大范式",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:cae66941d9efbd404e4d88758ea67670",
+      "previous_paths": [],
+      "aliases": [
+        "数据库六大范式"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_0dea34508ea8260222907306b8582df3": {
+      "id": "art_0dea34508ea8260222907306b8582df3",
+      "path": "posts/Vulkan/Vulkan入门05-Depth buffering.md",
+      "title": "Vulkan入门05-Depth buffering",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:94492f9a19a53e15e0b108185afd8add",
+      "previous_paths": [],
+      "aliases": [
+        "Vulkan入门05-Depth buffering"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "Vulkan入门05_Depth_buffering-intro-01.png",
+        "Vulkan入门05_Depth_buffering-3d几何-01.png",
+        "Vulkan入门05_Depth_buffering-显示效果-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_0f4e76e81e9ea0b1c8fd9a3fb0b068ce": {
+      "id": "art_0f4e76e81e9ea0b1c8fd9a3fb0b068ce",
+      "path": "pending/React之初体验.md",
+      "title": "React之初体验",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:639dc5d93ccc6fe0a13abc992526b43d",
+      "previous_paths": [],
+      "aliases": [
+        "React之初体验"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_142473a7434c41fde297a2a1d2bf8dcf": {
+      "id": "art_142473a7434c41fde297a2a1d2bf8dcf",
+      "path": "posts/随笔/起点从这里开始.md",
+      "title": "起点从这里开始",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:5abce620a88f22340dcf71339853ad5e",
+      "previous_paths": [],
+      "aliases": [
+        "起点从这里开始"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_15d7cc3db77a1d62d5965ac171e7b06a": {
+      "id": "art_15d7cc3db77a1d62d5965ac171e7b06a",
+      "path": "posts/renderer/RT-05-高级话题简述.md",
+      "title": "RT-05-高级话题简述",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:2c7eff2de0fbe980b15426b376ff768a",
+      "previous_paths": [],
+      "aliases": [
+        "RT-05-高级话题简述"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "RT-05-高级话题简述-双向路径追踪bidirectional-path-tracing-01.png",
+        "RT-05-高级话题简述-metropolis-light-transport-mlt-01.png",
+        "RT-05-高级话题简述-光子映射photon-mapping-01.png",
+        "RT-05-高级话题简述-vcm-vertex-connection-and-merging-01.png",
+        "RT-05-高级话题简述-实时辐射度instant-radiosity-ir-01.png",
+        "RT-05-高级话题简述-散射介质-participating-media-01.png",
+        "RT-05-高级话题简述-散射介质-participating-media-02.png",
+        "RT-05-高级话题简述-散射介质-participating-media-03.png",
+        "RT-05-高级话题简述-kajiya-kay-model-01.png",
+        "RT-05-高级话题简述-marschner-model-01.png",
+        "RT-05-高级话题简述-marschner-model-02.png",
+        "RT-05-高级话题简述-毛发-fur-appearance-01.png",
+        "RT-05-高级话题简述-毛发-fur-appearance-02.png",
+        "RT-05-高级话题简述-granular-material-01.png",
+        "RT-05-高级话题简述-bssrdf-01.png",
+        "RT-05-高级话题简述-bssrdf-02.png",
+        "RT-05-高级话题简述-dipole-approximation-01.png",
+        "RT-05-高级话题简述-布料-cloth-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_15fa133fa53f99bd79bd5b8f090a6cbe": {
+      "id": "art_15fa133fa53f99bd79bd5b8f090a6cbe",
+      "path": "posts/编译器/小白学写编译器：1.编译基础概念.md",
+      "title": "小白学写编译器：1.编译基础概念",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:4679276958163133d003e044d23ad78b",
+      "previous_paths": [],
+      "aliases": [
+        "小白学写编译器：1.编译基础概念"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "小白学写编译器_1_编译基础概念-一个例子-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_16c98582f36d19561fe2f1421125576e": {
+      "id": "art_16c98582f36d19561fe2f1421125576e",
+      "path": "posts/nodejs/配置TypeScript+Node.js的项目.md",
+      "title": "配置TypeScript+Node.js的项目",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:123fd565a27ce31e69c6369c8177715e",
+      "previous_paths": [],
+      "aliases": [
+        "配置TypeScript+Node.js的项目"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_16fbf071b33a44825309fe3f27c1789c": {
+      "id": "art_16fbf071b33a44825309fe3f27c1789c",
+      "path": "pending/Qt/Qt之QTableWidget.md",
+      "title": "Qt之QTableWidget",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:0ba390f0079ddd964d31c96f36cc9947",
+      "previous_paths": [],
+      "aliases": [
+        "Qt之QTableWidget"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_18ae0c3e6b88e9fe258445460de96f2f": {
+      "id": "art_18ae0c3e6b88e9fe258445460de96f2f",
+      "path": "posts/调试/WinDbg的初级用法.md",
+      "title": "WinDbg的初级用法",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:11ac79fd9abbf0c627ccb4dd8a0ac1d0",
+      "previous_paths": [],
+      "aliases": [
+        "WinDbg的初级用法"
+      ],
+      "outgoing_links": [
+        "记录调试Vulkan程序打印奇怪日志的问题"
+      ],
+      "incoming_links": [
+        "art_038b295da648a352ebc1cc78ebce18a8"
+      ],
+      "image_keys": [
+        "WinDbg的初级用法-启动调试-01.png",
+        "WinDbg的初级用法-实操演练-01.png",
+        "WinDbg的初级用法-ui配置-01.png",
+        "WinDbg的初级用法-添加断点-01.png",
+        "WinDbg的初级用法-中断到createfile-01.png",
+        "WinDbg的初级用法-如何查看具体汇编代码ui方式-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_1ae7480cf8e655b0b5963253080c40ec": {
+      "id": "art_1ae7480cf8e655b0b5963253080c40ec",
+      "path": "posts/C++/C++模板元编程初探.md",
+      "title": "C++模板元编程初探",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:260f38d037463b377b8c960e5c971d74",
+      "previous_paths": [],
+      "aliases": [
+        "C++模板元编程初探"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [
+        "art_31d9c405e6306a4410db3dbbea4d5c23"
+      ],
+      "image_keys": [
+        "C_模板元编程初探-intro-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_1aef825efae1fb5049311d142ffe5dd2": {
+      "id": "art_1aef825efae1fb5049311d142ffe5dd2",
+      "path": "posts/数学/Perlin Noise.md",
+      "title": "Perlin Noise",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:cae66941d9efbd404e4d88758ea67670",
+      "previous_paths": [],
+      "aliases": [
+        "Perlin Noise"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_1b3f62280468c056f1792c2047d9e171": {
+      "id": "art_1b3f62280468c056f1792c2047d9e171",
+      "path": "pending/Cmake/cmake进阶.md",
+      "title": "cmake进阶",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:c61fe21ec1c0bd76efec33601753ff4c",
+      "previous_paths": [],
+      "aliases": [
+        "cmake进阶"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_1bf20c6c21f7f3f21dd0caf79d1034da": {
+      "id": "art_1bf20c6c21f7f3f21dd0caf79d1034da",
+      "path": "posts/Shell/脚本-根据端口杀死进程.md",
+      "title": "脚本-根据端口杀死进程",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:d117941debf33b1b62995a3c1918011a",
+      "previous_paths": [],
+      "aliases": [
+        "脚本-根据端口杀死进程"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_1de237282bbf89e3b88cef12a40b39f9": {
+      "id": "art_1de237282bbf89e3b88cef12a40b39f9",
+      "path": "posts/renderer/RT-11-阴影渲染.md",
+      "title": "RT-11-阴影渲染",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:15cb7fdc89eae397a99f87a094806486",
+      "previous_paths": [],
+      "aliases": [
+        "RT-11-阴影渲染"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "RT-11-阴影渲染-problem1自遮挡-self-occlusionshadow-acne-01.png",
+        "RT-11-阴影渲染-problem1自遮挡-self-occlusionshadow-acne-02.png",
+        "RT-11-阴影渲染-problem1自遮挡-self-occlusionshadow-acne-03.png",
+        "RT-11-阴影渲染-problem2漏光-detached-shadowpeter-panning-01.png",
+        "RT-11-阴影渲染-p1p2-sol1-second-depth-shadow-mapping-01.png",
+        "RT-11-阴影渲染-problem3-aliasing-01.png",
+        "RT-11-阴影渲染-shadow-map-理论基础和分析-01.png",
+        "RT-11-阴影渲染-pcf-percentage-closer-filter-01.png",
+        "RT-11-阴影渲染-pcss-percentage-closer-soft-shadows-01.png",
+        "RT-11-阴影渲染-pcss-percentage-closer-soft-shadows-02.png",
+        "RT-11-阴影渲染-blocker的region怎么找-01.png",
+        "RT-11-阴影渲染-pcss的数学表达-01.png",
+        "RT-11-阴影渲染-pcss的数学表达-02.png",
+        "RT-11-阴影渲染-pcf-优化-01.png",
+        "RT-11-阴影渲染-pcf-优化-02.png",
+        "RT-11-阴影渲染-block-search-优化-01.png",
+        "RT-11-阴影渲染-block-search-优化-02.png",
+        "RT-11-阴影渲染-范围内查询工程上的优化-01.png",
+        "RT-11-阴影渲染-moment-shadow-mapping-01.png",
+        "RT-11-阴影渲染-moment-shadow-mapping-02.png",
+        "RT-11-阴影渲染-moment-shadow-mapping-03.png",
+        "RT-11-阴影渲染-moment-shadow-mapping-04.png",
+        "RT-11-阴影渲染-sdf的可视化-01.png",
+        "RT-11-阴影渲染-和sdf求交-ray-marching-01.png",
+        "RT-11-阴影渲染-生成软阴影原理-01.png",
+        "RT-11-阴影渲染-ray-marching如何得到安全角度-01.png",
+        "RT-11-阴影渲染-ray-marching如何得到安全角度-02.png",
+        "RT-11-阴影渲染-ray-marching如何得到安全角度-03.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_20e79d414316675cafaaaded4cedea12": {
+      "id": "art_20e79d414316675cafaaaded4cedea12",
+      "path": "posts/数学/常见不等式和近似.md",
+      "title": "常见不等式和近似",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:57266a5f6755e0800ee3049b89774ee1",
+      "previous_paths": [],
+      "aliases": [
+        "常见不等式和近似"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_2502a2da18c5b336cb687d236546883a": {
+      "id": "art_2502a2da18c5b336cb687d236546883a",
+      "path": "posts/renderer/RT-08-动画和仿真.md",
+      "title": "RT-08-动画和仿真",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:19f5c30cbde6b42e11a5a78f202a83f4",
+      "previous_paths": [],
+      "aliases": [
+        "RT-08-动画和仿真"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "RT-08-动画和仿真-关键帧动画-keyframe-animation-01.png",
+        "RT-08-动画和仿真-质点弹簧系统-mass-spring-system-01.png",
+        "RT-08-动画和仿真-质点弹簧系统-mass-spring-system-02.png",
+        "RT-08-动画和仿真-质点弹簧系统-mass-spring-system-03.png",
+        "RT-08-动画和仿真-粒子系统-01.png",
+        "RT-08-动画和仿真-euler方法-01.png",
+        "RT-08-动画和仿真-中点法-midpoint-method-01.png",
+        "RT-08-动画和仿真-中点法-midpoint-method-02.png",
+        "RT-08-动画和仿真-adaptive-step-size-01.png",
+        "RT-08-动画和仿真-隐式euler方法-implicit-euler-method-01.png",
+        "RT-08-动画和仿真-龙格库塔方法-runge-kutta-01.png",
+        "RT-08-动画和仿真-龙格库塔方法-runge-kutta-02.png",
+        "RT-08-动画和仿真-龙格库塔方法-runge-kutta-03.png",
+        "RT-08-动画和仿真-刚体模拟-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_2812f8e6671b2541a1aaf537f67b61b9": {
+      "id": "art_2812f8e6671b2541a1aaf537f67b61b9",
+      "path": "posts/renderer/RT-14-基于物理的材质 (PBR, PBR Materials).md",
+      "title": "RT-14-基于物理的材质 (PBR, PBR Materials)",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:9ee0878348a551ff6571ab04fdc78644",
+      "previous_paths": [],
+      "aliases": [
+        "RT-14-基于物理的材质 (PBR, PBR Materials)"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-recap-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-backmann-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-ggx-trowbridge-reitz-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-ggx-trowbridge-reitz-02.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-gtr-generialized-trowbridge-reitz-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-geometry-term-shadowing-masking-term-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-problem-多次弹射-能量损失-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-kulla-conty-approximation-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-kulla-conty-approximation-02.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-problem-多次弹射-颜色被多次吸收-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-面光源下求解linearly-transformed-consines-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-面光源下求解linearly-transformed-consines-02.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-面光源下求解linearly-transformed-consines-03.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-面光源下求解linearly-transformed-consines-04.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-disey-principled-brdf-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-目标-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-案例分析-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-outline-rendering-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-方法一利用法向-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-方法二利用geometry-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-image上的方法-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-color-blocks-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-color-blocks-02.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-strokes-surface-stylization-01.png",
+        "RT-14-基于物理的材质 (PBR, PBR Materials)-strokes-surface-stylization-02.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_31d9c405e6306a4410db3dbbea4d5c23": {
+      "id": "art_31d9c405e6306a4410db3dbbea4d5c23",
+      "path": "posts/C++/C++内存管理.md",
+      "title": "C++内存管理",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:9a591197eb06ccda0d2d473739b8e0e8",
+      "previous_paths": [],
+      "aliases": [
+        "C++内存管理"
+      ],
+      "outgoing_links": [
+        "C++模板元编程初探"
+      ],
+      "incoming_links": [],
+      "image_keys": [
+        "C_内存管理-intro-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_32344ad2f03937f4965d5488930f7fd5": {
+      "id": "art_32344ad2f03937f4965d5488930f7fd5",
+      "path": "posts/renderer/RT-13-全局光照(Global Illumination).md",
+      "title": "RT-13-全局光照(Global Illumination)",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:b85eabf105bb01a07e698c42d2cd7715",
+      "previous_paths": [],
+      "aliases": [
+        "RT-13-全局光照(Global Illumination)"
+      ],
+      "outgoing_links": [
+        "深入思考曲面积分"
+      ],
+      "incoming_links": [],
+      "image_keys": [
+        "RT_13_全局光照_Global_Illumination-原理-01.png",
+        "RT_13_全局光照_Global_Illumination-重要性采样importance_sampling与低频过滤-01.png",
+        "RT_13_全局光照_Global_Illumination-多级渐远纹理mipmaps高能压缩-01.png",
+        "RT_13_全局光照_Global_Illumination-1_generation-01.png",
+        "RT_13_全局光照_Global_Illumination-2_injection-01.png",
+        "RT_13_全局光照_Global_Illumination-3_propagation-01.png",
+        "RT_13_全局光照_Global_Illumination-problem_light_leaking-01.png",
+        "RT_13_全局光照_Global_Illumination-problem_light_leaking-02.png",
+        "RT_13_全局光照_Global_Illumination-思路-01.png",
+        "RT_13_全局光照_Global_Illumination-步骤-01.png",
+        "RT_13_全局光照_Global_Illumination-pass1_light_pass_得到直接光照的voxel-01.png",
+        "RT_13_全局光照_Global_Illumination-pass2_rendering_pass_渲染基于cone_tracing-01.png",
+        "RT_13_全局光照_Global_Illumination-问题-01.png",
+        "RT_13_全局光照_Global_Illumination-ambient_occlusion理论-01.png",
+        "RT_13_全局光照_Global_Illumination-如何计算_k_a-01.png",
+        "RT_13_全局光照_Global_Illumination-如何计算_k_a-02.png",
+        "RT_13_全局光照_Global_Illumination-false_occlusion_halos-01.png",
+        "RT_13_全局光照_Global_Illumination-screen_space_directional_occlusion_ssdo-01.png",
+        "RT_13_全局光照_Global_Illumination-思路-02.png",
+        "RT_13_全局光照_Global_Illumination-思路-03.png",
+        "RT_13_全局光照_Global_Illumination-思路-04.png",
+        "RT_13_全局光照_Global_Illumination-思路-05.png",
+        "RT_13_全局光照_Global_Illumination-核心步骤求像素反射点-01.png",
+        "RT_13_全局光照_Global_Illumination-核心步骤求像素反射点-02.png",
+        "RT_13_全局光照_Global_Illumination-核心步骤shading-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_3441d287016d4b269061d002e105f6af": {
+      "id": "art_3441d287016d4b269061d002e105f6af",
+      "path": "posts/Vulkan/Vulkan程序中Intel驱动总是被调用（未解决）.md",
+      "title": "Vulkan程序中Intel驱动总是被调用（未解决）",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:b7c7e00f2d49495f14db945062f15d5f",
+      "previous_paths": [],
+      "aliases": [
+        "Vulkan程序中Intel驱动总是被调用（未解决）"
+      ],
+      "outgoing_links": [
+        "Vulkan的ICD机制"
+      ],
+      "incoming_links": [
+        "art_038b295da648a352ebc1cc78ebce18a8"
+      ],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_3faa2484a8e0689450da25ade95e877f": {
+      "id": "art_3faa2484a8e0689450da25ade95e877f",
+      "path": "posts/renderer/RT-04-材质和BRDF.md",
+      "title": "RT-04-材质和BRDF",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:f7a59250e7d49f32226378ab1fca77e3",
+      "previous_paths": [],
+      "aliases": [
+        "RT-04-材质和BRDF"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "RT-04-材质和BRDF-lambertian-漫反射-01.png",
+        "RT-04-材质和BRDF-glossy-反射-01.png",
+        "RT-04-材质和BRDF-水面模型-01.png",
+        "RT-04-材质和BRDF-全反射total-internal-reflection-01.png",
+        "RT-04-材质和BRDF-反射模型fresnel-菲涅尔项-01.png",
+        "RT-04-材质和BRDF-反射模型fresnel-菲涅尔项-02.png",
+        "RT-04-材质和BRDF-如何计算frenel项严格-01.png",
+        "RT-04-材质和BRDF-schlicks-approximation-01.png",
+        "RT-04-材质和BRDF-微表面模型microfacet-theory-01.png",
+        "RT-04-材质和BRDF-微表面例子-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_42975218b57ac95c0eb80df90fe02325": {
+      "id": "art_42975218b57ac95c0eb80df90fe02325",
+      "path": "posts/中间件/Kalfka一些知识的总结01.md",
+      "title": "Kalfka一些知识的总结01",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:7bbdd15bed64da1d515aaddb6923482c",
+      "previous_paths": [],
+      "aliases": [
+        "Kalfka一些知识的总结01"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_467d874a8b54d3d1208247967a6c6b8d": {
+      "id": "art_467d874a8b54d3d1208247967a6c6b8d",
+      "path": "page/archives/index.md",
+      "title": "归档",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:e7736702303426a2d9751a46069cbf7e",
+      "previous_paths": [],
+      "aliases": [
+        "归档",
+        "index"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_4aec6fddcb2ed7303d21b24bc2385422": {
+      "id": "art_4aec6fddcb2ed7303d21b24bc2385422",
+      "path": "posts/cocos/cocos中画任意线.md",
+      "title": "用Sprite画任意直线",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:b2bed029e65b544d8b405c49e866f162",
+      "previous_paths": [],
+      "aliases": [
+        "用Sprite画任意直线",
+        "cocos中画任意线"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_4cdec07b9ff3116b2c91f781d5e3b852": {
+      "id": "art_4cdec07b9ff3116b2c91f781d5e3b852",
+      "path": "posts/AI/AI时代下的代码熵增.md",
+      "title": "AI时代下的代码熵增",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:80cfd2812c55faf729817f1e90a5b809",
+      "previous_paths": [],
+      "aliases": [
+        "AI时代下的代码熵增"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [
+        "art_4f951a1f66b49aff29649b4f76b90fe4"
+      ],
+      "image_keys": [
+        "AI时代下的代码熵增-intro-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_4ddf723ef6317a156270dcf2de7f5478": {
+      "id": "art_4ddf723ef6317a156270dcf2de7f5478",
+      "path": "posts/Vulkan/Vulkan的Layer发现机制和debug.md",
+      "title": "Vulkan的Layer发现机制",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:80303f72fabf6311439acef8628318b5",
+      "previous_paths": [],
+      "aliases": [
+        "Vulkan的Layer发现机制",
+        "Vulkan的Layer发现机制和debug"
+      ],
+      "outgoing_links": [
+        "Vulkan的ICD机制"
+      ],
+      "incoming_links": [
+        "art_038b295da648a352ebc1cc78ebce18a8"
+      ],
+      "image_keys": [
+        "Vulkan的Layer发现机制-windows_layer_discoverywindows_上的_layer_发现-01.png",
+        "Vulkan的Layer发现机制-windows_layer_discoverywindows_上的_layer_发现-02.png",
+        "Vulkan的Layer发现机制-windows_layer_discoverywindows_上的_layer_发现-03.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_4f36ec61f8b779787d24d55ede31f63f": {
+      "id": "art_4f36ec61f8b779787d24d55ede31f63f",
+      "path": "page/about/index.md",
+      "title": "关于我",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:df340f12814301e326728c8621280d7e",
+      "previous_paths": [],
+      "aliases": [
+        "关于我",
+        "index"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_4f8ad38dde84358fc4c1ebe0631233b6": {
+      "id": "art_4f8ad38dde84358fc4c1ebe0631233b6",
+      "path": "posts/Vulkan/MGPV-ch01-代码分析01-内存管理.md",
+      "title": "MGPK-ch01-代码分析01",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:c719fc666a19495577fd2769241592f9",
+      "previous_paths": [],
+      "aliases": [
+        "MGPK-ch01-代码分析01",
+        "MGPV-ch01-代码分析01-内存管理"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "MGPK_ch01_代码分析01-intro-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_4f951a1f66b49aff29649b4f76b90fe4": {
+      "id": "art_4f951a1f66b49aff29649b4f76b90fe4",
+      "path": "posts/GameEngine/关于AI Native游戏引擎的思考.md",
+      "title": "关于AI Native游戏引擎的思考",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:98e97e8b5565a804e1fea449bf30afe6",
+      "previous_paths": [],
+      "aliases": [
+        "关于AI Native游戏引擎的思考"
+      ],
+      "outgoing_links": [
+        "AI时代下的代码熵增"
+      ],
+      "incoming_links": [],
+      "image_keys": [
+        "关于AI_Native游戏引擎的思考-intro-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_51fb91b45d520cda32484e07194e10e7": {
+      "id": "art_51fb91b45d520cda32484e07194e10e7",
+      "path": "posts/调试/Release调试信息配置.md",
+      "title": "Release调试信息配置",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:caa2099609de6323d3b4aaef688ae9fc",
+      "previous_paths": [],
+      "aliases": [
+        "Release调试信息配置"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_53b1bced4143b63f61f88261d5123d0a": {
+      "id": "art_53b1bced4143b63f61f88261d5123d0a",
+      "path": "posts/数学/深入思考曲面积分.md",
+      "title": "深入思考曲面积分",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:4d5c221f663db847dd0cbffc0e81f809",
+      "previous_paths": [],
+      "aliases": [
+        "深入思考曲面积分"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [
+        "art_0a7737555ec399efc801f3ba424cbbb6",
+        "art_32344ad2f03937f4965d5488930f7fd5"
+      ],
+      "image_keys": [
+        "深入思考曲面积分-换元剪切技巧dmu_或_dcostheta-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_54949c376122bdbd2c05759fbf6e5df5": {
+      "id": "art_54949c376122bdbd2c05759fbf6e5df5",
+      "path": "projects/LXEngine/index.md",
+      "title": "LXEngine-AI Native渲染器",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:326f1d6ddf7c0a94e3f8dc3ff4b35719",
+      "previous_paths": [],
+      "aliases": [
+        "LXEngine-AI Native渲染器",
+        "index"
+      ],
+      "outgoing_links": [
+        "LXEngine架构 v0.1.0"
+      ],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_55ce3129c6a23b749c110bb7a966d5a6": {
+      "id": "art_55ce3129c6a23b749c110bb7a966d5a6",
+      "path": "pending/Qt/Qt之布局和布局容器.md",
+      "title": "Qt之layout",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:53a48890879473cea1989ba9eb4c4ba8",
+      "previous_paths": [],
+      "aliases": [
+        "Qt之layout",
+        "Qt之布局和布局容器"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_55dd0a3a8826d49cfcab9852926f620b": {
+      "id": "art_55dd0a3a8826d49cfcab9852926f620b",
+      "path": "pending/C++/Cpp之预编译头.md",
+      "title": "Cpp之预编译头",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:09278aa8daff8a8d66b5e38813ab2909",
+      "previous_paths": [],
+      "aliases": [
+        "Cpp之预编译头"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_596317905fe2e711894d3800e2714821": {
+      "id": "art_596317905fe2e711894d3800e2714821",
+      "path": "projects/_index.md",
+      "title": "项目",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:7d2ed745ae6e65c84e997bd30400349c",
+      "previous_paths": [],
+      "aliases": [
+        "项目",
+        "_index"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_5979a1643e7951f83a44e54fdd5fe72a": {
+      "id": "art_5979a1643e7951f83a44e54fdd5fe72a",
+      "path": "pending/Teaching-and-Learning-with-Jupyter.md",
+      "title": "Teaching and Learning with Jupyter",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:5928ff91b401136e3d6434fd87b3d55e",
+      "previous_paths": [],
+      "aliases": [
+        "Teaching and Learning with Jupyter",
+        "Teaching-and-Learning-with-Jupyter"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_59ef732fd218f1faa8761410540e9cd3": {
+      "id": "art_59ef732fd218f1faa8761410540e9cd3",
+      "path": "posts/renderer/RT-01-Whitted光线追踪.md",
+      "title": "RT-01-Whitted光线追踪",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:472e40368a6fe0e51a3d2506b8ee85ff",
+      "previous_paths": [],
+      "aliases": [
+        "RT-01-Whitted光线追踪"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "RT-01-Whitted光线追踪-三角形-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_5a0f88ce638741eaeb2f4de5bd2c9c0d": {
+      "id": "art_5a0f88ce638741eaeb2f4de5bd2c9c0d",
+      "path": "posts/Go/Go和GORM的补充知识01.md",
+      "title": "Go和GORM的补充知识01",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:74b19a28a4cf3abf771cd998d4cb1a59",
+      "previous_paths": [],
+      "aliases": [
+        "Go和GORM的补充知识01"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_5c399f1beff9f3bc65ac04a68f7ece17": {
+      "id": "art_5c399f1beff9f3bc65ac04a68f7ece17",
+      "path": "pending/Cmake/变量作用域.md",
+      "title": "变量作用域",
+      "draft": false,
+      "status": "pending",
+      "fingerprint": "b2:5ac92b736519bb15e3ec91ace2bb3bec",
+      "previous_paths": [],
+      "aliases": [
+        "变量作用域"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_5d3c12b6423a22e659ebb726669c7e41": {
+      "id": "art_5d3c12b6423a22e659ebb726669c7e41",
+      "path": "posts/数学/调和分析入门.md",
+      "title": "调和分析入门",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:f19ae74ec394046acfa6eb9067a27c15",
+      "previous_paths": [],
+      "aliases": [
+        "调和分析入门"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [
+        "art_d9fc359086a1e568c3b6320f11df2bb9"
+      ],
+      "image_keys": [
+        "调和分析入门-几何长相3d_波动气球-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_5e46eaf779962ece40b6fb1cbcc10aa8": {
+      "id": "art_5e46eaf779962ece40b6fb1cbcc10aa8",
+      "path": "pending/Python/Python之包管理.md",
+      "title": "Python之包管理",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:fe28e36810b65b6f592d0a0521d82488",
+      "previous_paths": [],
+      "aliases": [
+        "Python之包管理"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_5f6287e2e9d2d7307b53dfa259db8978": {
+      "id": "art_5f6287e2e9d2d7307b53dfa259db8978",
+      "path": "pending/Qt/Qt之输入控件.md",
+      "title": "Qt之输入控件",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:cae66941d9efbd404e4d88758ea67670",
+      "previous_paths": [],
+      "aliases": [
+        "Qt之输入控件"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_60ef42f5558d54864811a5e8c7c81b3d": {
+      "id": "art_60ef42f5558d54864811a5e8c7c81b3d",
+      "path": "pending/Qt/Qt之常见容器.md",
+      "title": "Qt之常见容器",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:e0e9c4a8eed7c261e16a9a1aea08725e",
+      "previous_paths": [],
+      "aliases": [
+        "Qt之常见容器"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_612e6b3653a6498a9178a76a9c0875a7": {
+      "id": "art_612e6b3653a6498a9178a76a9c0875a7",
+      "path": "posts/C++/C++字符串新特性.md",
+      "title": "C++字符串新特性",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:611098c8f462b1dcac1c30a2f46b81e2",
+      "previous_paths": [],
+      "aliases": [
+        "C++字符串新特性"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_6859d5678c399f5f83516fc56af6842b": {
+      "id": "art_6859d5678c399f5f83516fc56af6842b",
+      "path": "posts/Vulkan/Vulkan入门08-Multisampling.md",
+      "title": "Vulkan入门08-Multisampling",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:2a83a20593cd321063b4424c336bbb71",
+      "previous_paths": [],
+      "aliases": [
+        "Vulkan入门08-Multisampling"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "Vulkan入门08_Multisampling-intro-01.png",
+        "Vulkan入门08_Multisampling-intro-02.png",
+        "Vulkan入门08_Multisampling-渲染结果-01.png",
+        "Vulkan入门08_Multisampling-渲染结果-02.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_6fab79e4e6828639488383f4217e56ac": {
+      "id": "art_6fab79e4e6828639488383f4217e56ac",
+      "path": "pending/Cmake/分发二进制.md",
+      "title": "分发二进制",
+      "draft": false,
+      "status": "pending",
+      "fingerprint": "b2:aacc9e7771766dcb32270301fa64da1b",
+      "previous_paths": [],
+      "aliases": [
+        "分发二进制"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_7038b16438cb0f7b513ba979876a349d": {
+      "id": "art_7038b16438cb0f7b513ba979876a349d",
+      "path": "posts/Vulkan/Vulkan入门04-Texture mapping.md",
+      "title": "Vulkan入门04-Texture mapping",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:da8bd0c9ccbb8bb9abe4362763f5af91",
+      "previous_paths": [],
+      "aliases": [
+        "Vulkan入门04-Texture mapping"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "Vulkan入门04_Texture_mapping-intro-01.png",
+        "Vulkan入门04_Texture_mapping-加载图像_使用_stb_库-01.png",
+        "Vulkan入门04_Texture_mapping-基础概念原理-01.png",
+        "Vulkan入门04_Texture_mapping-基础概念原理-02.png",
+        "Vulkan入门04_Texture_mapping-基础概念原理-03.png",
+        "Vulkan入门04_Texture_mapping-shader的修改-01.png",
+        "Vulkan入门04_Texture_mapping-shader的修改-02.png",
+        "Vulkan入门04_Texture_mapping-shader的修改-03.png",
+        "Vulkan入门04_Texture_mapping-shader的修改-04.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_7777551fcbc11c8ed3fbf7aeccf2078e": {
+      "id": "art_7777551fcbc11c8ed3fbf7aeccf2078e",
+      "path": "posts/数学/四元数原理.md",
+      "title": "四元数原理",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:18f90bbbb276fa7728cb53e929297dbc",
+      "previous_paths": [],
+      "aliases": [
+        "四元数原理"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_78101f11c3f0db1b01a9ab262f8d2da7": {
+      "id": "art_78101f11c3f0db1b01a9ab262f8d2da7",
+      "path": "posts/Vulkan/Vulkan入门01-绘制三角形.md",
+      "title": "Vulkan入门01-绘制三角形",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:9b09f41a201321a263ff1318360b3373",
+      "previous_paths": [],
+      "aliases": [
+        "Vulkan入门01-绘制三角形"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "Vulkan入门01_绘制三角形-链接方式-01.png",
+        "Vulkan入门01_绘制三角形-启用的设备扩展_extensions-01.png",
+        "Vulkan入门01_绘制三角形-区分两者的好处-01.png",
+        "Vulkan入门01_绘制三角形-区分两者的好处-02.png",
+        "Vulkan入门01_绘制三角形-vulkan窗口渲染核心模型-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_7aff55431892c03c2cbfaba121d4206d": {
+      "id": "art_7aff55431892c03c2cbfaba121d4206d",
+      "path": "pending/Jupyter开发.md",
+      "title": "Jupyter开发",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:5ff40368e431d67a8a0425cf48bd9569",
+      "previous_paths": [],
+      "aliases": [
+        "Jupyter开发"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_8040ee7624ac1948226fff998be9d22c": {
+      "id": "art_8040ee7624ac1948226fff998be9d22c",
+      "path": "posts/renderer/RT-16-工业常见解决方案.md",
+      "title": "RT-16-工业常见解决方案",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:51766be40efc1f1e220f0c5897cedd3e",
+      "previous_paths": [],
+      "aliases": [
+        "RT-16-工业常见解决方案"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "RT-16-工业常见解决方案-ssaa-vs-msaa-01.png",
+        "RT-16-工业常见解决方案-fxaamlaasmaa-01.png",
+        "RT-16-工业常见解决方案-temporal-super-resolution-dlss-01.png",
+        "RT-16-工业常见解决方案-deferred-shading-01.png",
+        "RT-16-工业常见解决方案-tiled-shading-01.png",
+        "RT-16-工业常见解决方案-tiled-shading-02.png",
+        "RT-16-工业常见解决方案-level-of-detail-01.png",
+        "RT-16-工业常见解决方案-level-of-detail-02.png",
+        "RT-16-工业常见解决方案-level-of-detail-03.png",
+        "RT-16-工业常见解决方案-level-of-detail-04.png",
+        "RT-16-工业常见解决方案-global-illumination-solution-01.png",
+        "RT-16-工业常见解决方案-扩展没提到的-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_8c8b63bb4ce63d17fc3a05c6ce056b01": {
+      "id": "art_8c8b63bb4ce63d17fc3a05c6ce056b01",
+      "path": "pending/C++/C语言宏技巧.md",
+      "title": "C语言宏技巧",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:5d073e081490f3adbd21cb4aa3f22e6c",
+      "previous_paths": [],
+      "aliases": [
+        "C语言宏技巧"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_8f9744f578dcf0df20207de238c671fd": {
+      "id": "art_8f9744f578dcf0df20207de238c671fd",
+      "path": "pending/OpenCV相机矫正.md",
+      "title": "OpenCV相机矫正",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:c7d1d13ab2985adddde7fd4facfb890a",
+      "previous_paths": [],
+      "aliases": [
+        "OpenCV相机矫正"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_90cedca077e59b8168da8558a11eed0d": {
+      "id": "art_90cedca077e59b8168da8558a11eed0d",
+      "path": "posts/renderer/RT-06-光场-LightField.md",
+      "title": "RT-06-光场-LightField",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:f69ddb45044cfed1cee74dcc42464c0c",
+      "previous_paths": [],
+      "aliases": [
+        "RT-06-光场-LightField"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "RT-06-光场-LightField-the-plenoptic-function-01.png",
+        "RT-06-光场-LightField-平面-lumigraph-的参数化-01.png",
+        "RT-06-光场-LightField-记录光场-01.png",
+        "RT-06-光场-LightField-记录光场-02.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_91b957ad517c157a61adb7bcf9286c4c": {
+      "id": "art_91b957ad517c157a61adb7bcf9286c4c",
+      "path": "posts/构建/Task - go项目构建工具.md",
+      "title": "Task - go项目构建工具",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:af57617c9881d454a465f7b942d693c9",
+      "previous_paths": [],
+      "aliases": [
+        "Task - go项目构建工具"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_92481d771383f59bd3fe6b2833462f33": {
+      "id": "art_92481d771383f59bd3fe6b2833462f33",
+      "path": "_index.md",
+      "title": "content",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:cae66941d9efbd404e4d88758ea67670",
+      "previous_paths": [],
+      "aliases": [
+        "content",
+        "_index"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_93a5daf99e65963632022a15ffa75eb1": {
+      "id": "art_93a5daf99e65963632022a15ffa75eb1",
+      "path": "posts/GameEngine/SDL入门.md",
+      "title": "SDL入门",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:865d64016b4c277583d4eb81127dca84",
+      "previous_paths": [],
+      "aliases": [
+        "SDL入门"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "SDL入门-intro-01.png",
+        "SDL入门-引入sdl3-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_975aff2370f7d22dffe82fe76d5a9ce2": {
+      "id": "art_975aff2370f7d22dffe82fe76d5a9ce2",
+      "path": "posts/C++/C++ Allocator.md",
+      "title": "C++ Allocator",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:292e8e5d5ebe6008413e83bdf292771a",
+      "previous_paths": [],
+      "aliases": [
+        "C++ Allocator"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_9c01f0638ffb4140d204cab2418ec3c6": {
+      "id": "art_9c01f0638ffb4140d204cab2418ec3c6",
+      "path": "pending/Cmake/CMake的坑.md",
+      "title": "CMake错误依赖的坑",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:fe1cae4421b643c78279b88bb5874c72",
+      "previous_paths": [],
+      "aliases": [
+        "CMake错误依赖的坑",
+        "CMake的坑"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_9c13948c43bf015d3dab72cee4acacf3": {
+      "id": "art_9c13948c43bf015d3dab72cee4acacf3",
+      "path": "pending/Python/Python之打包.md",
+      "title": "Python之包管理",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:4e986f8672cbc99e52dc6392c5ad9164",
+      "previous_paths": [],
+      "aliases": [
+        "Python之包管理",
+        "Python之打包"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_9e4b687a4ba10f142a26acf1bd4c94e0": {
+      "id": "art_9e4b687a4ba10f142a26acf1bd4c94e0",
+      "path": "posts/renderer/RTR - Chap05.md",
+      "title": "RTR - Chap05",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:12ffe1da239dd63bafb84e6e27236c04",
+      "previous_paths": [],
+      "aliases": [
+        "RTR - Chap05"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "RTR - Chap05-点光源-point-light-01.png",
+        "RTR - Chap05-聚光灯-spotlights-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_a32b303672bda4d1fd951cb641de1bed": {
+      "id": "art_a32b303672bda4d1fd951cb641de1bed",
+      "path": "posts/proto/buf和connectrpc入门01.md",
+      "title": "buf和connectrpc入门01",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:6238305bb10697675006945161c4087e",
+      "previous_paths": [],
+      "aliases": [
+        "buf和connectrpc入门01"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_a49055d65eccdd8ff84a0cf87e487d2c": {
+      "id": "art_a49055d65eccdd8ff84a0cf87e487d2c",
+      "path": "posts/Vulkan/Vulkan入门09-Compute Shader.md",
+      "title": "Vulkan入门09-Compute Shader",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:a1bda6eb7f570f37f132d44c5b208084",
+      "previous_paths": [],
+      "aliases": [
+        "Vulkan入门09-Compute Shader"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "Vulkan入门09_Compute_Shader-intro-01.png",
+        "Vulkan入门09_Compute_Shader-vulkan_pipeline-01.png",
+        "Vulkan入门09_Compute_Shader-descriptor-01.png",
+        "Vulkan入门09_Compute_Shader-compute_space-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_a6d524fc682a524f04d1ec489c4747cb": {
+      "id": "art_a6d524fc682a524f04d1ec489c4747cb",
+      "path": "posts/renderer/RT-03-路径追踪入门.md",
+      "title": "RT-03-路径追踪入门",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:da3c003ad5781089375300a61f890b8d",
+      "previous_paths": [],
+      "aliases": [
+        "RT-03-路径追踪入门"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "RT-03-路径追踪入门-russian-roulette-rr-终止条件改进-01.png",
+        "RT-03-路径追踪入门-sampling-the-light-改进path的效率-01.png",
+        "RT-03-路径追踪入门-sampling-the-light-改进path的效率-02.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_a9e0c5e72f0dabe3eff7c123ebcdf73d": {
+      "id": "art_a9e0c5e72f0dabe3eff7c123ebcdf73d",
+      "path": "posts/GameEngine/LXEngine架构 v0.1.0.md",
+      "title": "LXEngine架构 v0.1.0",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:98ab52d1a7188c90ddadd1f7b0b15742",
+      "previous_paths": [],
+      "aliases": [
+        "LXEngine架构 v0.1.0"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [
+        "art_54949c376122bdbd2c05759fbf6e5df5"
+      ],
+      "image_keys": [
+        "LXEngine架构_v0_1_0-intro-01.png",
+        "LXEngine架构_v0_1_0-新架构图-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_aca14a640d50c48f0617fa9c5bb0028c": {
+      "id": "art_aca14a640d50c48f0617fa9c5bb0028c",
+      "path": "pending/关于用emacs记笔记.md",
+      "title": "关于用emacs记笔记",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:3603d6fc037db55b772f7a8030cd8827",
+      "previous_paths": [],
+      "aliases": [
+        "关于用emacs记笔记"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_af94a1a6a6e42b1e279e85af68993e4f": {
+      "id": "art_af94a1a6a6e42b1e279e85af68993e4f",
+      "path": "pending/Qt/Qt之图形.md",
+      "title": "Qt之图形",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:68e9e1fb9181285d079c71c92d48ec60",
+      "previous_paths": [],
+      "aliases": [
+        "Qt之图形"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_b7a50916f94a743f2449578789347bb1": {
+      "id": "art_b7a50916f94a743f2449578789347bb1",
+      "path": "posts/数学/采样和MCMC方法.md",
+      "title": "采样和MCMC方法",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:cae66941d9efbd404e4d88758ea67670",
+      "previous_paths": [],
+      "aliases": [
+        "采样和MCMC方法"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_bb0ad304bd964d7c0a789445af2164df": {
+      "id": "art_bb0ad304bd964d7c0a789445af2164df",
+      "path": "posts/Vulkan/Vulkan入门02-VertexBuffers.md",
+      "title": "Vulkan入门02-VertexBuffers",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:9afa697d66cf73f61756157ef63bf1b2",
+      "previous_paths": [],
+      "aliases": [
+        "Vulkan入门02-VertexBuffers"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "Vulkan入门02_VertexBuffers-intro-01.png",
+        "Vulkan入门02_VertexBuffers-效果展示-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_c1d10e346d5dd34011fa8d45c538edd5": {
+      "id": "art_c1d10e346d5dd34011fa8d45c538edd5",
+      "path": "posts/Vulkan/Vulkan的ICD机制.md",
+      "title": "Vulkan的ICD机制",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:2d4299529c6a5586a03cd96e7b05aa4d",
+      "previous_paths": [],
+      "aliases": [
+        "Vulkan的ICD机制"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [
+        "art_3441d287016d4b269061d002e105f6af",
+        "art_4ddf723ef6317a156270dcf2de7f5478"
+      ],
+      "image_keys": [
+        "Vulkan的ICD机制-显卡设备-01.png",
+        "Vulkan的ICD机制-显卡设备-02.png",
+        "Vulkan的ICD机制-软件组织设备-01.png",
+        "Vulkan的ICD机制-软件组织设备-02.png",
+        "Vulkan的ICD机制-思路1注册表访问函数上打断点失败-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_c4402402cfd686c8c4e4bff532177106": {
+      "id": "art_c4402402cfd686c8c4e4bff532177106",
+      "path": "posts/renderer/RT-07-颜色和Gamma矫正.md",
+      "title": "RT-07-颜色和Gamma矫正",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:6e29b4946136a0d922d52fc43ee40b68",
+      "previous_paths": [],
+      "aliases": [
+        "RT-07-颜色和Gamma矫正"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "RT-07-颜色和Gamma矫正-谱功率密度-spectrum-power-distribution-01.png",
+        "RT-07-颜色和Gamma矫正-生理学基础-01.png",
+        "RT-07-颜色和Gamma矫正-生理学基础-02.png",
+        "RT-07-颜色和Gamma矫正-数学基础-01.png",
+        "RT-07-颜色和Gamma矫正-数学基础-02.png",
+        "RT-07-颜色和Gamma矫正-cie-rgb-color-matching-01.png",
+        "RT-07-颜色和Gamma矫正-cie-rgb-color-matching-02.png",
+        "RT-07-颜色和Gamma矫正-cie-rgb-color-matching-03.png",
+        "RT-07-颜色和Gamma矫正-cie-xyz-color-matching-01.png",
+        "RT-07-颜色和Gamma矫正-可视化xyz-01.png",
+        "RT-07-颜色和Gamma矫正-hsv-hue-saturation-value-space-01.png",
+        "RT-07-颜色和Gamma矫正-cielab-space-01.png",
+        "RT-07-颜色和Gamma矫正-cmyk-a-substractive-color-space-01.png",
+        "RT-07-颜色和Gamma矫正-为什么要做gamma矫正-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_c7898726da2edf0e856421fc87e7fefd": {
+      "id": "art_c7898726da2edf0e856421fc87e7fefd",
+      "path": "pending/开源协议详解.md",
+      "title": "开源协议详解",
+      "draft": false,
+      "status": "pending",
+      "fingerprint": "b2:046f3c4550e0cb2e81b06babfd6da8c7",
+      "previous_paths": [],
+      "aliases": [
+        "开源协议详解"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_c8a86da304ece63d6341c55c404831ee": {
+      "id": "art_c8a86da304ece63d6341c55c404831ee",
+      "path": "posts/Vulkan/Vulkan入门03-UniformBuffers.md",
+      "title": "Vulkan入门03-UniformBuffers",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:84d36ccb55e3757ba6a8a04544adfdda",
+      "previous_paths": [],
+      "aliases": [
+        "Vulkan入门03-UniformBuffers"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "Vulkan入门03_UniformBuffers-intro-01.png",
+        "Vulkan入门03_UniformBuffers-渲染时使用描述符集-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_ccdfafdf2005112d13533eb61d7566c0": {
+      "id": "art_ccdfafdf2005112d13533eb61d7566c0",
+      "path": "pending/Vega-lite初体验.md",
+      "title": "Vega-lite初体验",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:f3ef008e8a164b962cf15fa3711a6b61",
+      "previous_paths": [],
+      "aliases": [
+        "Vega-lite初体验"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_d0f938feef634a6cae339d0778cfaec8": {
+      "id": "art_d0f938feef634a6cae339d0778cfaec8",
+      "path": "pending/Qt/Qt之常见控件.md",
+      "title": "Qt之常见控件",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:034cb12189a78a586004ca1186d889c3",
+      "previous_paths": [],
+      "aliases": [
+        "Qt之常见控件"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_d4faa792d306ff0013ea1c9530c89804": {
+      "id": "art_d4faa792d306ff0013ea1c9530c89804",
+      "path": "posts/architect/领域驱动设计简介.md",
+      "title": "领域驱动设计简介",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:b796f8958fbcd685d28d731c1004875d",
+      "previous_paths": [],
+      "aliases": [
+        "领域驱动设计简介"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "领域驱动设计简介-intro-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_d618ffad07fd1f1990e4fe7207fb2076": {
+      "id": "art_d618ffad07fd1f1990e4fe7207fb2076",
+      "path": "posts/Vulkan/Vulkan入门07-Generating Mipmaps.md",
+      "title": "Vulkan入门07-Generating Mipmaps",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:b6d2a300e993a2a4d5869cca4b992e4c",
+      "previous_paths": [],
+      "aliases": [
+        "Vulkan入门07-Generating Mipmaps"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "Vulkan入门07_Generating_Mipmaps-intro-01.png",
+        "Vulkan入门07_Generating_Mipmaps-采样器-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_d67e775cf7e3bb6ca17d19c6210d59ec": {
+      "id": "art_d67e775cf7e3bb6ca17d19c6210d59ec",
+      "path": "pending/Qt/Qt初学者的一些技巧.md",
+      "title": "Qt初学者的一些技巧",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:bc0828e2271a6df8212a08039a55eee4",
+      "previous_paths": [],
+      "aliases": [
+        "Qt初学者的一些技巧"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_d82c8c5cd333bc57b1ce5bdf2ad08fed": {
+      "id": "art_d82c8c5cd333bc57b1ce5bdf2ad08fed",
+      "path": "posts/shaders/shadertoy-example入门系列-01.md",
+      "title": "shadertoy-example入门系列-01",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:5fae42985fa3a7b1967d6a043c2a043c",
+      "previous_paths": [],
+      "aliases": [
+        "shadertoy-example入门系列-01"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "shadertoy-example入门系列-01-案例-01.png",
+        "shadertoy-example入门系列-01-无模型渲染sdf-01.png",
+        "shadertoy-example入门系列-01-ray-marching-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_d9fc359086a1e568c3b6320f11df2bb9": {
+      "id": "art_d9fc359086a1e568c3b6320f11df2bb9",
+      "path": "posts/renderer/RT-12-环境映射(Environment Mapping).md",
+      "title": "RT-12-环境映射(Environment Mapping)",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:f42befba2c2bd32c1470ab5f1ec248dd",
+      "previous_paths": [],
+      "aliases": [
+        "RT-12-环境映射(Environment Mapping)"
+      ],
+      "outgoing_links": [
+        "调和分析入门"
+      ],
+      "incoming_links": [],
+      "image_keys": [
+        "RT_12_环境映射_Environment_Mapping-原理思路-01.png",
+        "RT_12_环境映射_Environment_Mapping-ibl_积分_第一项-01.png",
+        "RT_12_环境映射_Environment_Mapping-microfacet_brdf_下的近似计算-01.png",
+        "RT_12_环境映射_Environment_Mapping-microfacet_brdf_下的近似计算-02.png",
+        "RT_12_环境映射_Environment_Mapping-microfacet_brdf_下的近似计算-03.png",
+        "RT_12_环境映射_Environment_Mapping-效果-01.png",
+        "RT_12_环境映射_Environment_Mapping-background_spherical_harmonics-01.png",
+        "RT_12_环境映射_Environment_Mapping-prt整体思路-01.png",
+        "RT_12_环境映射_Environment_Mapping-prt整体思路-02.png",
+        "RT_12_环境映射_Environment_Mapping-效果图-01.png",
+        "RT_12_环境映射_Environment_Mapping-prt_with_glossy-01.png",
+        "RT_12_环境映射_Environment_Mapping-prt_with_glossy-02.png",
+        "RT_12_环境映射_Environment_Mapping-prt_with_glossy-03.png",
+        "RT_12_环境映射_Environment_Mapping-其他基函数-01.png",
+        "RT_12_环境映射_Environment_Mapping-其他基函数-02.png",
+        "RT_12_环境映射_Environment_Mapping-其他基函数-03.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_db60f553745f2e626271a1d55262cbd4": {
+      "id": "art_db60f553745f2e626271a1d55262cbd4",
+      "path": "pending/数学之不动点定理.md",
+      "title": "数学之不动点定理",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:cae66941d9efbd404e4d88758ea67670",
+      "previous_paths": [],
+      "aliases": [
+        "数学之不动点定理"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_de3c9b98ec9e1ec650d90ccabe8c6815": {
+      "id": "art_de3c9b98ec9e1ec650d90ccabe8c6815",
+      "path": "posts/Vulkan/Vulkan入门06-Loading models.md",
+      "title": "Vulkan入门06-Loading models",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:b533b774cc42386f393f684b5a5c8796",
+      "previous_paths": [],
+      "aliases": [
+        "Vulkan入门06-Loading models"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "Vulkan入门06_Loading_models-intro-01.png",
+        "Vulkan入门06_Loading_models-tinyobjloader集成-01.png",
+        "Vulkan入门06_Loading_models-tinyobjloader集成-02.png",
+        "Vulkan入门06_Loading_models-tinyobjloader集成-03.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_e868820828e2cac4cffab0af3cacd45f": {
+      "id": "art_e868820828e2cac4cffab0af3cacd45f",
+      "path": "pending/Qt/Qt之事件.md",
+      "title": "Qt之事件",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:6a62804e5d384c574360bef742f884c4",
+      "previous_paths": [],
+      "aliases": [
+        "Qt之事件"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_ebc8defc80c51a123d78c5ba9fa786b2": {
+      "id": "art_ebc8defc80c51a123d78c5ba9fa786b2",
+      "path": "posts/Shell/脚本-导入`.env`中的环境变量.md",
+      "title": "脚本-导入`.env`中的环境变量",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:d117941debf33b1b62995a3c1918011a",
+      "previous_paths": [],
+      "aliases": [
+        "脚本-导入`.env`中的环境变量"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_f07c3e8dbbae7483f6784ba9fc2453c1": {
+      "id": "art_f07c3e8dbbae7483f6784ba9fc2453c1",
+      "path": "pending/Qt/Qt之buttons.md",
+      "title": "Qt之buttons",
+      "draft": true,
+      "status": "pending",
+      "fingerprint": "b2:53dc7881795244beae393f1b29bd7abf",
+      "previous_paths": [],
+      "aliases": [
+        "Qt之buttons"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_f0985b3f2512901e237f1c4cfa2c85ba": {
+      "id": "art_f0985b3f2512901e237f1c4cfa2c85ba",
+      "path": "projects/LXEngine/changelogs/v0.1.0.md",
+      "title": "v0.1.0",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:fa42abc7ba36d8b4e64900a153525c46",
+      "previous_paths": [],
+      "aliases": [
+        "v0.1.0"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_f4023e05c90b8d07f145226e6783c419": {
+      "id": "art_f4023e05c90b8d07f145226e6783c419",
+      "path": "posts/Typescript/TypeScript链式调用与串行锁.md",
+      "title": "TypeScript链式调用与串行锁",
+      "draft": true,
+      "status": "active",
+      "fingerprint": "b2:d117941debf33b1b62995a3c1918011a",
+      "previous_paths": [],
+      "aliases": [
+        "TypeScript链式调用与串行锁"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_f504a6715e669666465ddd5ed8babbc5": {
+      "id": "art_f504a6715e669666465ddd5ed8babbc5",
+      "path": "posts/renderer/RT-15-实时光追(RTRT).md",
+      "title": "RT-15-实时光追(RTRT)",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:22cae3ce01559abb6df9ebbaa553a4b7",
+      "previous_paths": [],
+      "aliases": [
+        "RT-15-实时光追(RTRT)"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [
+        "RT-15-实时光追(RTRT)-什么是1-spp-01.png",
+        "RT-15-实时光追(RTRT)-降噪的效果-01.png",
+        "RT-15-实时光追(RTRT)-the-g-buffers-01.png",
+        "RT-15-实时光追(RTRT)-back-projection-01.png",
+        "RT-15-实时光追(RTRT)-clamping-01.png",
+        "RT-15-实时光追(RTRT)-more-temporal-failure-01.png",
+        "RT-15-实时光追(RTRT)-空间滤波gauss-filter实现-01.png",
+        "RT-15-实时光追(RTRT)-双边滤波-bilateral-filter-01.png",
+        "RT-15-实时光追(RTRT)-双边滤波-bilateral-filter-02.png",
+        "RT-15-实时光追(RTRT)-联合双边滤波-joint-bilateral-filtercross-bilateral-filter-01.png",
+        "RT-15-实时光追(RTRT)-solution-1-separate-pass-01.png",
+        "RT-15-实时光追(RTRT)-solution-1-separate-pass-02.png",
+        "RT-15-实时光追(RTRT)-solution-2-progressiely-growing-sizes-01.png",
+        "RT-15-实时光追(RTRT)-solution-2-progressiely-growing-sizes-02.png",
+        "RT-15-实时光追(RTRT)-detection-01.png",
+        "RT-15-实时光追(RTRT)-rae-01.png"
+      ],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    },
+    "art_f7055de0ab33918f8b943aa3b67d809a": {
+      "id": "art_f7055de0ab33918f8b943aa3b67d809a",
+      "path": "posts/renderer/RT-10-高质量实时渲染-Intro.md",
+      "title": "RT-10-高质量实时渲染-Intro",
+      "draft": false,
+      "status": "active",
+      "fingerprint": "b2:1f52ee18b17c71c945663ac0d774d232",
+      "previous_paths": [],
+      "aliases": [
+        "RT-10-高质量实时渲染-Intro"
+      ],
+      "outgoing_links": [],
+      "incoming_links": [],
+      "image_keys": [],
+      "last_seen": "2026-05-30T13:56:42+00:00"
+    }
+  },
+  "path_index": {
+    "_index.md": "art_92481d771383f59bd3fe6b2833462f33",
+    "page/about/index.md": "art_4f36ec61f8b779787d24d55ede31f63f",
+    "page/archives/index.md": "art_467d874a8b54d3d1208247967a6c6b8d",
+    "pending/C++/Cpp中的RVO.md": "art_02cf2aa49834f01075ff6a67c6c52b49",
+    "pending/C++/Cpp之预编译头.md": "art_55dd0a3a8826d49cfcab9852926f620b",
+    "pending/C++/C语言宏技巧.md": "art_8c8b63bb4ce63d17fc3a05c6ce056b01",
+    "pending/C++/glog和gflags.md": "art_0949c3914b29ba75dbe6900e92e97469",
+    "pending/Cmake/CMake的坑.md": "art_9c01f0638ffb4140d204cab2418ec3c6",
+    "pending/Cmake/cmake进阶.md": "art_1b3f62280468c056f1792c2047d9e171",
+    "pending/Cmake/分发二进制.md": "art_6fab79e4e6828639488383f4217e56ac",
+    "pending/Cmake/变量作用域.md": "art_5c399f1beff9f3bc65ac04a68f7ece17",
+    "pending/Jupyter开发.md": "art_7aff55431892c03c2cbfaba121d4206d",
+    "pending/Jupyter用户文档.md": "art_019904150215dd1c9d97d8772552d96f",
+    "pending/OpenCV相机矫正.md": "art_8f9744f578dcf0df20207de238c671fd",
+    "pending/Python/Python之包管理.md": "art_5e46eaf779962ece40b6fb1cbcc10aa8",
+    "pending/Python/Python之打包.md": "art_9c13948c43bf015d3dab72cee4acacf3",
+    "pending/Qt/Qt之QTableWidget.md": "art_16fbf071b33a44825309fe3f27c1789c",
+    "pending/Qt/Qt之buttons.md": "art_f07c3e8dbbae7483f6784ba9fc2453c1",
+    "pending/Qt/Qt之事件.md": "art_e868820828e2cac4cffab0af3cacd45f",
+    "pending/Qt/Qt之图形.md": "art_af94a1a6a6e42b1e279e85af68993e4f",
+    "pending/Qt/Qt之布局和布局容器.md": "art_55ce3129c6a23b749c110bb7a966d5a6",
+    "pending/Qt/Qt之常见容器.md": "art_60ef42f5558d54864811a5e8c7c81b3d",
+    "pending/Qt/Qt之常见控件.md": "art_d0f938feef634a6cae339d0778cfaec8",
+    "pending/Qt/Qt之输入控件.md": "art_5f6287e2e9d2d7307b53dfa259db8978",
+    "pending/Qt/Qt初学者的一些技巧.md": "art_d67e775cf7e3bb6ca17d19c6210d59ec",
+    "pending/React之初体验.md": "art_0f4e76e81e9ea0b1c8fd9a3fb0b068ce",
+    "pending/Teaching-and-Learning-with-Jupyter.md": "art_5979a1643e7951f83a44e54fdd5fe72a",
+    "pending/Vega-lite初体验.md": "art_ccdfafdf2005112d13533eb61d7566c0",
+    "pending/关于用emacs记笔记.md": "art_aca14a640d50c48f0617fa9c5bb0028c",
+    "pending/开源协议详解.md": "art_c7898726da2edf0e856421fc87e7fefd",
+    "pending/数学之不动点定理.md": "art_db60f553745f2e626271a1d55262cbd4",
+    "pending/数据库六大范式.md": "art_0b5d86d1fee4b6094df4896d4b262a32",
+    "pending/矩阵初步.md": "art_0b033fb97e61b0ac8a7dd783d8c4b910",
+    "posts/AI/AI时代下的代码熵增.md": "art_4cdec07b9ff3116b2c91f781d5e3b852",
+    "posts/C++/C++ Allocator.md": "art_975aff2370f7d22dffe82fe76d5a9ce2",
+    "posts/C++/C++内存管理.md": "art_31d9c405e6306a4410db3dbbea4d5c23",
+    "posts/C++/C++字符串新特性.md": "art_612e6b3653a6498a9178a76a9c0875a7",
+    "posts/C++/C++模板元编程初探.md": "art_1ae7480cf8e655b0b5963253080c40ec",
+    "posts/GameEngine/ImGUI入门.md": "art_05b1c22ae41f1d9c7fe4bddf0f549e54",
+    "posts/GameEngine/LXEngine架构 v0.1.0.md": "art_a9e0c5e72f0dabe3eff7c123ebcdf73d",
+    "posts/GameEngine/SDL入门.md": "art_93a5daf99e65963632022a15ffa75eb1",
+    "posts/GameEngine/关于AI Native游戏引擎的思考.md": "art_4f951a1f66b49aff29649b4f76b90fe4",
+    "posts/Go/Go和GORM的补充知识01.md": "art_5a0f88ce638741eaeb2f4de5bd2c9c0d",
+    "posts/Shell/脚本-导入`.env`中的环境变量.md": "art_ebc8defc80c51a123d78c5ba9fa786b2",
+    "posts/Shell/脚本-根据端口杀死进程.md": "art_1bf20c6c21f7f3f21dd0caf79d1034da",
+    "posts/Typescript/TypeScript链式调用与串行锁.md": "art_f4023e05c90b8d07f145226e6783c419",
+    "posts/Vulkan/MGPV-ch01-代码分析01-内存管理.md": "art_4f8ad38dde84358fc4c1ebe0631233b6",
+    "posts/Vulkan/Vulkan入门01-绘制三角形.md": "art_78101f11c3f0db1b01a9ab262f8d2da7",
+    "posts/Vulkan/Vulkan入门02-VertexBuffers.md": "art_bb0ad304bd964d7c0a789445af2164df",
+    "posts/Vulkan/Vulkan入门03-UniformBuffers.md": "art_c8a86da304ece63d6341c55c404831ee",
+    "posts/Vulkan/Vulkan入门04-Texture mapping.md": "art_7038b16438cb0f7b513ba979876a349d",
+    "posts/Vulkan/Vulkan入门05-Depth buffering.md": "art_0dea34508ea8260222907306b8582df3",
+    "posts/Vulkan/Vulkan入门06-Loading models.md": "art_de3c9b98ec9e1ec650d90ccabe8c6815",
+    "posts/Vulkan/Vulkan入门07-Generating Mipmaps.md": "art_d618ffad07fd1f1990e4fe7207fb2076",
+    "posts/Vulkan/Vulkan入门08-Multisampling.md": "art_6859d5678c399f5f83516fc56af6842b",
+    "posts/Vulkan/Vulkan入门09-Compute Shader.md": "art_a49055d65eccdd8ff84a0cf87e487d2c",
+    "posts/Vulkan/Vulkan的ICD机制.md": "art_c1d10e346d5dd34011fa8d45c538edd5",
+    "posts/Vulkan/Vulkan的Layer发现机制和debug.md": "art_4ddf723ef6317a156270dcf2de7f5478",
+    "posts/Vulkan/Vulkan程序中Intel驱动总是被调用（未解决）.md": "art_3441d287016d4b269061d002e105f6af",
+    "posts/Vulkan/记录调试Vulkan程序打印奇怪日志的问题.md": "art_038b295da648a352ebc1cc78ebce18a8",
+    "posts/architect/领域驱动设计简介.md": "art_d4faa792d306ff0013ea1c9530c89804",
+    "posts/cocos/cocos中画任意线.md": "art_4aec6fddcb2ed7303d21b24bc2385422",
+    "posts/nodejs/配置TypeScript+Node.js的项目.md": "art_16c98582f36d19561fe2f1421125576e",
+    "posts/proto/buf和connectrpc入门01.md": "art_a32b303672bda4d1fd951cb641de1bed",
+    "posts/renderer/RT-01-Whitted光线追踪.md": "art_59ef732fd218f1faa8761410540e9cd3",
+    "posts/renderer/RT-02-光传播理论(渲染方程).md": "art_0a7737555ec399efc801f3ba424cbbb6",
+    "posts/renderer/RT-03-路径追踪入门.md": "art_a6d524fc682a524f04d1ec489c4747cb",
+    "posts/renderer/RT-04-材质和BRDF.md": "art_3faa2484a8e0689450da25ade95e877f",
+    "posts/renderer/RT-05-高级话题简述.md": "art_15d7cc3db77a1d62d5965ac171e7b06a",
+    "posts/renderer/RT-06-光场-LightField.md": "art_90cedca077e59b8168da8558a11eed0d",
+    "posts/renderer/RT-07-颜色和Gamma矫正.md": "art_c4402402cfd686c8c4e4bff532177106",
+    "posts/renderer/RT-08-动画和仿真.md": "art_2502a2da18c5b336cb687d236546883a",
+    "posts/renderer/RT-10-高质量实时渲染-Intro.md": "art_f7055de0ab33918f8b943aa3b67d809a",
+    "posts/renderer/RT-11-阴影渲染.md": "art_1de237282bbf89e3b88cef12a40b39f9",
+    "posts/renderer/RT-12-环境映射(Environment Mapping).md": "art_d9fc359086a1e568c3b6320f11df2bb9",
+    "posts/renderer/RT-13-全局光照(Global Illumination).md": "art_32344ad2f03937f4965d5488930f7fd5",
+    "posts/renderer/RT-14-基于物理的材质 (PBR, PBR Materials).md": "art_2812f8e6671b2541a1aaf537f67b61b9",
+    "posts/renderer/RT-15-实时光追(RTRT).md": "art_f504a6715e669666465ddd5ed8babbc5",
+    "posts/renderer/RT-16-工业常见解决方案.md": "art_8040ee7624ac1948226fff998be9d22c",
+    "posts/renderer/RTR - Chap05.md": "art_9e4b687a4ba10f142a26acf1bd4c94e0",
+    "posts/shaders/shadertoy-example入门系列-01.md": "art_d82c8c5cd333bc57b1ce5bdf2ad08fed",
+    "posts/中间件/Kalfka一些知识的总结01.md": "art_42975218b57ac95c0eb80df90fe02325",
+    "posts/数学/Perlin Noise.md": "art_1aef825efae1fb5049311d142ffe5dd2",
+    "posts/数学/四元数原理.md": "art_7777551fcbc11c8ed3fbf7aeccf2078e",
+    "posts/数学/常见不等式和近似.md": "art_20e79d414316675cafaaaded4cedea12",
+    "posts/数学/深入思考曲面积分.md": "art_53b1bced4143b63f61f88261d5123d0a",
+    "posts/数学/调和分析入门.md": "art_5d3c12b6423a22e659ebb726669c7e41",
+    "posts/数学/采样和MCMC方法.md": "art_b7a50916f94a743f2449578789347bb1",
+    "posts/构建/Task - go项目构建工具.md": "art_91b957ad517c157a61adb7bcf9286c4c",
+    "posts/构建/cmake入门.md": "art_036c98e48766feb5f09036a1fdd3512c",
+    "posts/系统/cpp中设置环境变量.md": "art_026abf2b4cfa3d4e8c0facc94a56951e",
+    "posts/编译器/小白学写编译器：1.编译基础概念.md": "art_15fa133fa53f99bd79bd5b8f090a6cbe",
+    "posts/调试/Release调试信息配置.md": "art_51fb91b45d520cda32484e07194e10e7",
+    "posts/调试/WinDbg的初级用法.md": "art_18ae0c3e6b88e9fe258445460de96f2f",
+    "posts/随笔/起点从这里开始.md": "art_142473a7434c41fde297a2a1d2bf8dcf",
+    "projects/LXEngine/changelogs/v0.1.0.md": "art_f0985b3f2512901e237f1c4cfa2c85ba",
+    "projects/LXEngine/index.md": "art_54949c376122bdbd2c05759fbf6e5df5",
+    "projects/_index.md": "art_596317905fe2e711894d3800e2714821"
+  },
+  "title_index": {
+    "AI时代下的代码熵增": "art_4cdec07b9ff3116b2c91f781d5e3b852",
+    "C++ Allocator": "art_975aff2370f7d22dffe82fe76d5a9ce2",
+    "C++内存管理": "art_31d9c405e6306a4410db3dbbea4d5c23",
+    "C++字符串新特性": "art_612e6b3653a6498a9178a76a9c0875a7",
+    "C++模板元编程初探": "art_1ae7480cf8e655b0b5963253080c40ec",
+    "CMake错误依赖的坑": "art_9c01f0638ffb4140d204cab2418ec3c6",
+    "Cook-Torrance BRDF": "art_0a7737555ec399efc801f3ba424cbbb6",
+    "Cpp中的RVO": "art_02cf2aa49834f01075ff6a67c6c52b49",
+    "Cpp之预编译头": "art_55dd0a3a8826d49cfcab9852926f620b",
+    "C语言宏技巧": "art_8c8b63bb4ce63d17fc3a05c6ce056b01",
+    "Go和GORM的补充知识01": "art_5a0f88ce638741eaeb2f4de5bd2c9c0d",
+    "ImGUI入门": "art_05b1c22ae41f1d9c7fe4bddf0f549e54",
+    "Jupyter开发": "art_7aff55431892c03c2cbfaba121d4206d",
+    "Jupyter用户文档": "art_019904150215dd1c9d97d8772552d96f",
+    "Kalfka一些知识的总结01": "art_42975218b57ac95c0eb80df90fe02325",
+    "LXEngine-AI Native渲染器": "art_54949c376122bdbd2c05759fbf6e5df5",
+    "LXEngine架构 v0.1.0": "art_a9e0c5e72f0dabe3eff7c123ebcdf73d",
+    "MGPK-ch01-代码分析01": "art_4f8ad38dde84358fc4c1ebe0631233b6",
+    "OpenCV相机矫正": "art_8f9744f578dcf0df20207de238c671fd",
+    "Perlin Noise": "art_1aef825efae1fb5049311d142ffe5dd2",
+    "Python之包管理": "art_5e46eaf779962ece40b6fb1cbcc10aa8",
+    "Qt之QTableWidget": "art_16fbf071b33a44825309fe3f27c1789c",
+    "Qt之buttons": "art_f07c3e8dbbae7483f6784ba9fc2453c1",
+    "Qt之layout": "art_55ce3129c6a23b749c110bb7a966d5a6",
+    "Qt之事件": "art_e868820828e2cac4cffab0af3cacd45f",
+    "Qt之图形": "art_af94a1a6a6e42b1e279e85af68993e4f",
+    "Qt之常见容器": "art_60ef42f5558d54864811a5e8c7c81b3d",
+    "Qt之常见控件": "art_d0f938feef634a6cae339d0778cfaec8",
+    "Qt之输入控件": "art_5f6287e2e9d2d7307b53dfa259db8978",
+    "Qt初学者的一些技巧": "art_d67e775cf7e3bb6ca17d19c6210d59ec",
+    "RT-01-Whitted光线追踪": "art_59ef732fd218f1faa8761410540e9cd3",
+    "RT-03-路径追踪入门": "art_a6d524fc682a524f04d1ec489c4747cb",
+    "RT-04-材质和BRDF": "art_3faa2484a8e0689450da25ade95e877f",
+    "RT-05-高级话题简述": "art_15d7cc3db77a1d62d5965ac171e7b06a",
+    "RT-06-光场-LightField": "art_90cedca077e59b8168da8558a11eed0d",
+    "RT-07-颜色和Gamma矫正": "art_c4402402cfd686c8c4e4bff532177106",
+    "RT-08-动画和仿真": "art_2502a2da18c5b336cb687d236546883a",
+    "RT-10-高质量实时渲染-Intro": "art_f7055de0ab33918f8b943aa3b67d809a",
+    "RT-11-阴影渲染": "art_1de237282bbf89e3b88cef12a40b39f9",
+    "RT-12-环境映射(Environment Mapping)": "art_d9fc359086a1e568c3b6320f11df2bb9",
+    "RT-13-全局光照(Global Illumination)": "art_32344ad2f03937f4965d5488930f7fd5",
+    "RT-14-基于物理的材质 (PBR, PBR Materials)": "art_2812f8e6671b2541a1aaf537f67b61b9",
+    "RT-15-实时光追(RTRT)": "art_f504a6715e669666465ddd5ed8babbc5",
+    "RT-16-工业常见解决方案": "art_8040ee7624ac1948226fff998be9d22c",
+    "RTR - Chap05": "art_9e4b687a4ba10f142a26acf1bd4c94e0",
+    "React之初体验": "art_0f4e76e81e9ea0b1c8fd9a3fb0b068ce",
+    "Release调试信息配置": "art_51fb91b45d520cda32484e07194e10e7",
+    "SDL入门": "art_93a5daf99e65963632022a15ffa75eb1",
+    "Task - go项目构建工具": "art_91b957ad517c157a61adb7bcf9286c4c",
+    "Teaching and Learning with Jupyter": "art_5979a1643e7951f83a44e54fdd5fe72a",
+    "TypeScript链式调用与串行锁": "art_f4023e05c90b8d07f145226e6783c419",
+    "Vega-lite初体验": "art_ccdfafdf2005112d13533eb61d7566c0",
+    "Vulkan入门01-绘制三角形": "art_78101f11c3f0db1b01a9ab262f8d2da7",
+    "Vulkan入门02-VertexBuffers": "art_bb0ad304bd964d7c0a789445af2164df",
+    "Vulkan入门03-UniformBuffers": "art_c8a86da304ece63d6341c55c404831ee",
+    "Vulkan入门04-Texture mapping": "art_7038b16438cb0f7b513ba979876a349d",
+    "Vulkan入门05-Depth buffering": "art_0dea34508ea8260222907306b8582df3",
+    "Vulkan入门06-Loading models": "art_de3c9b98ec9e1ec650d90ccabe8c6815",
+    "Vulkan入门07-Generating Mipmaps": "art_d618ffad07fd1f1990e4fe7207fb2076",
+    "Vulkan入门08-Multisampling": "art_6859d5678c399f5f83516fc56af6842b",
+    "Vulkan入门09-Compute Shader": "art_a49055d65eccdd8ff84a0cf87e487d2c",
+    "Vulkan的ICD机制": "art_c1d10e346d5dd34011fa8d45c538edd5",
+    "Vulkan的Layer发现机制": "art_4ddf723ef6317a156270dcf2de7f5478",
+    "Vulkan程序中Intel驱动总是被调用（未解决）": "art_3441d287016d4b269061d002e105f6af",
+    "WinDbg的初级用法": "art_18ae0c3e6b88e9fe258445460de96f2f",
+    "ai时代下的代码熵增": "art_4cdec07b9ff3116b2c91f781d5e3b852",
+    "buf和connectrpc入门01": "art_a32b303672bda4d1fd951cb641de1bed",
+    "c++ allocator": "art_975aff2370f7d22dffe82fe76d5a9ce2",
+    "c++内存管理": "art_31d9c405e6306a4410db3dbbea4d5c23",
+    "c++字符串新特性": "art_612e6b3653a6498a9178a76a9c0875a7",
+    "c++模板元编程初探": "art_1ae7480cf8e655b0b5963253080c40ec",
+    "cmake入门": "art_036c98e48766feb5f09036a1fdd3512c",
+    "cmake进阶": "art_1b3f62280468c056f1792c2047d9e171",
+    "cmake错误依赖的坑": "art_9c01f0638ffb4140d204cab2418ec3c6",
+    "content": "art_92481d771383f59bd3fe6b2833462f33",
+    "cook-torrance brdf": "art_0a7737555ec399efc801f3ba424cbbb6",
+    "cpp中的rvo": "art_02cf2aa49834f01075ff6a67c6c52b49",
+    "cpp中设置环境变量": "art_026abf2b4cfa3d4e8c0facc94a56951e",
+    "cpp之预编译头": "art_55dd0a3a8826d49cfcab9852926f620b",
+    "c语言宏技巧": "art_8c8b63bb4ce63d17fc3a05c6ce056b01",
+    "go和gorm的补充知识01": "art_5a0f88ce638741eaeb2f4de5bd2c9c0d",
+    "imgui入门": "art_05b1c22ae41f1d9c7fe4bddf0f549e54",
+    "jupyter开发": "art_7aff55431892c03c2cbfaba121d4206d",
+    "jupyter用户文档": "art_019904150215dd1c9d97d8772552d96f",
+    "kalfka一些知识的总结01": "art_42975218b57ac95c0eb80df90fe02325",
+    "lxengine-ai native渲染器": "art_54949c376122bdbd2c05759fbf6e5df5",
+    "lxengine架构 v0.1.0": "art_a9e0c5e72f0dabe3eff7c123ebcdf73d",
+    "mgpk-ch01-代码分析01": "art_4f8ad38dde84358fc4c1ebe0631233b6",
+    "opencv相机矫正": "art_8f9744f578dcf0df20207de238c671fd",
+    "perlin noise": "art_1aef825efae1fb5049311d142ffe5dd2",
+    "python之包管理": "art_5e46eaf779962ece40b6fb1cbcc10aa8",
+    "qt之buttons": "art_f07c3e8dbbae7483f6784ba9fc2453c1",
+    "qt之layout": "art_55ce3129c6a23b749c110bb7a966d5a6",
+    "qt之qtablewidget": "art_16fbf071b33a44825309fe3f27c1789c",
+    "qt之事件": "art_e868820828e2cac4cffab0af3cacd45f",
+    "qt之图形": "art_af94a1a6a6e42b1e279e85af68993e4f",
+    "qt之常见容器": "art_60ef42f5558d54864811a5e8c7c81b3d",
+    "qt之常见控件": "art_d0f938feef634a6cae339d0778cfaec8",
+    "qt之输入控件": "art_5f6287e2e9d2d7307b53dfa259db8978",
+    "qt初学者的一些技巧": "art_d67e775cf7e3bb6ca17d19c6210d59ec",
+    "react之初体验": "art_0f4e76e81e9ea0b1c8fd9a3fb0b068ce",
+    "release调试信息配置": "art_51fb91b45d520cda32484e07194e10e7",
+    "rt-01-whitted光线追踪": "art_59ef732fd218f1faa8761410540e9cd3",
+    "rt-03-路径追踪入门": "art_a6d524fc682a524f04d1ec489c4747cb",
+    "rt-04-材质和brdf": "art_3faa2484a8e0689450da25ade95e877f",
+    "rt-05-高级话题简述": "art_15d7cc3db77a1d62d5965ac171e7b06a",
+    "rt-06-光场-lightfield": "art_90cedca077e59b8168da8558a11eed0d",
+    "rt-07-颜色和gamma矫正": "art_c4402402cfd686c8c4e4bff532177106",
+    "rt-08-动画和仿真": "art_2502a2da18c5b336cb687d236546883a",
+    "rt-10-高质量实时渲染-intro": "art_f7055de0ab33918f8b943aa3b67d809a",
+    "rt-11-阴影渲染": "art_1de237282bbf89e3b88cef12a40b39f9",
+    "rt-12-环境映射(environment mapping)": "art_d9fc359086a1e568c3b6320f11df2bb9",
+    "rt-13-全局光照(global illumination)": "art_32344ad2f03937f4965d5488930f7fd5",
+    "rt-14-基于物理的材质 (pbr, pbr materials)": "art_2812f8e6671b2541a1aaf537f67b61b9",
+    "rt-15-实时光追(rtrt)": "art_f504a6715e669666465ddd5ed8babbc5",
+    "rt-16-工业常见解决方案": "art_8040ee7624ac1948226fff998be9d22c",
+    "rtr - chap05": "art_9e4b687a4ba10f142a26acf1bd4c94e0",
+    "sdl入门": "art_93a5daf99e65963632022a15ffa75eb1",
+    "shadertoy-example入门系列-01": "art_d82c8c5cd333bc57b1ce5bdf2ad08fed",
+    "task - go项目构建工具": "art_91b957ad517c157a61adb7bcf9286c4c",
+    "teaching and learning with jupyter": "art_5979a1643e7951f83a44e54fdd5fe72a",
+    "typescript链式调用与串行锁": "art_f4023e05c90b8d07f145226e6783c419",
+    "v0.1.0": "art_f0985b3f2512901e237f1c4cfa2c85ba",
+    "vega-lite初体验": "art_ccdfafdf2005112d13533eb61d7566c0",
+    "vulkan入门01-绘制三角形": "art_78101f11c3f0db1b01a9ab262f8d2da7",
+    "vulkan入门02-vertexbuffers": "art_bb0ad304bd964d7c0a789445af2164df",
+    "vulkan入门03-uniformbuffers": "art_c8a86da304ece63d6341c55c404831ee",
+    "vulkan入门04-texture mapping": "art_7038b16438cb0f7b513ba979876a349d",
+    "vulkan入门05-depth buffering": "art_0dea34508ea8260222907306b8582df3",
+    "vulkan入门06-loading models": "art_de3c9b98ec9e1ec650d90ccabe8c6815",
+    "vulkan入门07-generating mipmaps": "art_d618ffad07fd1f1990e4fe7207fb2076",
+    "vulkan入门08-multisampling": "art_6859d5678c399f5f83516fc56af6842b",
+    "vulkan入门09-compute shader": "art_a49055d65eccdd8ff84a0cf87e487d2c",
+    "vulkan的icd机制": "art_c1d10e346d5dd34011fa8d45c538edd5",
+    "vulkan的layer发现机制": "art_4ddf723ef6317a156270dcf2de7f5478",
+    "vulkan程序中intel驱动总是被调用（未解决）": "art_3441d287016d4b269061d002e105f6af",
+    "windbg的初级用法": "art_18ae0c3e6b88e9fe258445460de96f2f",
+    "关于AI Native游戏引擎的思考": "art_4f951a1f66b49aff29649b4f76b90fe4",
+    "关于ai native游戏引擎的思考": "art_4f951a1f66b49aff29649b4f76b90fe4",
+    "关于我": "art_4f36ec61f8b779787d24d55ede31f63f",
+    "关于用emacs记笔记": "art_aca14a640d50c48f0617fa9c5bb0028c",
+    "分发二进制": "art_6fab79e4e6828639488383f4217e56ac",
+    "变量作用域": "art_5c399f1beff9f3bc65ac04a68f7ece17",
+    "四元数原理": "art_7777551fcbc11c8ed3fbf7aeccf2078e",
+    "小白学写编译器：1.编译基础概念": "art_15fa133fa53f99bd79bd5b8f090a6cbe",
+    "常见不等式和近似": "art_20e79d414316675cafaaaded4cedea12",
+    "开源协议详解": "art_c7898726da2edf0e856421fc87e7fefd",
+    "归档": "art_467d874a8b54d3d1208247967a6c6b8d",
+    "数学之不动点定理": "art_db60f553745f2e626271a1d55262cbd4",
+    "数据库六大范式": "art_0b5d86d1fee4b6094df4896d4b262a32",
+    "深入思考曲面积分": "art_53b1bced4143b63f61f88261d5123d0a",
+    "用Sprite画任意直线": "art_4aec6fddcb2ed7303d21b24bc2385422",
+    "用sprite画任意直线": "art_4aec6fddcb2ed7303d21b24bc2385422",
+    "矩阵初步": "art_0b033fb97e61b0ac8a7dd783d8c4b910",
+    "脚本-导入`.env`中的环境变量": "art_ebc8defc80c51a123d78c5ba9fa786b2",
+    "脚本-根据端口杀死进程": "art_1bf20c6c21f7f3f21dd0caf79d1034da",
+    "记录调试Vulkan程序打印奇怪日志的问题": "art_038b295da648a352ebc1cc78ebce18a8",
+    "记录调试vulkan程序打印奇怪日志的问题": "art_038b295da648a352ebc1cc78ebce18a8",
+    "调和分析入门": "art_5d3c12b6423a22e659ebb726669c7e41",
+    "起点从这里开始": "art_142473a7434c41fde297a2a1d2bf8dcf",
+    "那些年踩过的坑--glog with gflags": "art_0949c3914b29ba75dbe6900e92e97469",
+    "配置TypeScript+Node.js的项目": "art_16c98582f36d19561fe2f1421125576e",
+    "配置typescript+node.js的项目": "art_16c98582f36d19561fe2f1421125576e",
+    "采样和MCMC方法": "art_b7a50916f94a743f2449578789347bb1",
+    "采样和mcmc方法": "art_b7a50916f94a743f2449578789347bb1",
+    "项目": "art_596317905fe2e711894d3800e2714821",
+    "领域驱动设计简介": "art_d4faa792d306ff0013ea1c9530c89804"
+  }
+}

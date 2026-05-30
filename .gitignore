@@ -18,6 +18,10 @@ Thumbs.db
 
 # Dependencies
 node_modules/
+src/hugo_blog/preview/admin_ui/dist/
+.venv/
+.tools/
+*.egg-info/
 
 # Legacy (Hexo)
 db.json
@@ -36,5 +40,7 @@ workspace.json
 .trash/
 
 .env
+.hugo-preview.*
 
 _notupload/
+submodules/

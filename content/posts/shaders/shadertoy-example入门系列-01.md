@@ -1,3 +1,6 @@
+---
+id: art_d82c8c5cd333bc57b1ce5bdf2ad08fed
+---
 
 # 案例
 ![[shadertoy-example入门系列-01-案例-01.png|606]]

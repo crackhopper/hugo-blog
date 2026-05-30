@@ -1,3 +1,6 @@
+---
+id: art_90cedca077e59b8168da8558a11eed0d
+---
 # The Plenoptic Function
 $P(\theta,\phi,\lambda,t,V_x,V_y, V_z)$
 

@@ -1,4 +1,5 @@
 ---
+id: art_975aff2370f7d22dffe82fe76d5a9ce2
 title: C++ Allocator
 date: 2025-12-10T15:30:01+08:00
 tags: []

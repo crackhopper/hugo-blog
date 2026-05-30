@@ -1,4 +1,5 @@
 ---
+id: art_78101f11c3f0db1b01a9ab262f8d2da7
 title: Vulkan入门01-绘制三角形
 date: 2025-11-11T21:29:13+08:00
 tags:
@@ -117,7 +118,7 @@ Khronos Group 通过其 **Vulkan Loader and Validation Layer (Loader)** 仓库�
 
 ### 链接方式
 在安装好的Vulkan的SDK中，可以找到对应的导出库，`vulkan-1.lib` ：
-![[Vulkan入门01-绘制三角形-链接方式-01.png]]
+![[Vulkan入门01_绘制三角形-链接方式-01.png]]
 
 因此严格来说，程序只要link这个库，并且system32中存在 `vulkan-1.dll` 那么就完成了vulkan的集成。
 
@@ -501,7 +502,7 @@ auto func = (PFN_vkCreateDebugUtilsMessengerEXT)vkGetInstanceProcAddr(
 主要填充字符串数组。类似： `VK_KHR_swapchain` 这种
 
 对比VkInstance的扩展：
-![[Vulkan入门01-绘制三角形-启用的设备扩展-extensions-01.png]]
+![[Vulkan入门01_绘制三角形-启用的设备扩展_extensions-01.png]]
 
 ### 实例扩展v.s.设备扩展
 相似点
@@ -548,17 +549,17 @@ auto func = (PFN_vkCreateDebugUtilsMessengerEXT)vkGetInstanceProcAddr(
 
 
 直接用 PhysicalDevice 的问题：
-![[Vulkan入门01-绘制三角形-区分两者的好处-01.png]]
+![[Vulkan入门01_绘制三角形-区分两者的好处-01.png]]
 
 对比OpenGL：
-![[Vulkan入门01-绘制三角形-区分两者的好处-02.png]]
+![[Vulkan入门01_绘制三角形-区分两者的好处-02.png]]
 ## Vulkan窗口渲染核心模型
 关键的元素：
 - Surface： Vulkan 用来表示“操作系统窗口表面”的对象。
 - SwapChain：Vulkan 中专门用于 **窗口渲染的图像队列**。它维护一组 **可以显示到 surface 的图像（images）**。
 - ImageView：`VkImageView` 是对 `VkImage` 的一种“视图”或“接口”。Swapchain 中的每一张图像都是 `VkImage`，但是 Vulkan 的渲染操作（Framebuffer、Pipeline）不能直接操作 `VkImage`，需要通过 `VkImageView`。
 
-![[Vulkan入门01-绘制三角形-vulkan窗口渲染核心模型-01.png]]
+![[Vulkan入门01_绘制三角形-vulkan窗口渲染核心模型-01.png]]
 ## 创建 SwapChain(建立渲染的条件)
 从**原理**角度来看，交换链 (Swap Chain) 是连接你的 Vulkan 渲染世界和操作系统的显示窗口的关键。它本质上是一个**生产-消费**缓冲区队列，因此，创建它需要定义生产者（Vulkan 渲染）和消费者（显示器/操作系统）之间的所有关键契约。
 

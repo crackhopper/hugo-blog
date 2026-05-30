@@ -1,11 +1,12 @@
 ---
+id: art_a9e0c5e72f0dabe3eff7c123ebcdf73d
 title: LXEngine架构 v0.1.0
 date: 2026-04-01T12:54:09+08:00
 tags: []
 draft: false
 ---
 
-![[LXEngine架构 v0.1.0-intro-01.png]]
+![[LXEngine架构_v0_1_0-intro-01.png]]
 
 本文主要讲解我的渲染器项目 LXEngine：从 vulkan tutorial 出发
 - 理解和识别里面的概念
@@ -570,4 +571,4 @@ public:
 
 
 ## 新架构图
-![[LXEngine架构 v0.1.0-新架构图-01.png]]
+![[LXEngine架构_v0_1_0-新架构图-01.png]]

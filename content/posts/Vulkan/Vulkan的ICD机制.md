@@ -1,4 +1,5 @@
 ---
+id: art_c1d10e346d5dd34011fa8d45c538edd5
 title: Vulkan的ICD机制
 date: 2025-11-18T12:57:45+08:00
 tags:

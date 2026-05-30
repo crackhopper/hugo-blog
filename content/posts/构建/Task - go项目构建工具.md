@@ -1,4 +1,5 @@
 ---
+id: art_91b957ad517c157a61adb7bcf9286c4c
 title: Task - go项目构建工具
 date: 2025-12-01T10:54:37+08:00
 tags:
