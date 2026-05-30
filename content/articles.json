@@ -8,6 +8,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:878bc930726cd791b02ce2280e622747",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Jupyter用户文档"
@@ -15,7 +19,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_026abf2b4cfa3d4e8c0facc94a56951e": {
       "id": "art_026abf2b4cfa3d4e8c0facc94a56951e",
@@ -24,6 +28,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:b756c6b3d359f88d39c5bc0fe4b2ef4a",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "cpp中设置环境变量"
@@ -31,7 +39,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_02cf2aa49834f01075ff6a67c6c52b49": {
       "id": "art_02cf2aa49834f01075ff6a67c6c52b49",
@@ -40,6 +48,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:dfe085ee2651180afb29a3a10179d309",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Cpp中的RVO"
@@ -47,7 +59,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_036c98e48766feb5f09036a1fdd3512c": {
       "id": "art_036c98e48766feb5f09036a1fdd3512c",
@@ -56,6 +68,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:64c49fd8405ffbc3117be3ca9ba1767d",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "cmake入门"
@@ -75,7 +91,7 @@
         "cmake入门-指定链接库优先链接动态库-02.png",
         "cmake入门-使用find_package-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_038b295da648a352ebc1cc78ebce18a8": {
       "id": "art_038b295da648a352ebc1cc78ebce18a8",
@@ -84,6 +100,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:74be8b1da11869195b15614682f77be8",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "记录调试Vulkan程序打印奇怪日志的问题"
@@ -102,7 +122,7 @@
         "记录调试Vulkan程序打印奇怪日志的问题-起因-03.png",
         "记录调试Vulkan程序打印奇怪日志的问题-增加断点处的行为scripting-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_05b1c22ae41f1d9c7fe4bddf0f549e54": {
       "id": "art_05b1c22ae41f1d9c7fe4bddf0f549e54",
@@ -111,6 +131,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:6a4982305c93e7d1f9d494c4dbf3da5f",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "ImGUI入门"
@@ -118,7 +142,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_0949c3914b29ba75dbe6900e92e97469": {
       "id": "art_0949c3914b29ba75dbe6900e92e97469",
@@ -127,6 +151,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:523a5d1accb5d0f3acb2929ad5b15298",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "那些年踩过的坑--glog with gflags",
@@ -135,7 +163,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_0a7737555ec399efc801f3ba424cbbb6": {
       "id": "art_0a7737555ec399efc801f3ba424cbbb6",
@@ -144,6 +172,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:863b71df12de87dd44298636dcfca5cf",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Cook-Torrance BRDF",
@@ -157,7 +189,7 @@
         "RT-02-光传播理论(渲染方程)-radiance-01.png",
         "RT-02-光传播理论(渲染方程)-brdfbidirectional-reflectance-distribution-function-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_0b033fb97e61b0ac8a7dd783d8c4b910": {
       "id": "art_0b033fb97e61b0ac8a7dd783d8c4b910",
@@ -166,6 +198,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:d87b63ab89340be03ea0f89337a47b02",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "矩阵初步"
@@ -173,7 +209,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_0b5d86d1fee4b6094df4896d4b262a32": {
       "id": "art_0b5d86d1fee4b6094df4896d4b262a32",
@@ -182,6 +218,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:cae66941d9efbd404e4d88758ea67670",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "数据库六大范式"
@@ -189,7 +229,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_0dea34508ea8260222907306b8582df3": {
       "id": "art_0dea34508ea8260222907306b8582df3",
@@ -198,6 +238,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:94492f9a19a53e15e0b108185afd8add",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vulkan入门05-Depth buffering"
@@ -209,7 +253,7 @@
         "Vulkan入门05_Depth_buffering-3d几何-01.png",
         "Vulkan入门05_Depth_buffering-显示效果-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_0f4e76e81e9ea0b1c8fd9a3fb0b068ce": {
       "id": "art_0f4e76e81e9ea0b1c8fd9a3fb0b068ce",
@@ -218,6 +262,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:639dc5d93ccc6fe0a13abc992526b43d",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "React之初体验"
@@ -225,7 +273,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_142473a7434c41fde297a2a1d2bf8dcf": {
       "id": "art_142473a7434c41fde297a2a1d2bf8dcf",
@@ -234,6 +282,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:5abce620a88f22340dcf71339853ad5e",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "起点从这里开始"
@@ -241,7 +293,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_15d7cc3db77a1d62d5965ac171e7b06a": {
       "id": "art_15d7cc3db77a1d62d5965ac171e7b06a",
@@ -250,6 +302,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:2c7eff2de0fbe980b15426b376ff768a",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-05-高级话题简述"
@@ -276,7 +332,7 @@
         "RT-05-高级话题简述-dipole-approximation-01.png",
         "RT-05-高级话题简述-布料-cloth-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_15fa133fa53f99bd79bd5b8f090a6cbe": {
       "id": "art_15fa133fa53f99bd79bd5b8f090a6cbe",
@@ -285,6 +341,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:4679276958163133d003e044d23ad78b",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "小白学写编译器：1.编译基础概念"
@@ -294,7 +354,7 @@
       "image_keys": [
         "小白学写编译器_1_编译基础概念-一个例子-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_16c98582f36d19561fe2f1421125576e": {
       "id": "art_16c98582f36d19561fe2f1421125576e",
@@ -303,6 +363,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:123fd565a27ce31e69c6369c8177715e",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "配置TypeScript+Node.js的项目"
@@ -310,7 +374,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_16fbf071b33a44825309fe3f27c1789c": {
       "id": "art_16fbf071b33a44825309fe3f27c1789c",
@@ -319,6 +383,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:0ba390f0079ddd964d31c96f36cc9947",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Qt之QTableWidget"
@@ -326,7 +394,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_18ae0c3e6b88e9fe258445460de96f2f": {
       "id": "art_18ae0c3e6b88e9fe258445460de96f2f",
@@ -335,6 +403,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:11ac79fd9abbf0c627ccb4dd8a0ac1d0",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "WinDbg的初级用法"
@@ -353,7 +425,7 @@
         "WinDbg的初级用法-中断到createfile-01.png",
         "WinDbg的初级用法-如何查看具体汇编代码ui方式-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_1ae7480cf8e655b0b5963253080c40ec": {
       "id": "art_1ae7480cf8e655b0b5963253080c40ec",
@@ -362,6 +434,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:260f38d037463b377b8c960e5c971d74",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "C++模板元编程初探"
@@ -373,7 +449,7 @@
       "image_keys": [
         "C_模板元编程初探-intro-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_1aef825efae1fb5049311d142ffe5dd2": {
       "id": "art_1aef825efae1fb5049311d142ffe5dd2",
@@ -382,6 +458,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:cae66941d9efbd404e4d88758ea67670",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Perlin Noise"
@@ -389,7 +469,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_1b3f62280468c056f1792c2047d9e171": {
       "id": "art_1b3f62280468c056f1792c2047d9e171",
@@ -398,6 +478,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:c61fe21ec1c0bd76efec33601753ff4c",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "cmake进阶"
@@ -405,7 +489,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_1bf20c6c21f7f3f21dd0caf79d1034da": {
       "id": "art_1bf20c6c21f7f3f21dd0caf79d1034da",
@@ -414,6 +498,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:d117941debf33b1b62995a3c1918011a",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "脚本-根据端口杀死进程"
@@ -421,7 +509,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_1de237282bbf89e3b88cef12a40b39f9": {
       "id": "art_1de237282bbf89e3b88cef12a40b39f9",
@@ -430,6 +518,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:15cb7fdc89eae397a99f87a094806486",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-11-阴影渲染"
@@ -466,7 +558,7 @@
         "RT-11-阴影渲染-ray-marching如何得到安全角度-02.png",
         "RT-11-阴影渲染-ray-marching如何得到安全角度-03.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_20e79d414316675cafaaaded4cedea12": {
       "id": "art_20e79d414316675cafaaaded4cedea12",
@@ -475,6 +567,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:57266a5f6755e0800ee3049b89774ee1",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "常见不等式和近似"
@@ -482,7 +578,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_2502a2da18c5b336cb687d236546883a": {
       "id": "art_2502a2da18c5b336cb687d236546883a",
@@ -491,6 +587,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:19f5c30cbde6b42e11a5a78f202a83f4",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-08-动画和仿真"
@@ -513,7 +613,7 @@
         "RT-08-动画和仿真-龙格库塔方法-runge-kutta-03.png",
         "RT-08-动画和仿真-刚体模拟-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_2812f8e6671b2541a1aaf537f67b61b9": {
       "id": "art_2812f8e6671b2541a1aaf537f67b61b9",
@@ -522,6 +622,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:9ee0878348a551ff6571ab04fdc78644",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-14-基于物理的材质 (PBR, PBR Materials)"
@@ -555,7 +659,7 @@
         "RT-14-基于物理的材质 (PBR, PBR Materials)-strokes-surface-stylization-01.png",
         "RT-14-基于物理的材质 (PBR, PBR Materials)-strokes-surface-stylization-02.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_31d9c405e6306a4410db3dbbea4d5c23": {
       "id": "art_31d9c405e6306a4410db3dbbea4d5c23",
@@ -564,6 +668,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:9a591197eb06ccda0d2d473739b8e0e8",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "C++内存管理"
@@ -575,7 +683,7 @@
       "image_keys": [
         "C_内存管理-intro-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_32344ad2f03937f4965d5488930f7fd5": {
       "id": "art_32344ad2f03937f4965d5488930f7fd5",
@@ -584,6 +692,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:b85eabf105bb01a07e698c42d2cd7715",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-13-全局光照(Global Illumination)"
@@ -619,7 +731,7 @@
         "RT_13_全局光照_Global_Illumination-核心步骤求像素反射点-02.png",
         "RT_13_全局光照_Global_Illumination-核心步骤shading-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_3441d287016d4b269061d002e105f6af": {
       "id": "art_3441d287016d4b269061d002e105f6af",
@@ -628,6 +740,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:b7c7e00f2d49495f14db945062f15d5f",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vulkan程序中Intel驱动总是被调用（未解决）"
@@ -639,7 +755,7 @@
         "art_038b295da648a352ebc1cc78ebce18a8"
       ],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_3faa2484a8e0689450da25ade95e877f": {
       "id": "art_3faa2484a8e0689450da25ade95e877f",
@@ -648,6 +764,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:f7a59250e7d49f32226378ab1fca77e3",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-04-材质和BRDF"
@@ -666,7 +786,7 @@
         "RT-04-材质和BRDF-微表面模型microfacet-theory-01.png",
         "RT-04-材质和BRDF-微表面例子-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_42975218b57ac95c0eb80df90fe02325": {
       "id": "art_42975218b57ac95c0eb80df90fe02325",
@@ -675,6 +795,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:7bbdd15bed64da1d515aaddb6923482c",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Kalfka一些知识的总结01"
@@ -682,7 +806,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_467d874a8b54d3d1208247967a6c6b8d": {
       "id": "art_467d874a8b54d3d1208247967a6c6b8d",
@@ -691,6 +815,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:e7736702303426a2d9751a46069cbf7e",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "归档",
@@ -699,7 +827,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_4aec6fddcb2ed7303d21b24bc2385422": {
       "id": "art_4aec6fddcb2ed7303d21b24bc2385422",
@@ -708,6 +836,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:b2bed029e65b544d8b405c49e866f162",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "用Sprite画任意直线",
@@ -716,7 +848,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_4cdec07b9ff3116b2c91f781d5e3b852": {
       "id": "art_4cdec07b9ff3116b2c91f781d5e3b852",
@@ -725,6 +857,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:80cfd2812c55faf729817f1e90a5b809",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "AI时代下的代码熵增"
@@ -736,7 +872,7 @@
       "image_keys": [
         "AI时代下的代码熵增-intro-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_4ddf723ef6317a156270dcf2de7f5478": {
       "id": "art_4ddf723ef6317a156270dcf2de7f5478",
@@ -745,6 +881,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:80303f72fabf6311439acef8628318b5",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vulkan的Layer发现机制",
@@ -761,7 +901,7 @@
         "Vulkan的Layer发现机制-windows_layer_discoverywindows_上的_layer_发现-02.png",
         "Vulkan的Layer发现机制-windows_layer_discoverywindows_上的_layer_发现-03.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_4f36ec61f8b779787d24d55ede31f63f": {
       "id": "art_4f36ec61f8b779787d24d55ede31f63f",
@@ -770,6 +910,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:df340f12814301e326728c8621280d7e",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "关于我",
@@ -778,7 +922,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_4f8ad38dde84358fc4c1ebe0631233b6": {
       "id": "art_4f8ad38dde84358fc4c1ebe0631233b6",
@@ -787,6 +931,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:c719fc666a19495577fd2769241592f9",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "MGPK-ch01-代码分析01",
@@ -797,7 +945,7 @@
       "image_keys": [
         "MGPK_ch01_代码分析01-intro-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_4f951a1f66b49aff29649b4f76b90fe4": {
       "id": "art_4f951a1f66b49aff29649b4f76b90fe4",
@@ -806,6 +954,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:98e97e8b5565a804e1fea449bf30afe6",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "关于AI Native游戏引擎的思考"
@@ -817,7 +969,7 @@
       "image_keys": [
         "关于AI_Native游戏引擎的思考-intro-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_51fb91b45d520cda32484e07194e10e7": {
       "id": "art_51fb91b45d520cda32484e07194e10e7",
@@ -826,6 +978,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:caa2099609de6323d3b4aaef688ae9fc",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Release调试信息配置"
@@ -833,7 +989,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_53b1bced4143b63f61f88261d5123d0a": {
       "id": "art_53b1bced4143b63f61f88261d5123d0a",
@@ -842,6 +998,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:4d5c221f663db847dd0cbffc0e81f809",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "深入思考曲面积分"
@@ -854,7 +1014,7 @@
       "image_keys": [
         "深入思考曲面积分-换元剪切技巧dmu_或_dcostheta-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_54949c376122bdbd2c05759fbf6e5df5": {
       "id": "art_54949c376122bdbd2c05759fbf6e5df5",
@@ -863,6 +1023,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:326f1d6ddf7c0a94e3f8dc3ff4b35719",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "LXEngine-AI Native渲染器",
@@ -873,7 +1037,7 @@
       ],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_55ce3129c6a23b749c110bb7a966d5a6": {
       "id": "art_55ce3129c6a23b749c110bb7a966d5a6",
@@ -882,6 +1046,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:53a48890879473cea1989ba9eb4c4ba8",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Qt之layout",
@@ -890,7 +1058,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_55dd0a3a8826d49cfcab9852926f620b": {
       "id": "art_55dd0a3a8826d49cfcab9852926f620b",
@@ -899,6 +1067,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:09278aa8daff8a8d66b5e38813ab2909",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Cpp之预编译头"
@@ -906,7 +1078,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_596317905fe2e711894d3800e2714821": {
       "id": "art_596317905fe2e711894d3800e2714821",
@@ -915,6 +1087,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:7d2ed745ae6e65c84e997bd30400349c",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "项目",
@@ -923,7 +1099,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_5979a1643e7951f83a44e54fdd5fe72a": {
       "id": "art_5979a1643e7951f83a44e54fdd5fe72a",
@@ -932,6 +1108,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:5928ff91b401136e3d6434fd87b3d55e",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Teaching and Learning with Jupyter",
@@ -940,7 +1120,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_59ef732fd218f1faa8761410540e9cd3": {
       "id": "art_59ef732fd218f1faa8761410540e9cd3",
@@ -949,6 +1129,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:472e40368a6fe0e51a3d2506b8ee85ff",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-01-Whitted光线追踪"
@@ -958,7 +1142,7 @@
       "image_keys": [
         "RT-01-Whitted光线追踪-三角形-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_5a0f88ce638741eaeb2f4de5bd2c9c0d": {
       "id": "art_5a0f88ce638741eaeb2f4de5bd2c9c0d",
@@ -967,6 +1151,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:74b19a28a4cf3abf771cd998d4cb1a59",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Go和GORM的补充知识01"
@@ -974,7 +1162,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_5c399f1beff9f3bc65ac04a68f7ece17": {
       "id": "art_5c399f1beff9f3bc65ac04a68f7ece17",
@@ -983,6 +1171,10 @@
       "draft": false,
       "status": "pending",
       "fingerprint": "b2:5ac92b736519bb15e3ec91ace2bb3bec",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "变量作用域"
@@ -990,7 +1182,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_5d3c12b6423a22e659ebb726669c7e41": {
       "id": "art_5d3c12b6423a22e659ebb726669c7e41",
@@ -999,6 +1191,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:f19ae74ec394046acfa6eb9067a27c15",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "调和分析入门"
@@ -1010,7 +1206,7 @@
       "image_keys": [
         "调和分析入门-几何长相3d_波动气球-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_5e46eaf779962ece40b6fb1cbcc10aa8": {
       "id": "art_5e46eaf779962ece40b6fb1cbcc10aa8",
@@ -1019,6 +1215,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:fe28e36810b65b6f592d0a0521d82488",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Python之包管理"
@@ -1026,7 +1226,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_5f6287e2e9d2d7307b53dfa259db8978": {
       "id": "art_5f6287e2e9d2d7307b53dfa259db8978",
@@ -1035,6 +1235,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:cae66941d9efbd404e4d88758ea67670",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Qt之输入控件"
@@ -1042,7 +1246,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_60ef42f5558d54864811a5e8c7c81b3d": {
       "id": "art_60ef42f5558d54864811a5e8c7c81b3d",
@@ -1051,6 +1255,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:e0e9c4a8eed7c261e16a9a1aea08725e",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Qt之常见容器"
@@ -1058,7 +1266,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_612e6b3653a6498a9178a76a9c0875a7": {
       "id": "art_612e6b3653a6498a9178a76a9c0875a7",
@@ -1067,6 +1275,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:611098c8f462b1dcac1c30a2f46b81e2",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "C++字符串新特性"
@@ -1074,7 +1286,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_6859d5678c399f5f83516fc56af6842b": {
       "id": "art_6859d5678c399f5f83516fc56af6842b",
@@ -1083,6 +1295,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:2a83a20593cd321063b4424c336bbb71",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vulkan入门08-Multisampling"
@@ -1095,7 +1311,7 @@
         "Vulkan入门08_Multisampling-渲染结果-01.png",
         "Vulkan入门08_Multisampling-渲染结果-02.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_6fab79e4e6828639488383f4217e56ac": {
       "id": "art_6fab79e4e6828639488383f4217e56ac",
@@ -1104,6 +1320,10 @@
       "draft": false,
       "status": "pending",
       "fingerprint": "b2:aacc9e7771766dcb32270301fa64da1b",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "分发二进制"
@@ -1111,7 +1331,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_7038b16438cb0f7b513ba979876a349d": {
       "id": "art_7038b16438cb0f7b513ba979876a349d",
@@ -1120,6 +1340,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:da8bd0c9ccbb8bb9abe4362763f5af91",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vulkan入门04-Texture mapping"
@@ -1137,7 +1361,7 @@
         "Vulkan入门04_Texture_mapping-shader的修改-03.png",
         "Vulkan入门04_Texture_mapping-shader的修改-04.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_7777551fcbc11c8ed3fbf7aeccf2078e": {
       "id": "art_7777551fcbc11c8ed3fbf7aeccf2078e",
@@ -1146,6 +1370,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:18f90bbbb276fa7728cb53e929297dbc",
+      "modified": "2026-05-30T21:53:56+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "四元数原理"
@@ -1153,7 +1381,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_78101f11c3f0db1b01a9ab262f8d2da7": {
       "id": "art_78101f11c3f0db1b01a9ab262f8d2da7",
@@ -1162,6 +1390,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:9b09f41a201321a263ff1318360b3373",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vulkan入门01-绘制三角形"
@@ -1175,7 +1407,7 @@
         "Vulkan入门01_绘制三角形-区分两者的好处-02.png",
         "Vulkan入门01_绘制三角形-vulkan窗口渲染核心模型-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_7aff55431892c03c2cbfaba121d4206d": {
       "id": "art_7aff55431892c03c2cbfaba121d4206d",
@@ -1184,6 +1416,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:5ff40368e431d67a8a0425cf48bd9569",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Jupyter开发"
@@ -1191,7 +1427,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_8040ee7624ac1948226fff998be9d22c": {
       "id": "art_8040ee7624ac1948226fff998be9d22c",
@@ -1200,6 +1436,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:51766be40efc1f1e220f0c5897cedd3e",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-16-工业常见解决方案"
@@ -1220,7 +1460,7 @@
         "RT-16-工业常见解决方案-global-illumination-solution-01.png",
         "RT-16-工业常见解决方案-扩展没提到的-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_8c8b63bb4ce63d17fc3a05c6ce056b01": {
       "id": "art_8c8b63bb4ce63d17fc3a05c6ce056b01",
@@ -1229,6 +1469,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:5d073e081490f3adbd21cb4aa3f22e6c",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "C语言宏技巧"
@@ -1236,7 +1480,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_8f9744f578dcf0df20207de238c671fd": {
       "id": "art_8f9744f578dcf0df20207de238c671fd",
@@ -1245,6 +1489,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:c7d1d13ab2985adddde7fd4facfb890a",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "OpenCV相机矫正"
@@ -1252,7 +1500,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_90cedca077e59b8168da8558a11eed0d": {
       "id": "art_90cedca077e59b8168da8558a11eed0d",
@@ -1261,6 +1509,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:f69ddb45044cfed1cee74dcc42464c0c",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-06-光场-LightField"
@@ -1273,7 +1525,7 @@
         "RT-06-光场-LightField-记录光场-01.png",
         "RT-06-光场-LightField-记录光场-02.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_91b957ad517c157a61adb7bcf9286c4c": {
       "id": "art_91b957ad517c157a61adb7bcf9286c4c",
@@ -1282,6 +1534,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:af57617c9881d454a465f7b942d693c9",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Task - go项目构建工具"
@@ -1289,7 +1545,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_92481d771383f59bd3fe6b2833462f33": {
       "id": "art_92481d771383f59bd3fe6b2833462f33",
@@ -1298,6 +1554,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:cae66941d9efbd404e4d88758ea67670",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "content",
@@ -1306,7 +1566,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_93a5daf99e65963632022a15ffa75eb1": {
       "id": "art_93a5daf99e65963632022a15ffa75eb1",
@@ -1315,6 +1575,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:865d64016b4c277583d4eb81127dca84",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "SDL入门"
@@ -1325,7 +1589,7 @@
         "SDL入门-intro-01.png",
         "SDL入门-引入sdl3-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_975aff2370f7d22dffe82fe76d5a9ce2": {
       "id": "art_975aff2370f7d22dffe82fe76d5a9ce2",
@@ -1334,6 +1598,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:292e8e5d5ebe6008413e83bdf292771a",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "C++ Allocator"
@@ -1341,7 +1609,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_9c01f0638ffb4140d204cab2418ec3c6": {
       "id": "art_9c01f0638ffb4140d204cab2418ec3c6",
@@ -1350,6 +1618,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:fe1cae4421b643c78279b88bb5874c72",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "CMake错误依赖的坑",
@@ -1358,7 +1630,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_9c13948c43bf015d3dab72cee4acacf3": {
       "id": "art_9c13948c43bf015d3dab72cee4acacf3",
@@ -1367,6 +1639,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:4e986f8672cbc99e52dc6392c5ad9164",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Python之包管理",
@@ -1375,7 +1651,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_9e4b687a4ba10f142a26acf1bd4c94e0": {
       "id": "art_9e4b687a4ba10f142a26acf1bd4c94e0",
@@ -1384,6 +1660,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:12ffe1da239dd63bafb84e6e27236c04",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RTR - Chap05"
@@ -1394,7 +1674,7 @@
         "RTR - Chap05-点光源-point-light-01.png",
         "RTR - Chap05-聚光灯-spotlights-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_a32b303672bda4d1fd951cb641de1bed": {
       "id": "art_a32b303672bda4d1fd951cb641de1bed",
@@ -1403,6 +1683,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:6238305bb10697675006945161c4087e",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "buf和connectrpc入门01"
@@ -1410,7 +1694,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_a49055d65eccdd8ff84a0cf87e487d2c": {
       "id": "art_a49055d65eccdd8ff84a0cf87e487d2c",
@@ -1419,6 +1703,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:a1bda6eb7f570f37f132d44c5b208084",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vulkan入门09-Compute Shader"
@@ -1431,7 +1719,7 @@
         "Vulkan入门09_Compute_Shader-descriptor-01.png",
         "Vulkan入门09_Compute_Shader-compute_space-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_a6d524fc682a524f04d1ec489c4747cb": {
       "id": "art_a6d524fc682a524f04d1ec489c4747cb",
@@ -1440,6 +1728,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:da3c003ad5781089375300a61f890b8d",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-03-路径追踪入门"
@@ -1451,7 +1743,7 @@
         "RT-03-路径追踪入门-sampling-the-light-改进path的效率-01.png",
         "RT-03-路径追踪入门-sampling-the-light-改进path的效率-02.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_a9e0c5e72f0dabe3eff7c123ebcdf73d": {
       "id": "art_a9e0c5e72f0dabe3eff7c123ebcdf73d",
@@ -1460,6 +1752,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:98ab52d1a7188c90ddadd1f7b0b15742",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "LXEngine架构 v0.1.0"
@@ -1472,7 +1768,7 @@
         "LXEngine架构_v0_1_0-intro-01.png",
         "LXEngine架构_v0_1_0-新架构图-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_aca14a640d50c48f0617fa9c5bb0028c": {
       "id": "art_aca14a640d50c48f0617fa9c5bb0028c",
@@ -1481,6 +1777,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:3603d6fc037db55b772f7a8030cd8827",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "关于用emacs记笔记"
@@ -1488,7 +1788,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_af94a1a6a6e42b1e279e85af68993e4f": {
       "id": "art_af94a1a6a6e42b1e279e85af68993e4f",
@@ -1497,6 +1797,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:68e9e1fb9181285d079c71c92d48ec60",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Qt之图形"
@@ -1504,7 +1808,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_b7a50916f94a743f2449578789347bb1": {
       "id": "art_b7a50916f94a743f2449578789347bb1",
@@ -1513,6 +1817,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:cae66941d9efbd404e4d88758ea67670",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "采样和MCMC方法"
@@ -1520,7 +1828,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_bb0ad304bd964d7c0a789445af2164df": {
       "id": "art_bb0ad304bd964d7c0a789445af2164df",
@@ -1529,6 +1837,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:9afa697d66cf73f61756157ef63bf1b2",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vulkan入门02-VertexBuffers"
@@ -1539,7 +1851,7 @@
         "Vulkan入门02_VertexBuffers-intro-01.png",
         "Vulkan入门02_VertexBuffers-效果展示-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_c1d10e346d5dd34011fa8d45c538edd5": {
       "id": "art_c1d10e346d5dd34011fa8d45c538edd5",
@@ -1548,6 +1860,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:2d4299529c6a5586a03cd96e7b05aa4d",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vulkan的ICD机制"
@@ -1564,7 +1880,7 @@
         "Vulkan的ICD机制-软件组织设备-02.png",
         "Vulkan的ICD机制-思路1注册表访问函数上打断点失败-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_c4402402cfd686c8c4e4bff532177106": {
       "id": "art_c4402402cfd686c8c4e4bff532177106",
@@ -1573,6 +1889,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:6e29b4946136a0d922d52fc43ee40b68",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-07-颜色和Gamma矫正"
@@ -1595,7 +1915,7 @@
         "RT-07-颜色和Gamma矫正-cmyk-a-substractive-color-space-01.png",
         "RT-07-颜色和Gamma矫正-为什么要做gamma矫正-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_c7898726da2edf0e856421fc87e7fefd": {
       "id": "art_c7898726da2edf0e856421fc87e7fefd",
@@ -1604,6 +1924,10 @@
       "draft": false,
       "status": "pending",
       "fingerprint": "b2:046f3c4550e0cb2e81b06babfd6da8c7",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "开源协议详解"
@@ -1611,7 +1935,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_c8a86da304ece63d6341c55c404831ee": {
       "id": "art_c8a86da304ece63d6341c55c404831ee",
@@ -1620,6 +1944,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:84d36ccb55e3757ba6a8a04544adfdda",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vulkan入门03-UniformBuffers"
@@ -1630,7 +1958,7 @@
         "Vulkan入门03_UniformBuffers-intro-01.png",
         "Vulkan入门03_UniformBuffers-渲染时使用描述符集-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_ccdfafdf2005112d13533eb61d7566c0": {
       "id": "art_ccdfafdf2005112d13533eb61d7566c0",
@@ -1639,6 +1967,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:f3ef008e8a164b962cf15fa3711a6b61",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vega-lite初体验"
@@ -1646,7 +1978,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_d0f938feef634a6cae339d0778cfaec8": {
       "id": "art_d0f938feef634a6cae339d0778cfaec8",
@@ -1655,6 +1987,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:034cb12189a78a586004ca1186d889c3",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Qt之常见控件"
@@ -1662,7 +1998,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_d4faa792d306ff0013ea1c9530c89804": {
       "id": "art_d4faa792d306ff0013ea1c9530c89804",
@@ -1671,6 +2007,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:b796f8958fbcd685d28d731c1004875d",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "领域驱动设计简介"
@@ -1680,7 +2020,7 @@
       "image_keys": [
         "领域驱动设计简介-intro-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_d618ffad07fd1f1990e4fe7207fb2076": {
       "id": "art_d618ffad07fd1f1990e4fe7207fb2076",
@@ -1689,6 +2029,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:b6d2a300e993a2a4d5869cca4b992e4c",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vulkan入门07-Generating Mipmaps"
@@ -1699,7 +2043,7 @@
         "Vulkan入门07_Generating_Mipmaps-intro-01.png",
         "Vulkan入门07_Generating_Mipmaps-采样器-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_d67e775cf7e3bb6ca17d19c6210d59ec": {
       "id": "art_d67e775cf7e3bb6ca17d19c6210d59ec",
@@ -1708,6 +2052,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:bc0828e2271a6df8212a08039a55eee4",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Qt初学者的一些技巧"
@@ -1715,7 +2063,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_d82c8c5cd333bc57b1ce5bdf2ad08fed": {
       "id": "art_d82c8c5cd333bc57b1ce5bdf2ad08fed",
@@ -1724,6 +2072,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:5fae42985fa3a7b1967d6a043c2a043c",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "shadertoy-example入门系列-01"
@@ -1735,7 +2087,7 @@
         "shadertoy-example入门系列-01-无模型渲染sdf-01.png",
         "shadertoy-example入门系列-01-ray-marching-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_d9fc359086a1e568c3b6320f11df2bb9": {
       "id": "art_d9fc359086a1e568c3b6320f11df2bb9",
@@ -1744,6 +2096,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:f42befba2c2bd32c1470ab5f1ec248dd",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-12-环境映射(Environment Mapping)"
@@ -1770,7 +2126,7 @@
         "RT_12_环境映射_Environment_Mapping-其他基函数-02.png",
         "RT_12_环境映射_Environment_Mapping-其他基函数-03.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_db60f553745f2e626271a1d55262cbd4": {
       "id": "art_db60f553745f2e626271a1d55262cbd4",
@@ -1779,6 +2135,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:cae66941d9efbd404e4d88758ea67670",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "数学之不动点定理"
@@ -1786,7 +2146,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_de3c9b98ec9e1ec650d90ccabe8c6815": {
       "id": "art_de3c9b98ec9e1ec650d90ccabe8c6815",
@@ -1795,6 +2155,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:b533b774cc42386f393f684b5a5c8796",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Vulkan入门06-Loading models"
@@ -1807,7 +2171,7 @@
         "Vulkan入门06_Loading_models-tinyobjloader集成-02.png",
         "Vulkan入门06_Loading_models-tinyobjloader集成-03.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_e868820828e2cac4cffab0af3cacd45f": {
       "id": "art_e868820828e2cac4cffab0af3cacd45f",
@@ -1816,6 +2180,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:6a62804e5d384c574360bef742f884c4",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Qt之事件"
@@ -1823,7 +2191,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_ebc8defc80c51a123d78c5ba9fa786b2": {
       "id": "art_ebc8defc80c51a123d78c5ba9fa786b2",
@@ -1832,6 +2200,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:d117941debf33b1b62995a3c1918011a",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "脚本-导入`.env`中的环境变量"
@@ -1839,7 +2211,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_f07c3e8dbbae7483f6784ba9fc2453c1": {
       "id": "art_f07c3e8dbbae7483f6784ba9fc2453c1",
@@ -1848,6 +2220,10 @@
       "draft": true,
       "status": "pending",
       "fingerprint": "b2:53dc7881795244beae393f1b29bd7abf",
+      "modified": "2026-05-30T20:44:01+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "Qt之buttons"
@@ -1855,7 +2231,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_f0985b3f2512901e237f1c4cfa2c85ba": {
       "id": "art_f0985b3f2512901e237f1c4cfa2c85ba",
@@ -1864,6 +2240,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:fa42abc7ba36d8b4e64900a153525c46",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "v0.1.0"
@@ -1871,7 +2251,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_f4023e05c90b8d07f145226e6783c419": {
       "id": "art_f4023e05c90b8d07f145226e6783c419",
@@ -1880,6 +2260,10 @@
       "draft": true,
       "status": "active",
       "fingerprint": "b2:d117941debf33b1b62995a3c1918011a",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "TypeScript链式调用与串行锁"
@@ -1887,7 +2271,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_f504a6715e669666465ddd5ed8babbc5": {
       "id": "art_f504a6715e669666465ddd5ed8babbc5",
@@ -1896,6 +2280,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:22cae3ce01559abb6df9ebbaa553a4b7",
+      "modified": "2026-05-30T20:44:03+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-15-实时光追(RTRT)"
@@ -1920,7 +2308,7 @@
         "RT-15-实时光追(RTRT)-detection-01.png",
         "RT-15-实时光追(RTRT)-rae-01.png"
       ],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     },
     "art_f7055de0ab33918f8b943aa3b67d809a": {
       "id": "art_f7055de0ab33918f8b943aa3b67d809a",
@@ -1929,6 +2317,10 @@
       "draft": false,
       "status": "active",
       "fingerprint": "b2:1f52ee18b17c71c945663ac0d774d232",
+      "modified": "2026-05-30T20:44:02+08:00",
+      "normalized_fingerprint": "",
+      "normalized_at": "",
+      "normalized_modified": "",
       "previous_paths": [],
       "aliases": [
         "RT-10-高质量实时渲染-Intro"
@@ -1936,7 +2328,7 @@
       "outgoing_links": [],
       "incoming_links": [],
       "image_keys": [],
-      "last_seen": "2026-05-30T13:56:42+00:00"
+      "last_seen": "2026-05-30T14:17:08+00:00"
     }
   },
   "path_index": {

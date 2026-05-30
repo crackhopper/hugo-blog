@@ -34,10 +34,11 @@ from hugo_blog.pipeline.wikilinks import (
     wiki_link_for_path,
 )
 from hugo_blog.pipeline.content_filters import iter_processable_markdown_files
+from hugo_blog.pipeline.article_manifest import mark_articles_normalized
 from hugo_blog.pipeline.image_manifest import ImageManifest
 from hugo_blog.pipeline.image_normalizer import normalize_markdown_images
 from hugo_blog.pipeline.link_manifest import LinkManifest
-from hugo_blog.pipeline.metadata import ensure_metadata, needs_summary, normalize_title, parse_front_matter
+from hugo_blog.pipeline.metadata import ensure_metadata, needs_summary, normalize_reasons, normalize_title, parse_front_matter
 from hugo_blog.pipeline.validate import ValidationIssue, format_report, validate_markdown_text, ValidationReport
 from hugo_blog.llm.client import LLMClient, LLMMetadata, config_from_env
 
@@ -491,6 +492,8 @@ def normalize_content(
                 if path.exists():
                     path.unlink()
 
+    normalized_paths: list[str] = []
+
     for md_file in ordered_files:
         if apply:
             image_result = normalize_markdown_images(
@@ -630,8 +633,15 @@ def normalize_content(
                 print(f'{md_file.name}: 跳过写入')
                 continue
             md_file.write_text(content, encoding='utf-8')
+            if not normalize_reasons(content):
+                normalized_paths.append(rel_file)
             if review_each and restart_preview:
                 restart_preview()
+        elif apply and not changed and not normalize_reasons(content):
+            normalized_paths.append(rel_file)
+
+    if normalized_paths:
+        mark_articles_normalized(content_dir, normalized_paths)
 
     report.broken_links = scan_broken_links(content_dir, wiki_index)
     return report

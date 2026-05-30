@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from hugo_blog.pipeline.article_manifest import ArticleManifest, reconcile_article_manifest
+from hugo_blog.pipeline.article_manifest import ArticleManifest, mark_article_normalized, reconcile_article_manifest
 
 
 class ArticleManifestTest(unittest.TestCase):
@@ -107,6 +107,25 @@ class ArticleManifestTest(unittest.TestCase):
             self.assertIn(source_record.id, target_record.incoming_links)
             self.assertEqual(raw_manifest["path_index"]["posts/source.md"], source_record.id)
             self.assertEqual(manifest.title_index["Target"], target_record.id)
+            self.assertRegex(source_record.modified, r"^\d{4}-\d{2}-\d{2}T")
+
+    def test_marks_article_normalized_with_current_fingerprint_and_time(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            content = Path(temp_dir) / "content"
+            (content / "posts").mkdir(parents=True)
+            article = content / "posts" / "a.md"
+            article.write_text("---\ntitle: A\n---\n正文 A\n", encoding="utf-8")
+            manifest = reconcile_article_manifest(content)
+            record = manifest.by_path("posts/a.md")
+
+            updated = mark_article_normalized(content, "posts/a.md")
+
+            self.assertTrue(updated.normalized_fingerprint.startswith("b2:"))
+            self.assertNotEqual(updated.normalized_fingerprint, "")
+            self.assertRegex(updated.normalized_at, r"^\d{4}-\d{2}-\d{2}T")
+            reloaded = ArticleManifest.load(content).by_path("posts/a.md")
+            self.assertEqual(reloaded.normalized_fingerprint, updated.normalized_fingerprint)
+            self.assertEqual(reloaded.normalized_at, updated.normalized_at)
 
     def test_duplicate_front_matter_ids_are_split_without_manifest_corruption(self):
         with tempfile.TemporaryDirectory() as temp_dir:

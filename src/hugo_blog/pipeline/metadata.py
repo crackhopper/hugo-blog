@@ -233,7 +233,7 @@ def ensure_metadata(
     )
 
 
-def metadata_for_listing(md_file: Path, content_dir: Path) -> dict[str, Any]:
+def metadata_for_listing(md_file: Path, content_dir: Path, article_record: Any | None = None) -> dict[str, Any]:
     text = md_file.read_text(encoding="utf-8")
     metadata, _, _ = parse_front_matter(text)
     rel_path = md_file.relative_to(content_dir).as_posix()
@@ -249,6 +249,9 @@ def metadata_for_listing(md_file: Path, content_dir: Path) -> dict[str, Any]:
         date_value = str(raw_date)
 
     reasons = normalize_reasons(text)
+    if not reasons:
+        manifest_reasons = normalize_manifest_reasons(text, article_record)
+        reasons.extend(manifest_reasons)
     return {
         "path": rel_path,
         "title": metadata.get("title") or normalize_title(md_file),
@@ -260,7 +263,23 @@ def metadata_for_listing(md_file: Path, content_dir: Path) -> dict[str, Any]:
         "preview_url": preview_path,
         "normalize_reasons": reasons,
         "normalized": not reasons,
+        "normalized_at": getattr(article_record, "normalized_at", "") if article_record is not None else "",
+        "normalized_modified": getattr(article_record, "normalized_modified", "") if article_record is not None else "",
     }
+
+
+def normalize_manifest_reasons(text: str, article_record: Any | None) -> list[str]:
+    if article_record is None:
+        return ["not normalized"]
+    normalized_fingerprint = str(getattr(article_record, "normalized_fingerprint", "") or "")
+    if not normalized_fingerprint:
+        return ["not normalized"]
+
+    from hugo_blog.pipeline.article_manifest import state_fingerprint
+
+    if state_fingerprint(text) != normalized_fingerprint:
+        return ["changed since normalize"]
+    return []
 
 
 def update_core_front_matter(md_file: Path, updates: dict[str, Any]) -> None:

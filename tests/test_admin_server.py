@@ -7,6 +7,7 @@ from pathlib import Path
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
+from hugo_blog.pipeline.article_manifest import mark_article_normalized, reconcile_article_manifest
 from hugo_blog.preview.admin import BlogAdminApp, admin_ui_dist_dir, admin_ui_index_path, make_handler
 
 
@@ -82,12 +83,35 @@ class AdminServerTest(unittest.TestCase):
                 encoding="utf-8",
             )
             needs_work.write_text("# Body\n", encoding="utf-8")
+            reconcile_article_manifest(content)
+            mark_article_normalized(content, "posts/normalized.md")
 
             pages = {page["path"]: page for page in BlogAdminApp(project_root=root, content_dir=content).list_pages()}
 
             self.assertTrue(pages["posts/normalized.md"]["normalized"])
             self.assertFalse(pages["posts/needs-work.md"]["normalized"])
-            self.assertIn("front matter", pages["posts/needs-work.md"]["normalize_reasons"])
+            self.assertIn("title", pages["posts/needs-work.md"]["normalize_reasons"])
+
+    def test_list_pages_marks_changed_after_normalize_as_needs_work(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            content = root / "content"
+            posts = content / "posts"
+            posts.mkdir(parents=True)
+            article = posts / "post.md"
+            article.write_text(
+                "---\ntitle: Post\ndate: 2026-01-01T00:00:00+08:00\ntags:\n- ok\ndraft: false\n---\n摘要\n\n<!--more-->\n\n# Body\n",
+                encoding="utf-8",
+            )
+            reconcile_article_manifest(content)
+            mark_article_normalized(content, "posts/post.md")
+            article.write_text(article.read_text(encoding="utf-8") + "\n新增内容\n", encoding="utf-8")
+            reconcile_article_manifest(content)
+
+            page = BlogAdminApp(project_root=root, content_dir=content).list_pages()[0]
+
+            self.assertFalse(page["normalized"])
+            self.assertIn("changed since normalize", page["normalize_reasons"])
 
     def test_missing_draft_field_is_not_treated_as_published(self):
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -248,6 +272,77 @@ class AdminServerTest(unittest.TestCase):
             self.assertFalse(report["ok"])
             self.assertEqual(report["issues"][0]["source_path"], "posts/post.md")
             self.assertEqual(report["issues"][0]["target"], "missing.png")
+
+    def test_health_api_reports_backend_status(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            content = root / "content"
+            (content / "posts").mkdir(parents=True)
+            (root / "static" / "images").mkdir(parents=True)
+
+            app = BlogAdminApp(project_root=root, content_dir=content)
+            health = app.health()
+
+            self.assertEqual(health["status"], "ok")
+            self.assertEqual(health["project_root"], str(root))
+            self.assertEqual(health["content_dir"], str(content))
+            self.assertIn("hugo_available", health)
+            self.assertEqual(health["issues"]["errors"], 0)
+
+    def test_image_cleanup_api_dry_run_and_delete(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            content = root / "content"
+            posts = content / "posts"
+            images = root / "static" / "images"
+            posts.mkdir(parents=True)
+            images.mkdir(parents=True)
+            (posts / "post.md").write_text("![[used.png]]\n", encoding="utf-8")
+            (images / "used.png").write_bytes(b"used")
+            (images / "unused.png").write_bytes(b"unused")
+
+            app = BlogAdminApp(project_root=root, content_dir=content)
+            dry_run = app.cleanup_images(delete=False)
+            deleted = app.cleanup_images(delete=True)
+
+            self.assertEqual(dry_run["unused_images"], ["unused.png"])
+            self.assertEqual(dry_run["deleted"], [])
+            self.assertEqual(deleted["deleted"], ["unused.png"])
+            self.assertTrue((images / "used.png").exists())
+            self.assertFalse((images / "unused.png").exists())
+
+    def test_health_and_image_cleanup_http_endpoints(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            content = root / "content"
+            images = root / "static" / "images"
+            (content / "posts").mkdir(parents=True)
+            images.mkdir(parents=True)
+            (content / "posts" / "post.md").write_text("![[used.png]]\n", encoding="utf-8")
+            (images / "used.png").write_bytes(b"used")
+            (images / "unused.png").write_bytes(b"unused")
+            app = BlogAdminApp(project_root=root, content_dir=content)
+            server = ThreadingHTTPServer(("127.0.0.1", 0), make_handler(app))
+            thread = threading.Thread(target=server.serve_forever, daemon=True)
+            thread.start()
+            try:
+                with urlopen(f"http://127.0.0.1:{server.server_port}/api/health", timeout=5) as response:
+                    health = json.loads(response.read().decode("utf-8"))
+                request = Request(
+                    f"http://127.0.0.1:{server.server_port}/api/images/cleanup",
+                    data=json.dumps({"delete": True}).encode("utf-8"),
+                    headers={"Content-Type": "application/json"},
+                    method="POST",
+                )
+                with urlopen(request, timeout=5) as response:
+                    cleanup = json.loads(response.read().decode("utf-8"))
+            finally:
+                server.shutdown()
+                thread.join(timeout=5)
+                server.server_close()
+
+            self.assertEqual(health["status"], "ok")
+            self.assertEqual(cleanup["deleted"], ["unused.png"])
 
     def test_content_api_rejects_path_escape_and_pending_by_default(self):
         with tempfile.TemporaryDirectory() as temp_dir:

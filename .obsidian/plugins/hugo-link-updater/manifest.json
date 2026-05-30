@@ -1,9 +1,9 @@
 {
   "id": "hugo-link-updater",
-  "name": "Hugo Link Updater",
+  "name": "Hugo Blog Workspace",
   "version": "1.0.0",
   "minAppVersion": "1.0.0",
-  "description": "Update Obsidian wiki links and Hugo relref shortcodes when files are renamed.",
+  "description": "Manage Hugo blog drafts, normalize posts, clean images, and update links from Obsidian.",
   "author": "crackhopper",
-  "isDesktopOnly": false
+  "isDesktopOnly": true
 }

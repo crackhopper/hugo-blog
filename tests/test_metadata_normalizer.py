@@ -3,6 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from hugo_blog.pipeline.article_manifest import ArticleManifest
 from hugo_blog.pipeline.metadata import (
     FrontMatterUpdate,
     ensure_metadata,
@@ -101,6 +102,30 @@ draft: false
         self.assertFalse(updated.changed)
         self.assertFalse(updated.metadata_changed)
         self.assertFalse(updated.summary_changed)
+
+    def test_normalize_records_successful_manifest_snapshot(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            content = Path(temp_dir) / "content"
+            images = Path(temp_dir) / "static" / "images"
+            (content / "posts").mkdir(parents=True)
+            images.mkdir(parents=True)
+            (content / "posts" / "post.md").write_text(
+                "---\ntitle: Post\ndate: 2026-01-01T00:00:00+08:00\ntags:\n- ok\ndraft: true\n---\n摘要\n\n<!-- more -->\n\n# Body\n",
+                encoding="utf-8",
+            )
+
+            normalize_content(
+                content_dir=content,
+                images_dir=images,
+                apply=True,
+                skip_delete=True,
+                normalize_metadata=True,
+                use_llm=False,
+            )
+
+            record = ArticleManifest.load(content).by_path("posts/post.md")
+            self.assertTrue(record.normalized_fingerprint.startswith("b2:"))
+            self.assertRegex(record.normalized_at, r"^\d{4}-\d{2}-\d{2}T")
 
     def test_existing_front_matter_summary_without_llm_does_not_add_empty_tags(self):
         text = """---

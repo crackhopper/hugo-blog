@@ -29,6 +29,10 @@ class ArticleRecord:
     draft: bool
     status: str
     fingerprint: str
+    modified: str = ""
+    normalized_fingerprint: str = ""
+    normalized_at: str = ""
+    normalized_modified: str = ""
     previous_paths: list[str] = field(default_factory=list)
     aliases: list[str] = field(default_factory=list)
     outgoing_links: list[str] = field(default_factory=list)
@@ -123,6 +127,10 @@ def _record_from_payload(article_id: str, payload: dict) -> ArticleRecord:
         draft=bool(payload.get("draft", False)),
         status=str(payload.get("status") or "missing"),
         fingerprint=str(payload.get("fingerprint") or ""),
+        modified=str(payload.get("modified") or ""),
+        normalized_fingerprint=str(payload.get("normalized_fingerprint") or ""),
+        normalized_at=str(payload.get("normalized_at") or ""),
+        normalized_modified=str(payload.get("normalized_modified") or ""),
         previous_paths=_string_list(payload.get("previous_paths")),
         aliases=_string_list(payload.get("aliases")),
         outgoing_links=_string_list(payload.get("outgoing_links")),
@@ -173,6 +181,10 @@ def reconcile_article_manifest(content_dir: Path) -> ArticleManifest:
             draft=bool(metadata.get("draft", False)),
             status="pending" if rel_path.startswith("pending/") else "active",
             fingerprint=fingerprint(updated_text),
+            modified=_file_modified_iso(md_file),
+            normalized_fingerprint=previous_record.normalized_fingerprint if previous_record else "",
+            normalized_at=previous_record.normalized_at if previous_record else "",
+            normalized_modified=previous_record.normalized_modified if previous_record else "",
             previous_paths=_previous_paths(previous_record, rel_path),
             aliases=_aliases(metadata, title, md_file, previous_record),
             outgoing_links=_outgoing_links(updated_text),
@@ -188,6 +200,33 @@ def reconcile_article_manifest(content_dir: Path) -> ArticleManifest:
     _fill_incoming_links(current)
     current.save()
     return current
+
+
+def mark_article_normalized(content_dir: Path, rel_path: str) -> ArticleRecord:
+    records = mark_articles_normalized(content_dir, [rel_path])
+    return records[0]
+
+
+def mark_articles_normalized(content_dir: Path, rel_paths: Iterable[str]) -> list[ArticleRecord]:
+    manifest = reconcile_article_manifest(content_dir)
+    updated_records: list[ArticleRecord] = []
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    seen: set[str] = set()
+    for rel_path in rel_paths:
+        normalized_rel_path = rel_path.strip().replace("\\", "/")
+        if not normalized_rel_path or normalized_rel_path in seen:
+            continue
+        seen.add(normalized_rel_path)
+        record = manifest.by_path(normalized_rel_path)
+        article = content_dir / normalized_rel_path
+        text = article.read_text(encoding="utf-8")
+        record.modified = _file_modified_iso(article)
+        record.normalized_fingerprint = state_fingerprint(text)
+        record.normalized_at = now
+        record.normalized_modified = record.modified
+        updated_records.append(record)
+    manifest.save()
+    return updated_records
 
 
 def read_article_id(text: str) -> str | None:
@@ -230,6 +269,19 @@ def fingerprint(text: str) -> str:
     normalized = _normalize_for_fingerprint(text)
     digest = hashlib.blake2b(normalized.encode("utf-8"), digest_size=16).hexdigest()
     return f"b2:{digest}"
+
+
+def state_fingerprint(text: str) -> str:
+    normalized = text.replace("\r\n", "\n").replace("\r", "\n")
+    digest = hashlib.blake2b(normalized.encode("utf-8"), digest_size=16).hexdigest()
+    return f"b2:{digest}"
+
+
+def _file_modified_iso(path: Path) -> str:
+    try:
+        return datetime.fromtimestamp(path.stat().st_mtime).astimezone().isoformat(timespec="seconds")
+    except OSError:
+        return ""
 
 
 def _normalize_for_fingerprint(text: str) -> str:

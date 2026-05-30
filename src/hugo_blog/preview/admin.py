@@ -14,6 +14,7 @@ from hugo_blog.paths import PROJECT_ROOT
 from hugo_blog.pipeline.content_inventory import iter_managed_markdown_files, list_content_pages
 from hugo_blog.pipeline.content_refactor import refactor_article
 from hugo_blog.pipeline.content_suggestions import suggest_article_moves
+from hugo_blog.pipeline.images import scan_all_image_references, scan_unused_images
 from hugo_blog.pipeline.image_normalizer import normalize_markdown_images
 from hugo_blog.pipeline.metadata import metadata_for_listing, update_core_front_matter
 from hugo_blog.pipeline.normalize_service import normalize_article
@@ -105,6 +106,39 @@ class BlogAdminApp:
 
     def validation_report(self) -> dict:
         return self._validation_report().to_dict()
+
+    def health(self) -> dict:
+        report = self._validation_report()
+        hugo_bin = self.project_root / ".tools" / "hugo" / "hugo"
+        return {
+            "status": "ok",
+            "project_root": str(self.project_root),
+            "content_dir": str(self.content_dir),
+            "admin": True,
+            "hugo_available": hugo_bin.exists(),
+            "issues": {
+                "errors": len([issue for issue in report.issues if issue.severity == "error"]),
+                "warnings": len([issue for issue in report.issues if issue.severity == "warning"]),
+            },
+        }
+
+    def cleanup_images(self, *, delete: bool = False) -> dict:
+        images_dir = self.project_root / "static" / "images"
+        referenced = scan_all_image_references(self.content_dir)
+        unused = scan_unused_images(images_dir, referenced)
+        deleted: list[str] = []
+        if delete:
+            for rel_path in unused:
+                target = (images_dir / rel_path).resolve()
+                images_root = images_dir.resolve()
+                if images_root in target.parents and target.exists() and target.is_file():
+                    target.unlink()
+                    deleted.append(rel_path)
+        return {
+            "unused_images": unused,
+            "deleted": deleted,
+            "delete": delete,
+        }
 
     def _validation_report(self) -> ValidationReport:
         return validate_content_tree(
@@ -345,6 +379,10 @@ def make_handler(app: BlogAdminApp):
                 except Exception as exc:
                     self._send(400, str(exc).encode("utf-8"), "text/plain; charset=utf-8")
                 return
+            if parsed.path == "/api/health":
+                body = json.dumps(app.health(), ensure_ascii=False).encode("utf-8")
+                self._send(200, body, "application/json; charset=utf-8")
+                return
             if parsed.path == "/api/docs":
                 body = json.dumps(app.list_docs(), ensure_ascii=False).encode("utf-8")
                 self._send(200, body, "application/json; charset=utf-8")
@@ -387,6 +425,15 @@ def make_handler(app: BlogAdminApp):
             if parsed.path == "/api/validation/run":
                 body = json.dumps(app.validation_report(), ensure_ascii=False).encode("utf-8")
                 self._send(200, body, "application/json; charset=utf-8")
+                return
+            if parsed.path == "/api/images/cleanup":
+                length = int(self.headers.get("Content-Length", "0"))
+                try:
+                    payload = json.loads(self.rfile.read(length).decode("utf-8")) if length else {}
+                    body = json.dumps(app.cleanup_images(delete=bool(payload.get("delete", False))), ensure_ascii=False).encode("utf-8")
+                    self._send(200, body, "application/json; charset=utf-8")
+                except Exception as exc:
+                    self._send(400, str(exc).encode("utf-8"), "text/plain; charset=utf-8")
                 return
             if parsed.path == "/api/content-refactor":
                 length = int(self.headers.get("Content-Length", "0"))
