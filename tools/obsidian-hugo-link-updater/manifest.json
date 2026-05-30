@@ -1,0 +1,9 @@
+{
+  "id": "hugo-link-updater",
+  "name": "Hugo Link Updater",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Update Obsidian wiki links and Hugo relref shortcodes when files are renamed.",
+  "author": "crackhopper",
+  "isDesktopOnly": false
+}

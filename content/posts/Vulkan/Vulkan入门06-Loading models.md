@@ -9,7 +9,7 @@ tags:
 draft: false
 ---
 
-![[Vulkan入门06-Loading models-1765192359210.png|695x522]]
+![[Vulkan入门06-Loading models-intro-01.png|695x522]]
 
 本节基于简单的 `tinyobjloader` 库来加载OBJ文件。整体比较简单，只是把之前手写的顶点数据替换为动态从文件中读取。
 
@@ -27,7 +27,7 @@ draft: false
 - 对应纹理贴图： https://vulkan-tutorial.com/resources/viking_room.png
 
 下载好之后，分别存入 models 和 textures 文件夹中。最后整体的目录结构为：
-![[Vulkan入门06-Loading models-1765190629645.png]]
+![[Vulkan入门06-Loading models-tinyobjloader集成-01.png]]
 
 接着我们写代码使用库来加载这些数据
 ```cpp
@@ -118,7 +118,7 @@ void loadModel() {
 }
 ```
 
-![[Vulkan入门06-Loading models-1765192161220.png]]
+![[Vulkan入门06-Loading models-tinyobjloader集成-02.png]]
 
 这个里面 OBJ 文件中纹理坐标的定义和vulkan中不一致，尤其是y坐标。因此我们需要flip y坐标，修复为：
 ```cpp
@@ -127,10 +127,10 @@ vertex.texCoord = {
     1.0f - attrib.texcoords[2 * index.texcoord_index + 1]
 };
 ```
-![[Vulkan入门06-Loading models-1765192359210.png|695x522]]
+![[Vulkan入门06-Loading models-intro-01.png|695x522]]
 
 当模型旋转起来的时候，背面会比较有意思（因为模型并没考虑到从那个方向观看）
-![[Vulkan入门06-Loading models-1765192467007.png]]
+![[Vulkan入门06-Loading models-tinyobjloader集成-03.png]]
 
 # 顶点重复问题 (vertex duduplication)
 我们每次用到索引的时候，都是新建一个顶点，新建一个索引。这样并没有利用到索引的优势（可以复用顶点数据）。因此我们调整 `loadModel` 代码：

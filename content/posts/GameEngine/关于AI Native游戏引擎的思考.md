@@ -4,7 +4,7 @@ date: 2026-04-02T09:49:26+08:00
 tags: []
 draft: false
 ---
-![[关于AI Native游戏引擎的思考-1775292310322.png]]
+![[关于AI Native游戏引擎的思考-intro-01.png]]
 
 随着 OpenClaw 等以 Agent 为核心的开发工具崛起，AI 驱动的大规模工程化已从理论变为现实。然而，AI 生成代码的“海量性”与“不可控性”带来的代码熵增，正成为长期维护的灾难。本文通过分析 OpenClaw 的开发模式，提出了“人类专家 + AI Agent”双线配合的研发流程，并进一步探讨了在 AI 时代，传统游戏引擎如何转型为“AI Native”形态，以解决 UI 抽象、空间感知、GPU 调试及资产生成等核心痛点。
 
@@ -136,5 +136,5 @@ AI Native 游戏引擎的核心价值，不在于替代开发者，而在于**�
 
 # 参考资料
 - https://mp.weixin.qq.com/s/s9dTiR4okEPHB2xnjv8B5A
-- [AI时代下的代码熵增]({{< relref "posts/AI/AI时代下的代码熵增.md" >}})
+- [[posts/AI/AI时代下的代码熵增|AI时代下的代码熵增]]
 

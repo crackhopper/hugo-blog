@@ -39,7 +39,7 @@ cmake <project_dir>
 
 看一个简单的例子，目录层级如下：
 
-![[cmake-tutorial/hello-world.png]]
+![[cmake入门-简单的例子-01.png]]
 其中，两个文件的内容：
 
 **helloworld.cpp**
@@ -69,7 +69,7 @@ add_executable(hello helloworld.cpp)
 
 ### 构建helloworld
 
-![[cmake-tutorial/make-hello-world-s.png]]
+![[cmake入门-构建helloworld-01.png]]
 
 解释一下： 
 
@@ -83,14 +83,14 @@ cmake提供了一个非常好用的特性，就是 **项目外构建** 。简单
 
 比如说刚才的例子，我们在项目里创建一个build文件夹，在里面构建。
 
-![[cmake-tutorial/out-build.png]]
+![[cmake入门-项目外构建-01.png]]
 
 构建好了之后:
-![[cmake-tutorial/out-build-res.png]]
+![[cmake入门-项目外构建-02.png]]
 
 我们可以看到生成的文件都在build文件夹中。进入到里面，进行make即可编译。
 
-![[cmake-tutorial/out-build-make.png]]
+![[cmake入门-项目外构建-03.png]]
 
 # 编译一个静态库文件
 
@@ -130,10 +130,10 @@ double abs(double v){
 ```
 
 我们尝试构建一下：
-![[cmake-tutorial/static-lib-s.png]]
+![[cmake入门-静态库项目-01.png]]
 
 构建后的结果：
-![[cmake-tutorial/static-lib-res.png]]
+![[cmake入门-静态库项目-02.png]]
 
 注意到，libabs.a文件，即为我们构造出的静态库文件。
 
@@ -203,7 +203,7 @@ target_link_libraries(helloworld hello world)
 - `target_link_libraries` 用来对 `helloworld` 这个target进行更多的描述：描述这个target完成过程中，需要对 `hello` 以及 `world` 两个target进行链接（这两个target必须是库）
 
 完整的目录结构：
-![[cmake-tutorial/multi-cmake.png]]
+![[cmake入门-add-block-directories-01.png]]
 
 ## 引入第三方库
 
@@ -243,17 +243,17 @@ target_link_libraries(hellocv opencv_core opencv_highgui opencv_imgproc)
 ```
 
 最后得到的结果：
-![[cmake-tutorial/opencv.png]]
+![[cmake入门-指定链接库优先链接动态库-01.png]]
 
 运行结果：
-![[cmake-tutorial/opencv-demo.png]]
+![[cmake入门-指定链接库优先链接动态库-02.png]]
 
 ## 使用find_package
 
 引入opencv非常容易，但有一个新问题。不同的平台上，opencv的安装地址可能不一样。如何才能更加通用的探测各个平台的opencv，并正确的链接呢？
 
 cmake为了解决这个问题，要求所有兼容cmake的包，都编写对应的cmake模块。比如opencv包安装文件，就包含了对应的cmake模块：
-![[cmake-tutorial/opencv-cmake-s.png]]
+![[cmake入门-使用find-package-01.png]]
 
 这里的.cmake文件被安装到 `/usr/share` 文件夹下。这个是cmake会搜索模块的路径之一。
 

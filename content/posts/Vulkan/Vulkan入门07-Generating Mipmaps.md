@@ -9,7 +9,7 @@ tags:
 draft: false
 ---
 
-![[Vulkan入门07-Generating Mipmaps-1765248326505.png|669x451]]
+![[Vulkan入门07-Generating Mipmaps-intro-01.png|669x451]]
 
 Mipmap: (Mip, Multum In Parvo拉丁语，在小中包含很多（Much in a little）)
 - 把同一张纹理的多个不同分辨率版本
@@ -334,7 +334,7 @@ void createTextureSampler() {
 
 此时，运行程序看到结果：（我们通过修改 samplerInfo 可以开启或关闭 mipmap）
 
-![[Vulkan入门07-Generating Mipmaps-1765254853080.png]]
+![[Vulkan入门07-Generating Mipmaps-采样器-01.png]]
 
 实际上，开启不开启mipmap的差距并不明显。复杂的场景，就能看出差别了，mipmap的速度也会更快。
 

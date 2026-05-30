@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-![[Vulkan入门03-UniformBuffers-1764830357797.png|603x452]]
+![[Vulkan入门03-UniformBuffers-intro-01.png|603x452]]
 
 
 通过 `VertexBuffer` ，我们可以给每个顶点赋值数据，并传递给 vertex shader 让其可以使用。（通过drawcall启动pipeline）
@@ -395,7 +395,7 @@ rasterizer.frontFace = VK_FRONT_FACE_COUNTER_CLOCKWISE;
 
 到这里，可以看到渲染的画面了
 
-![[Vulkan入门03-UniformBuffers-1764830352161.png]]
+![[Vulkan入门03-UniformBuffers-渲染时使用描述符集-01.png]]
 
 
 ## 对齐问题

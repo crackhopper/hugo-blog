@@ -7,7 +7,7 @@ tags:
   - 调试
 draft: false
 ---
-起因开始于 [记录调试Vulkan程序打印奇怪日志的问题]({{< relref "posts/Vulkan/记录调试Vulkan程序打印奇怪日志的问题.md" >}})
+起因开始于 [[posts/Vulkan/记录调试Vulkan程序打印奇怪日志的问题|记录调试Vulkan程序打印奇怪日志的问题]]
 
 这篇文章详细展开了 WinDbg 的基础用法。
 
@@ -31,7 +31,7 @@ winget install Microsoft.WinDbg
 
 点击文件：
 
-![[WinDbg的初级用法-1763393136760.png]]
+![[WinDbg的初级用法-启动调试-01.png]]
 
 选项介绍：
 - Launch executable : 直接启动一个exe，并且中断到最开始的地方。
@@ -203,7 +203,7 @@ HANDLE CreateFileW(
 我们的目标是找到异常写日志的代码。选择一个合适的方式，加载exe启动后，看到如下页面。
 
 启动对应exe：
-![[WinDbg的初级用法-1763395254791.png]]
+![[WinDbg的初级用法-实操演练-01.png]]
 
 ## 初始页面讲解
 ### 模块加载信息
@@ -252,7 +252,7 @@ start             end                 module name
 ### UI配置
 页面中的View选项可以调出很多好用的窗口。根据自己的需求配置即可。
 
-![[WinDbg的初级用法-1763519564490.png]]
+![[WinDbg的初级用法-ui配置-01.png]]
 
 随后可以拖拽窗口，dock到自己喜欢的位置上。
 
@@ -290,7 +290,7 @@ bp kernel32!CreateFileW;
 
 
 右下角面板可以打开 Breakpoint 选项卡：
-![[WinDbg的初级用法-1763396928280.png]]
+![[WinDbg的初级用法-添加断点-01.png]]
 
 随后可以输入命令：
 ```
@@ -308,7 +308,7 @@ bp kernel32!CreateFileW "du rcx;"
 
 ## 中断到CreateFile
 下面进入我们第一次中断的情况：
-![[WinDbg的初级用法-1763397056640.png]]
+![[WinDbg的初级用法-中断到createfile-01.png]]
 ### 寄存器观察
 ```
 0:000> r
@@ -570,7 +570,7 @@ KERNELBASE!CreateFileW:
 #### **如何查看具体汇编代码**（UI方式）
 可以打开 Disaseembly 面板。（当然如果有源代码+pdb文件，甚至可以直接打开源代码，类似普通在 vscode 中调试一样）
 
-![[WinDbg的初级用法-1763521358979.png]]
+![[WinDbg的初级用法-如何查看具体汇编代码ui方式-01.png]]
 
 
 # TTD指令

@@ -73,20 +73,20 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Class\{SoftwareComponent GUI
 ## 显卡设备
 对于显卡驱动开说，这里的 Adapter GUID是固定的，为 `4D36E968-E325-11CE-BFC1-08002BE10318` 。
 
-![[Vulkan的ICD机制-1763443508236.png]]
+![[Vulkan的ICD机制-显卡设备-01.png]]
 
 对应设备管理器：
 	
-![[Vulkan的ICD机制-1763444512168.png]]
+![[Vulkan的ICD机制-显卡设备-02.png]]
 
 在我们的case下，这里的两个真实显卡会配置： `VulkanDriverName` 和 `VulkanDriverNameWow` 这两个key，分别指定64位和32位的 ICD的json配置文件。
 
 ## 软件组织设备
 
 SoftwareComponent GUID也是固定的(“软件组件设备”，用于管理软件模块或驱动包中的附加功能。 **为了让操作系统可以像管理硬件设备一样管理驱动包中的软件模块**)，为 `5C4C3332-344D-483C-8739-259E934C9CC8`  （**SoftwareComponent 可以作为非标准设备或附加模块的“容器”，让操作系统统一管理**。）
-![[Vulkan的ICD机制-1763443585935.png]]
+![[Vulkan的ICD机制-软件组织设备-01.png]]
 对应设备管理器：
-![[Vulkan的ICD机制-1763444471920.png]]
+![[Vulkan的ICD机制-软件组织设备-02.png]]
 
 
 
@@ -95,7 +95,7 @@ SoftwareComponent GUID也是固定的(“软件组件设备”，用于管理软
 
 ## 思路1：注册表访问函数上打断点（失败）
 
-![[Vulkan的ICD机制-1763561340860.png]]
+![[Vulkan的ICD机制-思路1注册表访问函数上打断点失败-01.png]]
 
 
 ### `1F68E:2FD` 中断示例

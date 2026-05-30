@@ -4,7 +4,9 @@ date: 2024-01-01T10:00:00+08:00
 draft: false
 image: /images/game-engine.jpg
 ---
-LXEngine 是我从 高级 AI 工程师 向 底层图形学 跨越的技术结晶。它不仅是一个基于 Vulkan 的现代渲染器，更是我探索 “AI Native” 渲染范式的实验场。
+我希望每次根据不同的物理屏幕，能保存对应的UI配置（位置、大小、文字大小等）。因为不同屏幕下我希望的效果不一
+  样我希望每次根据不同的物理屏幕，能保存对应的UI配置（位置、大小、文字大小等）。因为不同屏幕下我希望的效果不一
+  样LXEngine 是我从 高级 AI 工程师 向 底层图形学 跨越的技术结晶。它不仅是一个基于 Vulkan 的现代渲染器，更是我探索 “AI Native” 渲染范式的实验场。
 
 项目状态：Active Development (v0.1.1 Core Architecture)
 
@@ -44,7 +46,7 @@ LXEngine 是我从 高级 AI 工程师 向 底层图形学 跨越的技术结晶
 ### 3. AI 辅助工程流 (AI-Driven Workflow)
 - **Agent 协同**：引入 **OpenSpec Agent** 工作流，辅助解决 Vulkan 复杂的同步与 Debug 细节，极大提升了底层重构效率。
 
-更多内容: [LXEngine架构 v0.1.0]({{< relref "posts/renderer/LXEngine架构 v0.1.0.md" >}})
+更多内容: [[posts/GameEngine/LXEngine架构 v0.1.0|LXEngine架构 v0.1.0]]
 
 ## RoadMap (核心开发计划)
 ### 阶段一：基础设施与静态渲染 (v0.1.0 - 已完成)

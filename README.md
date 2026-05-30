@@ -26,8 +26,12 @@ Stack 主题通过 Git Submodule 引入，首次克隆仓库后按顺序执行�
 
 > 主题仓库位于 `themes/Stack`，更新主题时只需进入该目录执行 `git pull`。
 
+### 项目规范
+
+内容写作与 Agent 协作规范见 [AGENTS.md](AGENTS.md)。
+
 ### 安装工具脚本
-自定义了很多处理markdown的工具，需要使用到python
+自定义了很多处理 markdown 的工具，需要使用到 python
 ```sh
 virtualenv venv
 ./venv/Scripts/activate.ps1 # 或linux/mac下 source venv/Scripts/activate
@@ -145,7 +149,9 @@ menu:
 
 **静态资源位置：** `static/images/`
 
-obsidian 配置了自动插入截图并且重命名为 `文章标题-时间.png`，例如 `测试-20251115004604697.png`。
+Obsidian 附件目录为 `static/images/`。推荐命名 `{文章}-{段落}-{序号}.png`；可用 `python scripts/normalize_content.py` 批量规范化。详见 [AGENTS.md](AGENTS.md)。
+
+> 遗留脚本 `scripts/fix_obsidian_images.py` 已弃用，请改用 `scripts/normalize_content.py`。
 
 ### 3. 文章分类和标签
 

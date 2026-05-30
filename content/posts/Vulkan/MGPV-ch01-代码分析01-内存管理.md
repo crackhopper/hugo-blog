@@ -4,7 +4,7 @@ date: 2025-12-10T13:10:41+08:00
 tags: []
 draft: true
 ---
-![[MGPV-ch01-代码分析01-1765343697247.png]]
+![[MGPV-ch01-代码分析01-内存管理-intro-01.png]]
 
 Vulkan Tutorial 已经读完。
 

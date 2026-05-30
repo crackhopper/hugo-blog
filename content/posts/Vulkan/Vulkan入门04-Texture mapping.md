@@ -8,7 +8,7 @@ tags:
   - descriptor
 draft: false
 ---
-![[Vulkan入门04-Texture mapping-1764816362517.png]]
+![[Vulkan入门04-Texture mapping-intro-01.png]]
 
 
 纹理映射，熟悉OGL和DX的，对这个功能并不陌生。在传统的API中，相对来说使用方式比较简单也比较固定。在vulkan中：
@@ -93,7 +93,7 @@ UNDEFINED
 
 我们的目录结构：
 
-![[Vulkan入门04-Texture mapping-1764816054141.png|205x325]]
+![[Vulkan入门04-Texture mapping-加载图像-使用-stb-库-01.png|205x325]]
 
 我们的cmakelist配置
 ```cmake
@@ -113,7 +113,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE include)
 ```
 
 开始之前，在创建 textures 文件夹，并放入一个 CC0 的image （512 x 512 ） `texture.jpg` 如下：
-![[Vulkan入门04-Texture mapping-1764816362517.png|142x142]]
+![[Vulkan入门04-Texture mapping-intro-01.png|142x142]]
 
 接下来我们来创建TextureImage:
 ```cpp
@@ -571,7 +571,7 @@ void cleanup() {
 假设，texture的一个像素，对应到多个fragments 时（oversampling）。那么使用采样器，会有平滑效果：（这里oversampling过采样指的是，fragment采样的时候，对同个texel多次采样）
 
 
-![[Vulkan入门04-Texture mapping-1764823642196.png]]
+![[Vulkan入门04-Texture mapping-基础概念原理-01.png]]
 
 另一个方面，欠采样（undersampling）也会产生问题，即，一个fragment覆盖多个texel。会产生 artifacts （走样）。欠采样的本质：**欠采样**发生在 **fragment 的采样率不足以覆盖它所映射的 texel 区域**
 - 典型情况：
@@ -584,10 +584,10 @@ void cleanup() {
 
 下面是一个结果。（解决方法是各向异性采样 anisotropic filtering：原理：针对纹理区域为长方形条的fragment， **沿长轴方向增加采样点** → 多个 texel 加权融合；短轴方向采样少 → 节约计算）
 
-![[Vulkan入门04-Texture mapping-1764824965915.png]]
+![[Vulkan入门04-Texture mapping-基础概念原理-02.png]]
 
 此外，采样器也会定义超出正常范围之外的位置如何填充颜色，（address mode）：
-![[Vulkan入门04-Texture mapping-1764825031307.png]]
+![[Vulkan入门04-Texture mapping-基础概念原理-03.png]]
 
 
 ## 创建采样器
@@ -841,7 +841,7 @@ void main() {
 ```
 
 运行可以看到（验证纹理坐标是否正确的读取）：
-![[Vulkan入门04-Texture mapping-1764828930621.png]]
+![[Vulkan入门04-Texture mapping-shader的修改-01.png]]
 
 
 
@@ -862,7 +862,7 @@ void main() {
 ```
 
 运行可以看到（验证texture成功使用）
-![[Vulkan入门04-Texture mapping-1764828959861.png]]
+![[Vulkan入门04-Texture mapping-shader的修改-02.png]]
 
 修改：
 ```glsl
@@ -881,7 +881,7 @@ void main() {
 ```
 
 运行可以看到（验证 address mode）
-![[Vulkan入门04-Texture mapping-1764828979224.png]]
+![[Vulkan入门04-Texture mapping-shader的修改-03.png]]
 
 还可以进行颜色融合：
 ```glsl
@@ -899,4 +899,4 @@ void main() {
 }
 ```
 
-![[Vulkan入门04-Texture mapping-1764828997270.png]]
+![[Vulkan入门04-Texture mapping-shader的修改-04.png]]

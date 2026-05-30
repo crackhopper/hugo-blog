@@ -16,18 +16,18 @@ draft: false
 
 随后，我发现程序有一个奇怪的地方：
 
-![[记录调试Vulkan程序打印奇怪日志的问题-1763387839953.png|700x416]]
+![[记录调试Vulkan程序打印奇怪日志的问题-起因-01.png|700x416]]
 
 这个文件的全名是： `VulkanGLFWDemo.20251117-xxxxxx-xxxx.log`
 
 我的代码基本上就是照着tutorial复刻的，有改动，但都是在自己理解的情况下做的一些简单改动。绝对没有日志打印的操作。
 
 怀着好奇心，我打开这个文件，想看看到底是啥日志。夸张的事情来了：
-![[记录调试Vulkan程序打印奇怪日志的问题-1763387971733.png]]
+![[记录调试Vulkan程序打印奇怪日志的问题-起因-02.png]]
 
 虽然后缀是 `.log` 但是是个二进制文件！但二进制文件咱就看不了了么？显然不是，用hex editor插件打开。我要看看二进制中是不是有什么字符串，能让我猜出来到底咋回事。
 
-![[记录调试Vulkan程序打印奇怪日志的问题-1763388065279.png]]
+![[记录调试Vulkan程序打印奇怪日志的问题-起因-03.png]]
 
 WTF？！
 
@@ -43,7 +43,7 @@ AI可以不停的给我提出各种各样没用的方案。
 考虑到，程序无非就是二进制在CPU上跑，我直接动态调试二进制程序不就可以了？于是开启了我的WinDbg之路。
 
 ## WinDbg
-**关于 WinDbg 的使用，更多参见** [WinDbg的初级用法]({{< relref "posts/调试/WinDbg的初级用法.md" >}})
+**关于 WinDbg 的使用，更多参见** [[posts/调试/WinDbg的初级用法|WinDbg的初级用法]]
 
 # 问题定位
 ## 增加断点处的行为(scripting)
@@ -59,7 +59,7 @@ bp KERNELBASE!CreateFileW "r rcx; du @rcx; k L3; g"
 - `g` ： 不停止，继续执行。
 
 接着让我们运行看下会发生什么，将我们的断点配置如下：
-![[WinDbg的初级用法-1763438550768.png]]
+![[记录调试Vulkan程序打印奇怪日志的问题-增加断点处的行为scripting-01.png]]
 
 输出很长。可以见有很多文件都被打开。（大大出乎预料）
 
@@ -479,7 +479,7 @@ start             end                 module name
 ### 原因
 vulkan初始化的时候，会检查注册表，加载所有 `Implicit Layer` 的配置（manifest）。这样同样也会加载对应的dll。这就是为什么 WeGame 的Layer被加载了。（vulkan的这个功能似乎很有安全问题啊！）
 
-**关于validation layer发现机制，更多参见**： [Vulkan的Layer发现机制和debug]({{< relref "posts/Vulkan/Vulkan的Layer发现机制和debug.md" >}})
+**关于validation layer发现机制，更多参见**： [[posts/Vulkan/Vulkan的Layer发现机制和debug|Vulkan的Layer发现机制和debug]]
 
 # 神秘日志问题解决！
 
@@ -506,7 +506,7 @@ VK_LOADER_LAYERS_DISABLE=*wegame*
 由于内容比较多，单独开了一个帖子来记录。这个问题当前没找到解决方案。
 
 
-[Vulkan程序中Intel驱动总是被调用（未解决）]({{< relref "posts/Vulkan/Vulkan程序中Intel驱动总是被调用（未解决）.md" >}})
+[[posts/Vulkan/Vulkan程序中Intel驱动总是被调用（未解决）|Vulkan程序中Intel驱动总是被调用（未解决）]]
 
 
 

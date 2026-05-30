@@ -73,7 +73,7 @@ bp KERNELBASE!CreateFileW "r rcx; du @rcx; k L3; g"
 ## AI解释
 `igvk64` 很可能是 Intel 的 Vulkan ICD / 驱动相关模块（或 Intel GPU 的 Vulkan 支持库/监控库）。Vulkan loader 在进程初始化 / 创建实例时会把系统里注册的所有 ICD（以及某些层）都载入并初始化——因此即便你最后用的是 NVIDIA 的物理设备，Intel 的 ICD 也可能会被加载并执行初始化代码（查询注册表、查询温度/设备信息、打开设备/日志文件等），这就会看到大量 `CreateFileW` / 注册表读取 等操作，堆栈里就会出现 `igvk64` 的函数。
 
-**关于ICD机制，更多参见：** [Vulkan的ICD机制]({{< relref "posts/Vulkan/Vulkan的ICD机制.md" >}})
+**关于ICD机制，更多参见：** [[posts/Vulkan/Vulkan的ICD机制|Vulkan的ICD机制]]
 
 
 ## 手动加载ICD后

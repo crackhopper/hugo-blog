@@ -7,7 +7,7 @@ tags:
   - 3d
 draft: false
 ---
-![[Vulkan入门05-Depth buffering-1765166362854.png]]
+![[Vulkan入门05-Depth buffering-intro-01.png]]
 
 
 深度缓冲，对于有图形基础的人来说是很熟悉的概念。Vulkan中是如何管理的呢？
@@ -66,7 +66,7 @@ const std::vector<Vertex> vertices = {
 ```
 
 随后，我们为了表明3D渲染，在之前的矩形下方再增加一个矩形。
-![[Vulkan入门05-Depth buffering-1765166362854.png]]
+![[Vulkan入门05-Depth buffering-intro-01.png]]
 
 更新顶点和索引数据：
 ```cpp
@@ -89,7 +89,7 @@ const std::vector<uint16_t> indices = {
 ```
 
 我们注意到，更高的矩形，应该在矮矩形的上方。但此时我们的显示内容为：
-![[Vulkan入门05-Depth buffering-1765178797074.png]]
+![[Vulkan入门05-Depth buffering-3d几何-01.png]]
 
 
 解决这个问题，两个办法：
@@ -397,7 +397,7 @@ Depth Bounds Test 常见用途：
 
 ## 显示效果
 
-![[Vulkan入门05-Depth buffering-1765179402245.png]]
+![[Vulkan入门05-Depth buffering-显示效果-01.png]]
 
 ## 处理window resize
 当resize发生的时候，我们需要重新创建 depthResouce；同时，销毁资源也应该和swapChain一起销毁。

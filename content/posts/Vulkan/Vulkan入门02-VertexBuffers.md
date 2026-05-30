@@ -6,7 +6,7 @@ tags:
   - vertexbuffer
 draft: false
 ---
-![[Vulkan入门02-VertexBuffers-1764252524778.png|574x430]]
+![[Vulkan入门02-VertexBuffers-intro-01.png|574x430]]
 
 继续深入 Vulkan 的绘制教程。当然我这里内容会比官方文档更深入一些。
 
@@ -361,7 +361,7 @@ vkCmdDraw(commandBuffer, static_cast<uint32_t>(vertices.size()), 1, 0, 0);
 
 ## 效果展示
 到这里，前两节如果都按照教程操作成功，那么可以正常绘制三角形。
-![[Vulkan入门02-VertexBuffers-1764249822704.png]]
+![[Vulkan入门02-VertexBuffers-效果展示-01.png]]
 # 暂存缓冲区(Staging Buffer)
 我们创建的显存，properties指定的是： 
 ```
@@ -528,4 +528,4 @@ vkCmdDrawIndexed(commandBuffer, static_cast<uint32_t>(indices.size()), 1, 0, 0, 
 ```
 
 ## 效果
-![[Vulkan入门02-VertexBuffers-1764252524778.png|574x430]]
+![[Vulkan入门02-VertexBuffers-intro-01.png|574x430]]

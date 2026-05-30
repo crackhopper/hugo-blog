@@ -4,5 +4,6 @@
   "oz-clear-unused-images",
   "image-converter",
   "OA-file-hider",
-  "templater-obsidian"
+  "templater-obsidian",
+  "hugo-link-updater"
 ]

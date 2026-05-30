@@ -49,7 +49,7 @@ breaking:
     - FILE
 ```
 
-`buf.yaml` 文件位于工作区根目录，它定义的工作区是所有 Buf 操作的默认输入。[[#Buf CLI 输入]]
+`buf.yaml` 文件位于工作区根目录，它定义的工作区是所有 Buf 操作的默认输入。[[#Buf CLI 输入|_index]]
 
 ## 基础知识
 
@@ -190,7 +190,7 @@ protoc -I . -o /dev/stdout proto/fetcher/market_data.proto   --experimental_allo
 #### 术语
 
 - **Source**： 未编译的 Protobuf 文件集合。
-- **Image** ： A set of Protobuf files compiled into an [`Image`](https://buf.build/bufbuild/buf/docs/main/buf.alpha.image.v1#buf.alpha.image.v1.Image) binary using the `buf build` command. （使用 `buf build` 命令将一组 Protobuf 文件编译成的 `Image` 二进制文件。）_image_ represents everything inside a Protobuf project and can be used as the input to most commands. （镜像文件，可以认为是protobuf编译后的平台独立的schema字节码；包含了生成所需要的所有信息） [[#Buf Image (Buf镜像文件)]]
+- **Image** ： A set of Protobuf files compiled into an [`Image`](https://buf.build/bufbuild/buf/docs/main/buf.alpha.image.v1#buf.alpha.image.v1.Image) binary using the `buf build` command. （使用 `buf build` 命令将一组 Protobuf 文件编译成的 `Image` 二进制文件。）_image_ represents everything inside a Protobuf project and can be used as the input to most commands. （镜像文件，可以认为是protobuf编译后的平台独立的schema字节码；包含了生成所需要的所有信息） [[#Buf Image (Buf镜像文件)|_index]]
 - **Input** : 输入，Source 或 Image
 - **Format** : 对输入类型的描述，常用类型 `dir` , `git` 。通常自动生成。
 - **Buf Schema Registry (BSR)**： Buf 的 核心原语(core primitive)是模块( **module**)。Protobuf 本身没有模块的概念，只有文件。Buf Schema注册中心 (BSR) 是一个用于跨团队甚至跨组织管理 Buf 模块的注册中心。 （可以理解一些围绕一个业务的独立的proto文件集合，构成一个module）。BSR的URL可以指定为一个source，作为命令输入。比如 `buf lint buf.build/acme/petapis`
@@ -218,7 +218,7 @@ path#option_key1=option_value1,option_key2=option_value2
 - path : 可以是 `.`, `proto/` , `file.binpb` , `https://github.com/googleapis/googleapis`, `-` 等等。
 - 选项：
 	- `format` : 用来**强制指定输入的类型**，覆盖 Buf 自动推断的格式。
-		- 默认的根据path自动推断格式，比如： 目录: `dir` ；`.git` : `git`；`.zip` : `zip`；`.tar.gz` : `tar`；`-` : `stdin` 。更多格式参考 [[#source格式]]
+		- 默认的根据path自动推断格式，比如： 目录: `dir` ；`.git` : `git`；`.zip` : `zip`；`.tar.gz` : `tar`；`-` : `stdin` 。更多格式参考 [[#source格式|_index]]
 	- `branch=<branch-name>` : 指定 Git 仓库的分支。
 	- `tag=<tag-name>` : 指定 Git tag。
 	- `ref=<git-ref>` : 任意 `git checkout` 支持的引用
@@ -314,7 +314,7 @@ file: {
 
 
 Image输入格式：
-- **binpb** ： Buf Image的二进制格式。[[#Buf Image (Buf镜像文件)]]
+- **binpb** ： Buf Image的二进制格式。[[#Buf Image (Buf镜像文件)|_index]]
 - **json** : 一个 JSON 格式的 Buf Image 。 解析速度较慢，但生成的差异比较结果会以可读的格式显示两个 Buf Image之间的实际差异。
 - **txtpb** : 文本格式的 Buf Image。在现代 Protobuf 使用中，JSON 更受欢迎，但许多 Protobuf 的遗留使用仍然使用文本格式。
 
@@ -475,7 +475,7 @@ inputs:
 |**依赖关系**|无法单独生成代码，需要配合 buf.gen.yaml|可以单独生成代码，也可以依赖 buf.yaml 的模块信息|
 |**输出目录**|N/A|插件生成代码的目录（`out`）|
 
-因此，关于生成的动作，主要看 `buf.gen.yaml` 的配置，以及参考： [[#Buf CLI 输入]] 这里面关于输入的默认定义。
+因此，关于生成的动作，主要看 `buf.gen.yaml` 的配置，以及参考： [[#Buf CLI 输入|_index]] 这里面关于输入的默认定义。
 
 ## 生成stubs (buf.gen.yaml) 
 使用当前目录中的 `buf.gen.yaml` 可以执行生成命令（注意，严格来说不需要 `buf.yaml` ，这个文件仅仅是将proto文件组织成了模块，是项目描述文件。生成的时候，会引用 `buf.yaml` ，也可以直接手动指定或者按照规则指定inputs）
